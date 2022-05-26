@@ -1,0 +1,16 @@
+F:\Data\ki4\PBL3\PBL3New\QuanLyPhongTroLinQ\bin\Debug\QuanLyPhongTroLinQ.exe.config
+F:\Data\ki4\PBL3\PBL3New\QuanLyPhongTroLinQ\bin\Debug\QuanLyPhongTroLinQ.exe
+F:\Data\ki4\PBL3\PBL3New\QuanLyPhongTroLinQ\bin\Debug\QuanLyPhongTroLinQ.pdb
+F:\Data\ki4\PBL3\PBL3New\QuanLyPhongTroLinQ\bin\Debug\EntityFramework.dll
+F:\Data\ki4\PBL3\PBL3New\QuanLyPhongTroLinQ\bin\Debug\EntityFramework.SqlServer.dll
+F:\Data\ki4\PBL3\PBL3New\QuanLyPhongTroLinQ\bin\Debug\EntityFramework.xml
+F:\Data\ki4\PBL3\PBL3New\QuanLyPhongTroLinQ\bin\Debug\EntityFramework.SqlServer.xml
+F:\Data\ki4\PBL3\PBL3New\QuanLyPhongTroLinQ\obj\Debug\QuanLyPhongTroLinQ.csproj.AssemblyReference.cache
+F:\Data\ki4\PBL3\PBL3New\QuanLyPhongTroLinQ\obj\Debug\QuanLyPhongTroLinQ.csproj.SuggestedBindingRedirects.cache
+F:\Data\ki4\PBL3\PBL3New\QuanLyPhongTroLinQ\obj\Debug\QuanLyPhongTroLinQ.Properties.Resources.resources
+F:\Data\ki4\PBL3\PBL3New\QuanLyPhongTroLinQ\obj\Debug\QuanLyPhongTroLinQ.csproj.GenerateResource.cache
+F:\Data\ki4\PBL3\PBL3New\QuanLyPhongTroLinQ\obj\Debug\QuanLyPhongTroLinQ.csproj.CoreCompileInputs.cache
+F:\Data\ki4\PBL3\PBL3New\QuanLyPhongTroLinQ\obj\Debug\QuanLyPhongTroLinQ.csproj.CopyComplete
+F:\Data\ki4\PBL3\PBL3New\QuanLyPhongTroLinQ\obj\Debug\QuanLyPhongTroLinQ.exe
+F:\Data\ki4\PBL3\PBL3New\QuanLyPhongTroLinQ\obj\Debug\QuanLyPhongTroLinQ.pdb
+F:\Data\ki4\PBL3\PBL3New\QuanLyPhongTroLinQ\obj\Debug\QuanLyPhongTroLinQ.View.FormMenuChuTro.resources
