@@ -1,9 +1,7 @@
-﻿using System;
+﻿using QuanLyPhongTroLinQ.DTO;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using QuanLyPhongTroLinQ.DTO;
 
 namespace QuanLyPhongTroLinQ.BLL
 {
@@ -49,7 +47,7 @@ namespace QuanLyPhongTroLinQ.BLL
 
         private List<LoaiPhong> GetDSLoaiPhongTro()
         {
-            return db.LoaiPhongs.ToList(); 
+            return db.LoaiPhongs.ToList();
         }
 
         public List<PhongTro> GetDSPhongTro()
