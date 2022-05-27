@@ -1,4 +1,5 @@
-﻿using QuanLyPhongTroLinQ.DTO;
+﻿using QuanLyPhongTroLinQ.BLL;
+using QuanLyPhongTroLinQ.DTO;
 using System;
 using System.Drawing;
 using System.Windows.Forms;
@@ -18,13 +19,13 @@ namespace QuanLyPhongTroLinQ.View
         }
         public void GUI()
         {
-            //tk = TaiKhoanBLL.Instance.GetTKByID(IDNhanVien);
-            //txtTenDangNhap.Text = tk.TenTK;
-            //nd = TaiKhoanBLL.Instance.GetNDByID(IDNhanVien);
-            //txtTen.Text = nd.Ten;
-            //txtQueQuan.Text = nd.QueQuan;
-            //txtSDT.Text = nd.SDT;
-            //txtCCCD.Text = nd.CCCD;
+            tk = TaiKhoanBLL.Instance.GetTKByID(IDNhanVien);
+            txtTenDangNhap.Text = tk.TenTK;
+            nd = TaiKhoanBLL.Instance.GetNDByID(IDNhanVien);
+            txtTen.Text = nd.Ten;
+            txtQueQuan.Text = nd.QueQuan;
+            txtSDT.Text = nd.SDT;
+            txtCCCD.Text = nd.CCCD;
         }
 
         private void txtTen_Enter(object sender, EventArgs e)
@@ -127,6 +128,52 @@ namespace QuanLyPhongTroLinQ.View
         public void xuathien()
         {
             this.Show();
+        }
+
+        private void txtSDT_TextChanged(object sender, EventArgs e)
+        {
+            if (txtSDT.Text != "")
+            {
+                nd.SDT = txtSDT.Text;
+            }
+        }
+
+        private void btnHoanThanh_Click(object sender, EventArgs e)
+        {
+            TaiKhoanBLL.Instance.Update(tk);
+            NguoiDungBLL.Instance.Update(nd);
+        }
+
+        private void txtTen_TextChanged(object sender, EventArgs e)
+        {
+            if(txtTen.Text != "")
+            {
+                nd.Ten = txtTen.Text;
+            }
+        }
+
+        private void txtTenDangNhap_TextChanged(object sender, EventArgs e)
+        {
+            if(txtTenDangNhap.Text != "")
+            {
+                tk.TenTK = txtTenDangNhap.Text;
+            }
+        }
+
+        private void txtCCCD_TextChanged(object sender, EventArgs e)
+        {
+            if (txtCCCD.Text != "")
+            {
+                nd.CCCD = txtCCCD.Text;
+            }
+        }
+
+        private void txtQueQuan_TextChanged(object sender, EventArgs e)
+        {
+            if (txtQueQuan.Text != "")
+            {
+                nd.QueQuan = txtQueQuan.Text;
+            }
         }
     }
 }

@@ -115,7 +115,7 @@
             this.txtTen.Name = "txtTen";
             this.txtTen.Size = new System.Drawing.Size(458, 23);
             this.txtTen.TabIndex = 135;
-            this.txtTen.Text = "Tên";
+            this.txtTen.TextChanged += new System.EventHandler(this.txtTen_TextChanged);
             this.txtTen.Enter += new System.EventHandler(this.txtTen_Enter);
             this.txtTen.Leave += new System.EventHandler(this.txtTen_Leave);
             // 
@@ -140,7 +140,7 @@
             this.txtTenDangNhap.Name = "txtTenDangNhap";
             this.txtTenDangNhap.Size = new System.Drawing.Size(458, 23);
             this.txtTenDangNhap.TabIndex = 137;
-            this.txtTenDangNhap.Text = "Tên đăng nhập";
+            this.txtTenDangNhap.TextChanged += new System.EventHandler(this.txtTenDangNhap_TextChanged);
             this.txtTenDangNhap.Enter += new System.EventHandler(this.txtTenDangNhap_Enter);
             this.txtTenDangNhap.Leave += new System.EventHandler(this.txtTenDangNhap_Leave);
             // 
@@ -165,7 +165,7 @@
             this.txtCCCD.Name = "txtCCCD";
             this.txtCCCD.Size = new System.Drawing.Size(458, 23);
             this.txtCCCD.TabIndex = 141;
-            this.txtCCCD.Text = "Tên đăng nhập";
+            this.txtCCCD.TextChanged += new System.EventHandler(this.txtCCCD_TextChanged);
             this.txtCCCD.Enter += new System.EventHandler(this.txtCCCD_Enter);
             this.txtCCCD.Leave += new System.EventHandler(this.txtCCCD_Leave);
             // 
@@ -190,7 +190,7 @@
             this.txtSDT.Name = "txtSDT";
             this.txtSDT.Size = new System.Drawing.Size(458, 23);
             this.txtSDT.TabIndex = 139;
-            this.txtSDT.Text = "Tên đăng nhập";
+            this.txtSDT.TextChanged += new System.EventHandler(this.txtSDT_TextChanged);
             this.txtSDT.Enter += new System.EventHandler(this.txtSDT_Enter);
             this.txtSDT.Leave += new System.EventHandler(this.txtSDT_Leave);
             // 
@@ -215,7 +215,7 @@
             this.txtQueQuan.Name = "txtQueQuan";
             this.txtQueQuan.Size = new System.Drawing.Size(458, 23);
             this.txtQueQuan.TabIndex = 141;
-            this.txtQueQuan.Text = "Tên đăng nhập";
+            this.txtQueQuan.TextChanged += new System.EventHandler(this.txtQueQuan_TextChanged);
             this.txtQueQuan.Enter += new System.EventHandler(this.txtQueQuan_Enter);
             this.txtQueQuan.Leave += new System.EventHandler(this.txtQueQuan_Leave);
             // 
@@ -246,6 +246,7 @@
             this.btnHoanThanh.TabIndex = 144;
             this.btnHoanThanh.Text = "Hoàn thành";
             this.btnHoanThanh.UseVisualStyleBackColor = false;
+            this.btnHoanThanh.Click += new System.EventHandler(this.btnHoanThanh_Click);
             // 
             // uclSuaTKNhanVien
             // 

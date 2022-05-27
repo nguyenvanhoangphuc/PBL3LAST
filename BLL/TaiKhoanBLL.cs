@@ -39,6 +39,12 @@ namespace QuanLyPhongTroLinQ.BLL
             string id = db.TaiKhoans.Where(p => (p.TenTK == obj.TenTK) && (p.MKhau == obj.MKhau)).Select(p => p.ID).FirstOrDefault();
             return id;
         }
+
+        public NguoiDung GetNDByID(string iDNhanVien)
+        {
+            return db.NguoiDungs.Where(p => p.ID == iDNhanVien).FirstOrDefault();
+        }
+
         public string CheckTuCach(string id)
         {
             return db.NguoiDungs.Where(p => p.ID == id).Select(p => p.TuCach).FirstOrDefault();
@@ -201,6 +207,11 @@ namespace QuanLyPhongTroLinQ.BLL
             {
                 return "Mật khẩu không chính xác";
             }
+        }
+        public void Update(TaiKhoan tk)
+        {
+            var p = db.TaiKhoans.Find(tk.ID);
+            p=tk;
         }
     }
 }
