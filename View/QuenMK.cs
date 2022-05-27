@@ -82,7 +82,7 @@ namespace QuanLyPhongTroLinQ.View
                 MessageBox.Show(Check);
             }
         }
-        public void SendEmail(string email)
+        public string SendEmail(string email)
         {
             string FromEmail = "p2ncteam@gmail.com";
             string PWFromEmail = "p2ncteamvip";
@@ -108,7 +108,7 @@ namespace QuanLyPhongTroLinQ.View
             {
                 MessageBox.Show(ex.Message);
             }
-
+            return RandomCode;
         }
 
     }

@@ -46,7 +46,7 @@
             this.btnGuiLaiMa.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnGuiLaiMa.FlatAppearance.BorderSize = 0;
             this.btnGuiLaiMa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGuiLaiMa.Font = new System.Drawing.Font("Palatino Linotype", 13.2F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic)
+            this.btnGuiLaiMa.Font = new System.Drawing.Font("Palatino Linotype", 13.2F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
                 | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuiLaiMa.ForeColor = System.Drawing.Color.ForestGreen;
             this.btnGuiLaiMa.Location = new System.Drawing.Point(39, 287);
