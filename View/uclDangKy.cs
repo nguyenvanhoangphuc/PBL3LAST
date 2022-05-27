@@ -185,6 +185,8 @@ namespace QuanLyPhongTroLinQ.View
                     //insert
                     tk.ID = TaiKhoanBLL.Instance.GetNowID();
                     nd.ID = tk.ID;
+                    nd.ID_TK = tk.ID;
+                    nd.TrangThai = "Cho";
                     TaiKhoanBLL.Instance.InsertTaiKhoan_NguoiDung(tk, nd);
                     MessageBox.Show("Đăng kí thành công. Tài khoản của bạn đang chờ được xét duyệt");
                     uclDangNhap ucl = new uclDangNhap();
