@@ -15,6 +15,7 @@ namespace QuanLyPhongTroLinQ
         [STAThread]
         static void Main()
         {
+            //push lan dau tien
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new FormLogin());
