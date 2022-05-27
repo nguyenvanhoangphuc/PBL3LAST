@@ -58,6 +58,7 @@ namespace QuanLyPhongTroLinQ.BLL
         {
             var tk = db.TaiKhoans.Where((p) => p.Email == email).FirstOrDefault();
             tk.MKhau = MK;
+            db.SaveChanges();
             return "Cập nhật mật khẩu thành công!";
         }
         public bool CheckTrangThai(string id)
