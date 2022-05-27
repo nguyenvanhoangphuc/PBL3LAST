@@ -196,6 +196,7 @@ namespace QuanLyPhongTroLinQ.BLL
                 if (newMK == retypeMK)
                 {
                     tk.MKhau = newMK;
+                    db.SaveChanges();
                     return "Cập nhật mật khẩu thành công";
                 }
                 else
@@ -211,7 +212,8 @@ namespace QuanLyPhongTroLinQ.BLL
         public void Update(TaiKhoan tk)
         {
             var p = db.TaiKhoans.Find(tk.ID);
-            p=tk;
+            p.TenTK = tk.TenTK;
+            db.SaveChanges();
         }
     }
 }
