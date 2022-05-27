@@ -18,7 +18,7 @@ namespace QuanLyPhongTroLinQ.View
 
         private void btnOK_Click(object sender, EventArgs e)
         {
-           // MessageBox.Show(TaiKhoanBLL.Instance.DoiMatKhau(ID, txtMatKhauHienTai.Text, txtMKMoi.Text, txtNhapLaiMK.Text));
+            MessageBox.Show(TaiKhoanBLL.Instance.DoiMatKhau(ID, txtMatKhauHienTai.Text, txtMKMoi.Text, txtNhapLaiMK.Text));
         }
 
         private void btnHuy_Click(object sender, EventArgs e)

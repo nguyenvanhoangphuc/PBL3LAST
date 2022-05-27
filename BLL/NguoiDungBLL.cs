@@ -49,7 +49,11 @@ namespace QuanLyPhongTroLinQ.BLL
         public void Update(NguoiDung tk)
         {
             var p = db.NguoiDungs.Find(tk.ID);
-            p = tk;
+            p.Ten = tk.Ten;
+            p.SDT = tk.SDT;
+            p.QueQuan = tk.QueQuan;
+            p.CCCD = tk.CCCD;
+            db.SaveChanges();
         }
     }
 }

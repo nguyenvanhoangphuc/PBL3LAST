@@ -142,6 +142,7 @@ namespace QuanLyPhongTroLinQ.View
         {
             TaiKhoanBLL.Instance.Update(tk);
             NguoiDungBLL.Instance.Update(nd);
+            this.Hide();
         }
 
         private void txtTen_TextChanged(object sender, EventArgs e)
