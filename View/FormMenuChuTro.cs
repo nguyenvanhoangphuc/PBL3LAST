@@ -80,6 +80,7 @@ namespace QuanLyPhongTroLinQ.View
             fdsP.MdiParent = this;
             fdsP.Show();
         }
+        //====================================
         private void lblDSNguoiThue_Click(object sender, EventArgs e)
         {
             Default();

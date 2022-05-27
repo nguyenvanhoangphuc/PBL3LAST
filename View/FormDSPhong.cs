@@ -26,18 +26,18 @@ namespace QuanLyPhongTroLinQ.View
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            //AddPhong ap = new AddPhong("");
-            //ap.dShow = new AddPhong.myDel(ShowDGV);
-            //ap.Show();
+            AddPhong ap = new AddPhong("");
+            ap.dShow = new AddPhong.myDel(ShowDGV);
+            ap.Show();
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             if (DGVPhongTro.SelectedRows.Count == 1)
             {
-                //AddPhong up = new AddPhong(DGVPhongTro.SelectedRows[0].Cells["ID"].Value.ToString());
-                //up.dShow = new AddPhong.myDel(ShowDGV);
-                //up.Show();
+                AddPhong up = new AddPhong(DGVPhongTro.SelectedRows[0].Cells["ID"].Value.ToString());
+                up.dShow = new AddPhong.myDel(ShowDGV);
+                up.Show();
             }
         }
 
@@ -55,7 +55,7 @@ namespace QuanLyPhongTroLinQ.View
                 {
                     foreach (DataGridViewRow dr in DGVPhongTro.SelectedRows)
                     {
-                        PhongTroBLL.DeletePhong(dr.Cells[0].Value.ToString());
+                        PhongTroBLL.Instance.DeletePhong(dr.Cells[0].Value.ToString());
                     }
                     ShowDGV();
                 }
@@ -83,13 +83,6 @@ namespace QuanLyPhongTroLinQ.View
             }
             txtSearch.Text = "";
             ShowDGV();
-        }
-
-        private void lblDSNguoiThue_Click(object sender, EventArgs e)
-        {
-            //FormNguoiThue f = new FormNguoiThue();
-            //f.Show();
-            //this.Close();
         }
     }
 }
