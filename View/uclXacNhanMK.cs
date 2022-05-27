@@ -6,7 +6,7 @@ namespace QuanLyPhongTroLinQ.View
 {
     public partial class uclXacNhanMK : UserControl
     {
-        public delegate void Mydel(string s);
+        public delegate string Mydel(string s);
         public Mydel d;
         public static string em, code;
         public uclXacNhanMK(string email, string randomcode)
@@ -14,11 +14,6 @@ namespace QuanLyPhongTroLinQ.View
             code = randomcode;
             em = email;
             InitializeComponent();
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
 
         }
 
@@ -36,9 +31,8 @@ namespace QuanLyPhongTroLinQ.View
 
         private void txtMaXN_Enter(object sender, EventArgs e)
         {
-            if (txtMaXN.Text == "Mã xác nhận")
+            if (txtMaXN.Text == "< > Mã xác nhận")
             {
-                txtMaXN.UseSystemPasswordChar = true;
                 txtMaXN.Text = "";
                 txtMaXN.ForeColor = Color.Black;
             }
@@ -48,14 +42,14 @@ namespace QuanLyPhongTroLinQ.View
         {
             if (txtMaXN.Text == "")
             {
-                txtMaXN.Text = "Mã xác nhận";
+                txtMaXN.Text = "< > Mã xác nhận";
                 txtMaXN.ForeColor = Color.Silver;
             }
         }
 
         private void btnGuiLaiMa_Click(object sender, EventArgs e)
         {
-            d(em);
+            code=d(em);
         }
 
         private void btnXacNhan_Click(object sender, EventArgs e)
