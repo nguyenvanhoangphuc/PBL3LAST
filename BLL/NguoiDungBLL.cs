@@ -46,5 +46,10 @@ namespace QuanLyPhongTroLinQ.BLL
         {
             return db.NguoiDungs.ToList();
         }
+        public void Update(NguoiDung tk)
+        {
+            var p = db.NguoiDungs.Find(tk.ID);
+            p = tk;
+        }
     }
 }
