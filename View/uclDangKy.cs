@@ -1,4 +1,5 @@
-﻿using QuanLyPhongTroLinQ.DTO;
+﻿using QuanLyPhongTroLinQ.BLL;
+using QuanLyPhongTroLinQ.DTO;
 using System;
 using System.Drawing;
 using System.Windows.Forms;
@@ -178,22 +179,22 @@ namespace QuanLyPhongTroLinQ.View
         {
             if (rdoDongY.Checked)
             {
-                //string ThongBao = TaiKhoanBLL.Instance.CheckThongTin(tk, nd);
-                //if (ThongBao == "Tài khoản hợp lệ")
-                //{
-                //    //insert
-                //    tk.ID = TaiKhoanBLL.Instance.GetNowID();
-                //    nd.ID = tk.ID;
-                //    TaiKhoanBLL.Instance.UpdateTaiKhoan_NguoiDung(tk, nd);//lộn update rồi
-                //    MessageBox.Show("Đăng kí thành công. Tài khoản của bạn đang chờ được xét duyệt");
-                //    uclDangNhap ucl = new uclDangNhap();
-                //    this.Hide();
-                //    Parent.Controls.Add(ucl);
-                //}
-                //else
-                //{
-                //    //MessageBox.Show(ThongBao);
-                //}
+                string ThongBao = TaiKhoanBLL.Instance.CheckThongTin(tk, nd);
+                if (ThongBao == "Tài khoản hợp lệ")
+                {
+                    //insert
+                    tk.ID = TaiKhoanBLL.Instance.GetNowID();
+                    nd.ID = tk.ID;
+                    TaiKhoanBLL.Instance.InsertTaiKhoan_NguoiDung(tk, nd);
+                    MessageBox.Show("Đăng kí thành công. Tài khoản của bạn đang chờ được xét duyệt");
+                    uclDangNhap ucl = new uclDangNhap();
+                    this.Hide();
+                    Parent.Controls.Add(ucl);
+                }
+                else
+                {
+                    MessageBox.Show(ThongBao);
+                }
             }
             else
             {

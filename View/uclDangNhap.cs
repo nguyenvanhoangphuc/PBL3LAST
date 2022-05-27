@@ -27,7 +27,7 @@ namespace QuanLyPhongTroLinQ.View
                 case "requied_password":
                     MessageBox.Show("Mật khẩu không được để trống!");
                     return;
-                case "Tai khoan hoac mat khau khong chinh xac!":
+                case null:
                     MessageBox.Show("Tài khoản hoặc mật khẩu không chính xác!");
                     return;
             }
