@@ -1,15 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data.Entity;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace QuanLyPhongTroLinQ.DTO
 {
     public class CreateDB :
-        CreateDatabaseIfNotExists<QLPT>
-    //DropCreateDatabaseIfModelChanges<QLPT>
+    //CreateDatabaseIfNotExists<QLPT>
+    DropCreateDatabaseIfModelChanges<QLPT>
     //DropCreateDatabaseAlways<QLPT>
     {
         protected override void Seed(QLPT context)

@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace QuanLyPhongTroLinQ.View
@@ -14,8 +8,10 @@ namespace QuanLyPhongTroLinQ.View
     {
         public delegate void myDel();
         public myDel dExit;
-        public FormMenuChuTro()
+        string IDChuTro;
+        public FormMenuChuTro(string ID)
         {
+            IDChuTro = ID;
             InitializeComponent();
         }
         public void Default()

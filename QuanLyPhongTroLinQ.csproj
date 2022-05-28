@@ -114,6 +114,12 @@
     <Compile Include="View\FormMenuChuTro.Designer.cs">
       <DependentUpon>FormMenuChuTro.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\FormQLNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormQLNhanVien.Designer.cs">
+      <DependentUpon>FormQLNhanVien.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -126,6 +132,9 @@
     </Compile>
     <EmbeddedResource Include="View\FormMenuChuTro.resx">
       <DependentUpon>FormMenuChuTro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormQLNhanVien.resx">
+      <DependentUpon>FormQLNhanVien.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
