@@ -76,6 +76,7 @@ namespace QuanLyPhongTroLinQ.View
             fdsP.MdiParent = this;
             fdsP.Show();
         }
+        //====================================
         private void lblDSNguoiThue_Click(object sender, EventArgs e)
         {
             Default();
@@ -156,9 +157,9 @@ namespace QuanLyPhongTroLinQ.View
             lblQLNV.MouseLeave -= new EventHandler(this.lbl_MouseLeave);
             pnlQLNV.BackColor = SystemColors.ControlDarkDark;
             lblQLNV.ForeColor = Color.Blue;
-            //FormQLNhanVien f = new FormQLNhanVien();
-            //f.MdiParent = this;
-            //f.Show();
+            FormQLNhanVien f = new FormQLNhanVien();
+            f.MdiParent = this;
+            f.Show();
         }
     }
 }

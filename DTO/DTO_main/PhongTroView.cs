@@ -6,5 +6,6 @@
         public string TenPhong { get; set; }
         public string TenLoaiPhong { get; set; }
         public string TinhTrang { get; set; }
+        public int SoChuDien { get; set; }
     }
 }
