@@ -1,9 +1,6 @@
-﻿using System;
+﻿using QuanLyPhongTroLinQ.DTO;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using QuanLyPhongTroLinQ.DTO;
 
 namespace QuanLyPhongTroLinQ.BLL
 {
@@ -27,7 +24,7 @@ namespace QuanLyPhongTroLinQ.BLL
         {
             db = new QLPT();
         }
-        public List<NguoiDungView> GetNguoiDungViews ()
+        public List<NguoiDungView> GetNguoiDungViews()
         {
             List<NguoiDungView> nguoiDungViews = new List<NguoiDungView>();
             foreach (NguoiDung nguoiDung in GetNguoiDungs())
@@ -48,6 +45,15 @@ namespace QuanLyPhongTroLinQ.BLL
         private List<NguoiDung> GetNguoiDungs()
         {
             return db.NguoiDungs.ToList();
+        }
+        public void Update(NguoiDung tk)
+        {
+            var p = db.NguoiDungs.Find(tk.ID);
+            p.Ten = tk.Ten;
+            p.SDT = tk.SDT;
+            p.QueQuan = tk.QueQuan;
+            p.CCCD = tk.CCCD;
+            db.SaveChanges();
         }
     }
 }
