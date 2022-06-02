@@ -21,6 +21,7 @@ namespace QuanLyPhongTroLinQ.BLL
             }
             private set { }
         }
+
         public PhongTroBLL()
         {
             db = new QLPT();
@@ -37,6 +38,11 @@ namespace QuanLyPhongTroLinQ.BLL
                 });
             }
             return list;
+        }
+
+        public string GetIDByTen(string ten)
+        {
+            return db.PhongTros.Where(p => p.TenPhong == ten).Select(p => p.ID).FirstOrDefault();
         }
 
         private List<LoaiPhong> GetDSLoaiPhongTro()
@@ -64,14 +70,6 @@ namespace QuanLyPhongTroLinQ.BLL
                 });
             }
             return list;
-        }
-        private List<LoaiPhong> GetDSLoaiPhongTro()
-        {
-            return db.LoaiPhongs.ToList();
-        }
-        public List<PhongTro> GetDSPhongTro()
-        {
-            return db.PhongTros.ToList();
         }
         public PhongTro GetPhongByID(string id)
         {
@@ -154,25 +152,22 @@ namespace QuanLyPhongTroLinQ.BLL
             }
             return list;
         }
-        //============================================
-
-        public object GetAll_LTB()
+        public List<CBBItem> GetAllCBBPhongFull()
         {
-            throw new NotImplementedException();
+            List<CBBItem> cBBItems = new List<CBBItem>();
+            cBBItems.Add(new CBBItem { ID = "0", Ten = "All" });
+            cBBItems.AddRange(GetAllCBBPhong()); 
+            return cBBItems;
         }
-
-        
-
-        
-
-
-
-
-
-        
-
-        
-
-        
+        public List<CBBItem> GetAllCBBPhong()
+        {
+            List<CBBItem> cBBItems = new List<CBBItem>();
+            foreach (PhongTro pt in GetDSPhongTro())
+            {
+                cBBItems.Add(new CBBItem { ID = pt.ID, Ten = pt.TenPhong });
+            }
+            return cBBItems;
+        }
+        //============================================
     }
 }

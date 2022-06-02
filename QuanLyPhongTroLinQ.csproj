@@ -70,9 +70,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\LichSuSuaChuaBLL.cs" />
     <Compile Include="BLL\NguoiDungBLL.cs" />
+    <Compile Include="BLL\NhanVienBLL.cs" />
     <Compile Include="BLL\PhongTroBLL.cs" />
     <Compile Include="BLL\TaiKhoanBLL.cs" />
+    <Compile Include="BLL\ThietBiBLL.cs" />
+    <Compile Include="BLL\ThongKe_NVBLL.cs" />
     <Compile Include="DTO\DTO_CSDL\CreateDB.cs" />
     <Compile Include="DTO\DTO_CSDL\DanhSachIDLTB.cs" />
     <Compile Include="DTO\DTO_CSDL\LichSuSuaChua.cs" />
@@ -86,10 +90,26 @@
     <Compile Include="DTO\DTO_CSDL\TaiKhoan.cs" />
     <Compile Include="DTO\DTO_CSDL\ThietBi.cs" />
     <Compile Include="DTO\DTO_main\CBBItem.cs" />
+    <Compile Include="DTO\DTO_main\LichSuSuaChuaView.cs" />
     <Compile Include="DTO\DTO_main\NguoiDungView.cs" />
+    <Compile Include="DTO\DTO_main\NhanVienView.cs" />
     <Compile Include="DTO\DTO_main\PhongTroView.cs" />
+    <Compile Include="DTO\DTO_main\ThietBiView.cs" />
+    <Compile Include="DTO\DTO_main\TKLSSC.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\AddLichSuSuaChua.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\AddLichSuSuaChua.Designer.cs">
+      <DependentUpon>AddLichSuSuaChua.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\AddNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\AddNhanVien.Designer.cs">
+      <DependentUpon>AddNhanVien.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\AddPhong.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,6 +121,12 @@
     </Compile>
     <Compile Include="View\FormDSPhong.Designer.cs">
       <DependentUpon>FormDSPhong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormLichSuSuaChua.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormLichSuSuaChua.Designer.cs">
+      <DependentUpon>FormLichSuSuaChua.cs</DependentUpon>
     </Compile>
     <Compile Include="View\FormLogin.cs">
       <SubType>Form</SubType>
@@ -114,11 +140,41 @@
     <Compile Include="View\FormMenuChuTro.Designer.cs">
       <DependentUpon>FormMenuChuTro.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\FormMenuNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormMenuNhanVien.designer.cs">
+      <DependentUpon>FormMenuNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormNVChoDuyet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormNVChoDuyet.Designer.cs">
+      <DependentUpon>FormNVChoDuyet.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\FormQLNhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\FormQLNhanVien.Designer.cs">
       <DependentUpon>FormQLNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormQLTB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormQLTB.Designer.cs">
+      <DependentUpon>FormQLTB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormThongKe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormThongKe.Designer.cs">
+      <DependentUpon>FormThongKe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormUpdateTB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormUpdateTB.Designer.cs">
+      <DependentUpon>FormUpdateTB.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -130,11 +186,38 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="View\AddLichSuSuaChua.resx">
+      <DependentUpon>AddLichSuSuaChua.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\AddNhanVien.resx">
+      <DependentUpon>AddNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormDSPhong.resx">
+      <DependentUpon>FormDSPhong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormLichSuSuaChua.resx">
+      <DependentUpon>FormLichSuSuaChua.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\FormMenuChuTro.resx">
       <DependentUpon>FormMenuChuTro.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\FormMenuNhanVien.resx">
+      <DependentUpon>FormMenuNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormNVChoDuyet.resx">
+      <DependentUpon>FormNVChoDuyet.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\FormQLNhanVien.resx">
       <DependentUpon>FormQLNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormQLTB.resx">
+      <DependentUpon>FormQLTB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormThongKe.resx">
+      <DependentUpon>FormThongKe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormUpdateTB.resx">
+      <DependentUpon>FormUpdateTB.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
