@@ -38,3 +38,13 @@ C:\Users\HP\source\repos\main\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\HP\source\repos\main\bin\Debug\EntityFramework.xml
 C:\Users\HP\source\repos\main\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\HP\source\repos\main\obj\Debug\QuanLyPhongTroLinQ.csproj.CopyComplete
+F:\Data\ki4\PBL3\PBL3New\QuanLyPhongTroLinQ\obj\Debug\QuanLyPhongTroLinQ.View.AddNhanVien.resources
+F:\Data\ki4\PBL3\PBL3New\QuanLyPhongTroLinQ\obj\Debug\QuanLyPhongTroLinQ.View.FormQLNhanVien.resources
+F:\Data\ki4\PBL3\PBL3New\QuanLyPhongTroLinQ\obj\Debug\QuanLyPhongTroLinQ.View.FormNVChoDuyet.resources
+F:\Data\ki4\PBL3\PBL3New\QuanLyPhongTroLinQ\obj\Debug\QuanLyPhongTroLinQ.View.FormMenuNhanVien.resources
+F:\Data\ki4\PBL3\PBL3New\QuanLyPhongTroLinQ\obj\Debug\QuanLyPhongTroLinQ.View.FormQLTB.resources
+F:\Data\ki4\PBL3\PBL3New\QuanLyPhongTroLinQ\obj\Debug\QuanLyPhongTroLinQ.View.FormUpdateTB.resources
+F:\Data\ki4\PBL3\PBL3New\QuanLyPhongTroLinQ\obj\Debug\QuanLyPhongTroLinQ.View.FormLichSuSuaChua.resources
+F:\Data\ki4\PBL3\PBL3New\QuanLyPhongTroLinQ\obj\Debug\QuanLyPhongTroLinQ.View.AddLichSuSuaChua.resources
+F:\Data\ki4\PBL3\PBL3New\QuanLyPhongTroLinQ\obj\Debug\QuanLyPhongTroLinQ.View.FormDSPhong.resources
+F:\Data\ki4\PBL3\PBL3New\QuanLyPhongTroLinQ\obj\Debug\QuanLyPhongTroLinQ.View.FormThongKe.resources

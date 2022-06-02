@@ -1,6 +1,7 @@
 ﻿using QuanLyPhongTroLinQ.BLL;
 using System;
 using System.Windows.Forms;
+using QuanLyPhongTroLinQ.DTO;
 
 namespace QuanLyPhongTroLinQ.View
 {
@@ -58,7 +59,7 @@ namespace QuanLyPhongTroLinQ.View
         private void btnSearch_Click(object sender, EventArgs e)
         {
             //Lấy dữ liệu check box đưa vào PhongTro
-            DTO.PhongTroView pt = new DTO.PhongTroView
+            PhongTroView pt = new PhongTroView
             {
                 ID = (cbID.Checked) ? txtSearch.Text : "",
                 TenPhong = (cbTen.Checked) ? txtSearch.Text : "",

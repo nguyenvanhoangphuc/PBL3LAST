@@ -4,8 +4,8 @@ using System.Data.Entity;
 namespace QuanLyPhongTroLinQ.DTO
 {
     public class CreateDB :
-    //CreateDatabaseIfNotExists<QLPT>
-    DropCreateDatabaseIfModelChanges<QLPT>
+    CreateDatabaseIfNotExists<QLPT>
+    //DropCreateDatabaseIfModelChanges<QLPT>
     //DropCreateDatabaseAlways<QLPT>
     {
         protected override void Seed(QLPT context)
@@ -16,7 +16,9 @@ namespace QuanLyPhongTroLinQ.DTO
                 new TaiKhoan {ID = "2", TenTK = "Nguyen", MKhau ="060402"},
                 new TaiKhoan {ID = "3", TenTK = "Phuong", MKhau ="120202"},
                 new TaiKhoan {ID = "4", TenTK = "Cuong", MKhau ="280802"},
-                new TaiKhoan {ID = "5", TenTK = "Tien", MKhau ="040916"}
+                new TaiKhoan {ID = "5", TenTK = "Tien", MKhau ="040916"},
+                new TaiKhoan {ID = "6", TenTK = "Long", MKhau ="123456"},
+                new TaiKhoan {ID = "7", TenTK = "Long", MKhau ="987654"}
             });
             context.NguoiDungs.AddRange(new NguoiDung[]
             {
@@ -25,6 +27,8 @@ namespace QuanLyPhongTroLinQ.DTO
                 new NguoiDung {ID="3", ID_TK="3", Ten ="TTTPhuong", QueQuan ="BacCan", SDT ="0303040401", CCCD="209114111", TrangThai ="ChapNhan", TuCach ="ChuTro"},
                 new NguoiDung {ID="4", ID_TK="4", Ten ="NCCuong", QueQuan ="TamKi", SDT ="0122852703", CCCD="208224115", TrangThai ="ChapNhan", TuCach ="NhanVien"},
                 new NguoiDung {ID="5", ID_TK="5", Ten ="PVTieen", QueQuan ="SongNuoc", SDT ="1234656789", CCCD="777776666", TrangThai ="ChapNhan" ,TuCach ="NhanVien"},
+                new NguoiDung {ID="6", ID_TK="6", Ten ="LTLong", QueQuan ="HongKong", SDT ="0123456987", CCCD="145234657", TrangThai ="ChoDuyet", TuCach ="NhanVien"},
+                new NguoiDung {ID="7", ID_TK="7", Ten ="LTLong", QueQuan ="HongKong", SDT ="0123456987", CCCD="145234657", TrangThai ="ChoDuyet", TuCach ="NhanVien"}
             });
 
             context.LoaiPhongs.AddRange(new LoaiPhong[]

@@ -8,10 +8,10 @@ namespace QuanLyPhongTroLinQ.View
     {
         public delegate void myDel();
         public myDel dExit;
-        string IDChuTro;
-        public FormMenuChuTro(string ID)
+        //string IDChuTro;
+        public FormMenuChuTro()
         {
-            IDChuTro = ID;
+            //IDChuTro = ID;
             InitializeComponent();
         }
         public void Default()

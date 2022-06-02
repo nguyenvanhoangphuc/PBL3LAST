@@ -1,4 +1,14 @@
-﻿using System.Windows.Forms;
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using QuanLyPhongTroLinQ.DTO;
+using QuanLyPhongTroLinQ.BLL;
 
 namespace QuanLyPhongTroLinQ.View
 {
@@ -35,6 +45,13 @@ namespace QuanLyPhongTroLinQ.View
             {
                 FormMenuChuTro fCT = new FormMenuChuTro();
                 fCT.dExit = new FormMenuChuTro.myDel(xuathien);
+                fCT.Show();
+                this.Hide();
+            }
+            else if (TaiKhoanBLL.Instance.CheckTuCach(getuser) == "NhanVien")
+            {
+                FormMenuNhanVien fCT = new FormMenuNhanVien(getuser);
+                fCT.dExit = new FormMenuNhanVien.myDel(xuathien);
                 fCT.Show();
                 this.Hide();
             }
@@ -95,6 +112,7 @@ namespace QuanLyPhongTroLinQ.View
         private void btnHienMatKhau_MouseDown(object sender, MouseEventArgs e)
         {
             txtMatKhau.UseSystemPasswordChar = false;
+            btnHienMatKhau.BackgroundImage = global::QuanLyPhongTroLinQ.Properties.Resources.iconShow;
         }
 
         private void btnHienMatKhau_MouseUp(object sender, MouseEventArgs e)
