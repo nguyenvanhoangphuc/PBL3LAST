@@ -23,6 +23,8 @@ namespace QuanLyPhongTroLinQ.View
         private void ShowDGV()
         {
             DGVNhanVien.DataSource = NhanVienBLL.Instance.GetDSNhanVienView();
+            DGVNhanVien.Columns[0].HeaderText = "Mã nhân viên";
+            DGVNhanVien.Columns[0].Visible = false;
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
