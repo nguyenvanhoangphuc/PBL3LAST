@@ -75,6 +75,7 @@
     <Compile Include="BLL\LichSuSuaChuaBLL.cs" />
     <Compile Include="BLL\LoaiPhongBLL.cs" />
     <Compile Include="BLL\NguoiDungBLL.cs" />
+    <Compile Include="BLL\NguoiThueBLL.cs" />
     <Compile Include="BLL\NhanVienBLL.cs" />
     <Compile Include="BLL\PhongTroBLL.cs" />
     <Compile Include="BLL\TaiKhoanBLL.cs" />
@@ -164,6 +165,12 @@
     <Compile Include="View\FormMenuNhanVien.designer.cs">
       <DependentUpon>FormMenuNhanVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\FormNguoiThue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormNguoiThue.Designer.cs">
+      <DependentUpon>FormNguoiThue.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\FormNVChoDuyet.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -187,6 +194,12 @@
     </Compile>
     <Compile Include="View\FormQLTB.Designer.cs">
       <DependentUpon>FormQLTB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormThemNguoi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormThemNguoi.Designer.cs">
+      <DependentUpon>FormThemNguoi.cs</DependentUpon>
     </Compile>
     <Compile Include="View\FormThongKe.cs">
       <SubType>Form</SubType>
@@ -258,6 +271,9 @@
     <EmbeddedResource Include="View\FormMenuNhanVien.resx">
       <DependentUpon>FormMenuNhanVien.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\FormNguoiThue.resx">
+      <DependentUpon>FormNguoiThue.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\FormNVChoDuyet.resx">
       <DependentUpon>FormNVChoDuyet.cs</DependentUpon>
     </EmbeddedResource>
@@ -267,8 +283,14 @@
     <EmbeddedResource Include="View\FormQLTB.resx">
       <DependentUpon>FormQLTB.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\FormThemNguoi.resx">
+      <DependentUpon>FormThemNguoi.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\FormThongKe.resx">
       <DependentUpon>FormThongKe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormTTPhong.resx">
+      <DependentUpon>FormTTPhong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\FormUpdateTB.resx">
       <DependentUpon>FormUpdateTB.cs</DependentUpon>

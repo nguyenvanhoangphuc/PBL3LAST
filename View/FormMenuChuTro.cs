@@ -84,9 +84,9 @@ namespace QuanLyPhongTroLinQ.View
             lblDSNguoiThue.MouseLeave -= new EventHandler(this.lbl_MouseLeave);
             pnlDSNguoiThue.BackColor = SystemColors.ControlDarkDark;
             lblDSNguoiThue.ForeColor = Color.Blue;
-            //FormNguoiThue f = new FormNguoiThue();
-            //f.MdiParent = this;
-            //f.Show();
+            FormNguoiThue f = new FormNguoiThue();
+            f.MdiParent = this;
+            f.Show();
         }
 
         private void lbl_MouseEnter(object sender, EventArgs e)

@@ -5,8 +5,6 @@ namespace QuanLyPhongTroLinQ.DTO
 {
     public class CreateDB :
     CreateDatabaseIfNotExists<QLPT>
-    //DropCreateDatabaseIfModelChanges<QLPT>
-    //DropCreateDatabaseAlways<QLPT>
     {
         protected override void Seed(QLPT context)
         {
