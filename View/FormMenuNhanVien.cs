@@ -98,7 +98,14 @@ namespace QuanLyPhongTroLinQ.View
 
         private void lblLoaiPhong_Click(object sender, EventArgs e)
         {
-
+            Default();
+            panel4.Hide();
+            lblLichSuSuaChua.MouseLeave -= new EventHandler(this.lbl_MouseLeave);
+            pnlLoaiPhong.BackColor = SystemColors.ControlDarkDark;
+            lblLichSuSuaChua.ForeColor = Color.Blue;
+            FormPhong_NV f = new FormPhong_NV();
+            f.MdiParent = this;
+            f.Show();
         }
 
         private void lblThongKe_Click(object sender, EventArgs e)

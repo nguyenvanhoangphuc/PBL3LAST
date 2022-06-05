@@ -112,9 +112,9 @@ namespace QuanLyPhongTroLinQ.View
             lblLoaiPhong.MouseLeave -= new EventHandler(this.lbl_MouseLeave);
             pnlLoaiPhong.BackColor = SystemColors.ControlDarkDark;
             lblLoaiPhong.ForeColor = Color.Blue;
-            //FormLoaiPhong f = new FormLoaiPhong();
-            //f.MdiParent = this;
-            //f.Show();
+            FormLoaiPhong f = new FormLoaiPhong();
+            f.MdiParent = this;
+            f.Show();
         }
 
         private void lblTraTien_Click(object sender, EventArgs e)
@@ -136,9 +136,9 @@ namespace QuanLyPhongTroLinQ.View
             lblDatPhong.MouseLeave -= new EventHandler(this.lbl_MouseLeave);
             pnlDatPhong.BackColor = SystemColors.ControlDarkDark;
             lblDatPhong.ForeColor = Color.Blue;
-            //FormDatPhong f = new FormDatPhong();
-            //f.MdiParent = this;
-            //f.Show();
+            FormDatTraPhong f = new FormDatTraPhong();
+            f.MdiParent = this;
+            f.Show();
         }
 
         private void lblThongKe_Click(object sender, EventArgs e)
