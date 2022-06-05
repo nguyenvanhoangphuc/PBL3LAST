@@ -114,6 +114,10 @@ namespace QuanLyPhongTroLinQ.BLL
             {
                 db.NguoiThues.Remove(db.NguoiThues.Find(ID));
                 db.SaveChanges();
+
+                IEnumerable<QLDatPhong> list = db.QLDatPhongs.Where(x => x.ID_NguoiThue == ID).ToList();
+                db.QLDatPhongs.RemoveRange(list);
+                db.SaveChanges();
             }
             return 0;
         }

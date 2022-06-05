@@ -15,7 +15,7 @@ namespace QuanLyPhongTroLinQ
             //push lan dau tien
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormMenuChuTro());
+            Application.Run(new FormNguoiThue());
         }
     }
 }
