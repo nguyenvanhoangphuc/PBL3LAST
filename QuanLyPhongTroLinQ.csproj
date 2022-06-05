@@ -122,6 +122,12 @@
     <Compile Include="View\AddPhong.Designer.cs">
       <DependentUpon>AddPhong.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\FormDatPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormDatPhong.Designer.cs">
+      <DependentUpon>FormDatPhong.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\FormDSPhong.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -133,6 +139,12 @@
     </Compile>
     <Compile Include="View\FormLichSuSuaChua.Designer.cs">
       <DependentUpon>FormLichSuSuaChua.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormLoaiPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormLoaiPhong.Designer.cs">
+      <DependentUpon>FormLoaiPhong.cs</DependentUpon>
     </Compile>
     <Compile Include="View\FormLogin.cs">
       <SubType>Form</SubType>
@@ -158,6 +170,12 @@
     <Compile Include="View\FormNVChoDuyet.Designer.cs">
       <DependentUpon>FormNVChoDuyet.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\FormPhong_NV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormPhong_NV.Designer.cs">
+      <DependentUpon>FormPhong_NV.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\FormQLNhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -176,11 +194,41 @@
     <Compile Include="View\FormThongKe.Designer.cs">
       <DependentUpon>FormThongKe.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\FormDatTraPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormDatTraPhong.Designer.cs">
+      <DependentUpon>FormDatTraPhong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormTraPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormTraPhong.Designer.cs">
+      <DependentUpon>FormTraPhong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormTTPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormTTPhong.Designer.cs">
+      <DependentUpon>FormTTPhong.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\FormUpdateTB.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\FormUpdateTB.Designer.cs">
       <DependentUpon>FormUpdateTB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormViewTB_LoaiPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormViewTB_LoaiPhong.Designer.cs">
+      <DependentUpon>FormViewTB_LoaiPhong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormXemThietBiPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormXemThietBiPhong.Designer.cs">
+      <DependentUpon>FormXemThietBiPhong.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
