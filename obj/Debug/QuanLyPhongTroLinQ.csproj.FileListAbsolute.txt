@@ -48,3 +48,28 @@ F:\Data\ki4\PBL3\PBL3New\QuanLyPhongTroLinQ\obj\Debug\QuanLyPhongTroLinQ.View.Fo
 F:\Data\ki4\PBL3\PBL3New\QuanLyPhongTroLinQ\obj\Debug\QuanLyPhongTroLinQ.View.AddLichSuSuaChua.resources
 F:\Data\ki4\PBL3\PBL3New\QuanLyPhongTroLinQ\obj\Debug\QuanLyPhongTroLinQ.View.FormDSPhong.resources
 F:\Data\ki4\PBL3\PBL3New\QuanLyPhongTroLinQ\obj\Debug\QuanLyPhongTroLinQ.View.FormThongKe.resources
+D:\nguyên\học tập\pbl3\PBL_main\bin\Debug\QuanLyPhongTroLinQ.exe.config
+D:\nguyên\học tập\pbl3\PBL_main\bin\Debug\QuanLyPhongTroLinQ.exe
+D:\nguyên\học tập\pbl3\PBL_main\bin\Debug\QuanLyPhongTroLinQ.pdb
+D:\nguyên\học tập\pbl3\PBL_main\bin\Debug\EntityFramework.dll
+D:\nguyên\học tập\pbl3\PBL_main\bin\Debug\EntityFramework.SqlServer.dll
+D:\nguyên\học tập\pbl3\PBL_main\bin\Debug\EntityFramework.xml
+D:\nguyên\học tập\pbl3\PBL_main\bin\Debug\EntityFramework.SqlServer.xml
+D:\nguyên\học tập\pbl3\PBL_main\obj\Debug\QuanLyPhongTroLinQ.csproj.AssemblyReference.cache
+D:\nguyên\học tập\pbl3\PBL_main\obj\Debug\QuanLyPhongTroLinQ.Properties.Resources.resources
+D:\nguyên\học tập\pbl3\PBL_main\obj\Debug\QuanLyPhongTroLinQ.View.AddLichSuSuaChua.resources
+D:\nguyên\học tập\pbl3\PBL_main\obj\Debug\QuanLyPhongTroLinQ.View.AddNhanVien.resources
+D:\nguyên\học tập\pbl3\PBL_main\obj\Debug\QuanLyPhongTroLinQ.View.FormDSPhong.resources
+D:\nguyên\học tập\pbl3\PBL_main\obj\Debug\QuanLyPhongTroLinQ.View.FormLichSuSuaChua.resources
+D:\nguyên\học tập\pbl3\PBL_main\obj\Debug\QuanLyPhongTroLinQ.View.FormMenuChuTro.resources
+D:\nguyên\học tập\pbl3\PBL_main\obj\Debug\QuanLyPhongTroLinQ.View.FormMenuNhanVien.resources
+D:\nguyên\học tập\pbl3\PBL_main\obj\Debug\QuanLyPhongTroLinQ.View.FormNVChoDuyet.resources
+D:\nguyên\học tập\pbl3\PBL_main\obj\Debug\QuanLyPhongTroLinQ.View.FormQLNhanVien.resources
+D:\nguyên\học tập\pbl3\PBL_main\obj\Debug\QuanLyPhongTroLinQ.View.FormQLTB.resources
+D:\nguyên\học tập\pbl3\PBL_main\obj\Debug\QuanLyPhongTroLinQ.View.FormThongKe.resources
+D:\nguyên\học tập\pbl3\PBL_main\obj\Debug\QuanLyPhongTroLinQ.View.FormUpdateTB.resources
+D:\nguyên\học tập\pbl3\PBL_main\obj\Debug\QuanLyPhongTroLinQ.csproj.GenerateResource.cache
+D:\nguyên\học tập\pbl3\PBL_main\obj\Debug\QuanLyPhongTroLinQ.csproj.CoreCompileInputs.cache
+D:\nguyên\học tập\pbl3\PBL_main\obj\Debug\QuanLyPhongTroLinQ.csproj.CopyComplete
+D:\nguyên\học tập\pbl3\PBL_main\obj\Debug\QuanLyPhongTroLinQ.exe
+D:\nguyên\học tập\pbl3\PBL_main\obj\Debug\QuanLyPhongTroLinQ.pdb

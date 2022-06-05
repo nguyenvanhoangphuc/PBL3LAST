@@ -70,7 +70,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\BLL_DatTraPhong.cs" />
+    <Compile Include="BLL\BLL_Phong_NV.cs" />
     <Compile Include="BLL\LichSuSuaChuaBLL.cs" />
+    <Compile Include="BLL\LoaiPhongBLL.cs" />
     <Compile Include="BLL\NguoiDungBLL.cs" />
     <Compile Include="BLL\NhanVienBLL.cs" />
     <Compile Include="BLL\PhongTroBLL.cs" />
@@ -90,10 +93,13 @@
     <Compile Include="DTO\DTO_CSDL\TaiKhoan.cs" />
     <Compile Include="DTO\DTO_CSDL\ThietBi.cs" />
     <Compile Include="DTO\DTO_main\CBBItem.cs" />
+    <Compile Include="DTO\DTO_main\CBBItemLoaiPhong.cs" />
     <Compile Include="DTO\DTO_main\LichSuSuaChuaView.cs" />
+    <Compile Include="DTO\DTO_main\LoaiThietBi_VIew.cs" />
     <Compile Include="DTO\DTO_main\NguoiDungView.cs" />
     <Compile Include="DTO\DTO_main\NhanVienView.cs" />
     <Compile Include="DTO\DTO_main\PhongTroView.cs" />
+    <Compile Include="DTO\DTO_main\PhongTro_DatPhongView.cs" />
     <Compile Include="DTO\DTO_main\ThietBiView.cs" />
     <Compile Include="DTO\DTO_main\TKLSSC.cs" />
     <Compile Include="Program.cs" />
