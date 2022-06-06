@@ -48,6 +48,8 @@ namespace QuanLyPhongTroLinQ.View
             BLL_DatTraPhong.Instance.TraPhongWithTenPhong(phong.TenPhong);
             t();
         }
+
+       
     }
 }
 
