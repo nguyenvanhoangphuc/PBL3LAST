@@ -271,10 +271,10 @@ namespace QuanLyPhongTroLinQ.View
             this.panel4.Controls.Add(this.label4);
             this.panel4.Controls.Add(this.label3);
             this.panel4.Controls.Add(this.label2);
-            this.panel4.Location = new System.Drawing.Point(327, 94);
+            this.panel4.Location = new System.Drawing.Point(351, 103);
             this.panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1056, 624);
+            this.panel4.Size = new System.Drawing.Size(1032, 611);
             this.panel4.TabIndex = 10;
             // 
             // label4

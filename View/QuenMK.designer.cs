@@ -37,6 +37,7 @@
             this.lblTimTK = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.picTenDangNhap = new System.Windows.Forms.PictureBox();
+            this.lblThongBao = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picTenDangNhap)).BeginInit();
             this.SuspendLayout();
@@ -140,11 +141,22 @@
             this.picTenDangNhap.TabIndex = 29;
             this.picTenDangNhap.TabStop = false;
             // 
+            // lblThongBao
+            // 
+            this.lblThongBao.Font = new System.Drawing.Font("Palatino Linotype", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblThongBao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblThongBao.Location = new System.Drawing.Point(41, 296);
+            this.lblThongBao.Name = "lblThongBao";
+            this.lblThongBao.Size = new System.Drawing.Size(454, 46);
+            this.lblThongBao.TabIndex = 146;
+            this.lblThongBao.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // QuenMK
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Controls.Add(this.lblThongBao);
             this.Controls.Add(this.lblQuenMK);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblChuaCoTaiKhoan);
@@ -172,5 +184,6 @@
         private System.Windows.Forms.Panel pnlTenDangNhap;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label lblTimTK;
+        private System.Windows.Forms.Label lblThongBao;
     }
 }

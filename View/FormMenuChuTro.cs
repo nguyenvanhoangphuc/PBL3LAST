@@ -8,10 +8,10 @@ namespace QuanLyPhongTroLinQ.View
     {
         public delegate void myDel();
         public myDel dExit;
-        //string IDChuTro;
-        public FormMenuChuTro()
+        string IDChuTro;
+        public FormMenuChuTro(string ID)
         {
-            //IDChuTro = ID;
+            IDChuTro = ID;
             InitializeComponent();
         }
         public void Default()
@@ -63,6 +63,12 @@ namespace QuanLyPhongTroLinQ.View
                 lblThongKe.ForeColor = SystemColors.ActiveCaptionText;
                 lblThongKe.MouseLeave += new EventHandler(this.lbl_MouseLeave);
                 pnlThongKe.BackColor = SystemColors.ButtonHighlight;
+            }
+            if (pnlTaiKhoan.BackColor != SystemColors.ButtonHighlight)
+            {
+                lblTaiKhoan.ForeColor = SystemColors.ActiveCaptionText;
+                lblTaiKhoan.MouseLeave += new EventHandler(this.lbl_MouseLeave);
+                pnlTaiKhoan.BackColor = SystemColors.ButtonHighlight;
             }
         }
         private void lblDSPhong_Click(object sender, EventArgs e)
@@ -160,6 +166,17 @@ namespace QuanLyPhongTroLinQ.View
             FormQLNhanVien f = new FormQLNhanVien();
             f.MdiParent = this;
             f.Show();
+        }
+
+        private void lblTaiKhoan_Click(object sender, EventArgs e)
+        {
+            Default();
+            lblTaiKhoan.MouseLeave -= new EventHandler(this.lbl_MouseLeave);
+            pnlTaiKhoan.BackColor = SystemColors.ControlDarkDark;
+            lblTaiKhoan.ForeColor = Color.Blue;
+            panel4.Controls.Clear();
+            panel4.Show();
+            panel4.Controls.Add(new uclSuaTK(IDChuTro));
         }
     }
 }

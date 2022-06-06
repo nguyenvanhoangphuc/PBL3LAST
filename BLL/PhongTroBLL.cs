@@ -77,7 +77,7 @@ namespace QuanLyPhongTroLinQ.BLL
         }
         public LoaiPhong GetLoaiPhongByID(string iD_LoaiPhong)
         {
-            return db.LoaiPhongs.Where(p=>p.IDLoaiPhong==iD_LoaiPhong).FirstOrDefault();
+            return db.LoaiPhongs.Where(p => p.IDLoaiPhong == iD_LoaiPhong).FirstOrDefault();
         }
         public string AddPhongTro(PhongTro phongTro, string ID)
         {
@@ -124,20 +124,20 @@ namespace QuanLyPhongTroLinQ.BLL
         {
             var s = db.PhongTros.Find(id);
             db.PhongTros.Remove(s);
-            db.SaveChanges(); 
+            db.SaveChanges();
         }
         public List<PhongTroView> SearchData(PhongTroView pt)
         {
-            bool tt=false, kt=false;
+            bool tt = false, kt = false;
             if (pt.TinhTrang.ToLower() == "true" || pt.TinhTrang.ToLower() == "false")
             {
                 tt = Convert.ToBoolean(pt.TinhTrang);
                 kt = true;
             }
-            var l = db.PhongTros.Where(p => ((pt.ID!="")?p.ID.Contains(pt.ID):false)||
-            ((pt.TenPhong!= "") ? p.TenPhong.Contains(pt.TenPhong):false)||
-            ((pt.TenLoaiPhong!="")?p.LoaiPhong.TenLoaiPhong.Contains(pt.TenLoaiPhong):false)||
-            ((kt!=false)?(p.TinhTrang==tt):false)).ToList();
+            var l = db.PhongTros.Where(p => ((pt.ID != "") ? p.ID.Contains(pt.ID) : false) ||
+            ((pt.TenPhong != "") ? p.TenPhong.Contains(pt.TenPhong) : false) ||
+            ((pt.TenLoaiPhong != "") ? p.LoaiPhong.TenLoaiPhong.Contains(pt.TenLoaiPhong) : false) ||
+            ((kt != false) ? (p.TinhTrang == tt) : false)).ToList();
             List<PhongTroView> list = new List<PhongTroView>();
             foreach (PhongTro i in l)
             {
@@ -156,7 +156,7 @@ namespace QuanLyPhongTroLinQ.BLL
         {
             List<CBBItem> cBBItems = new List<CBBItem>();
             cBBItems.Add(new CBBItem { ID = "0", Ten = "All" });
-            cBBItems.AddRange(GetAllCBBPhong()); 
+            cBBItems.AddRange(GetAllCBBPhong());
             return cBBItems;
         }
         public List<CBBItem> GetAllCBBPhong()

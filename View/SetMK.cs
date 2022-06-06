@@ -95,14 +95,14 @@ namespace QuanLyPhongTroLinQ.View
         {
             if (txtNhapLaiMK.Text == txtNhapMKMoi.Text)
             {
-                MessageBox.Show(TaiKhoanBLL.Instance.SetMK(em, txtNhapMKMoi.Text));
+                lblThongBao.Text=TaiKhoanBLL.Instance.SetMK(em, txtNhapMKMoi.Text);
                 uclDangNhap dn = new uclDangNhap();
                 this.Hide();
                 this.Parent.Controls.Add(dn);
             }
             else
             {
-                MessageBox.Show("Mật khẩu không trùng khớp");
+                lblThongBao.Text="Mật khẩu không trùng khớp";
             }
         }
 

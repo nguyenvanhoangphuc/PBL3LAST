@@ -1,9 +1,6 @@
-﻿using System;
+﻿using QuanLyPhongTroLinQ.DTO;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using QuanLyPhongTroLinQ.DTO;
 
 namespace QuanLyPhongTroLinQ.BLL
 {
@@ -25,11 +22,11 @@ namespace QuanLyPhongTroLinQ.BLL
         }
         public ThietBiBLL()
         {
-            db=new QLPT();
+            db = new QLPT();
         }
         public List<ThietBiView> GetThietBiViews()
         {
-            List<ThietBiView> thietBiViews = new List<ThietBiView>(); 
+            List<ThietBiView> thietBiViews = new List<ThietBiView>();
             foreach (ThietBi thietBi in GetThietBis())
             {
                 thietBiViews.Add(new ThietBiView
@@ -37,14 +34,14 @@ namespace QuanLyPhongTroLinQ.BLL
                     TenPhong = new CBBItem { ID = thietBi.IDPhong, Ten = thietBi.PhongTro.TenPhong },
                     TenLoaiTB = new CBBItem { ID = thietBi.IDLoaiThietBi, Ten = thietBi.LoaiThietBi.TenLoaiThietBi },
                     TinhTrang = (thietBi.TinhTrang) ? "Hong" : "Tot"
-                }); 
+                });
             }
             return thietBiViews;
         }
 
         public ThietBi GetThietBiByID(string idphong, string idloaitb)
         {
-            return db.ThietBis.Where(p => (p.IDPhong == idphong) && (p.IDLoaiThietBi == idloaitb)).FirstOrDefault(); 
+            return db.ThietBis.Where(p => (p.IDPhong == idphong) && (p.IDLoaiThietBi == idloaitb)).FirstOrDefault();
         }
 
         public List<CBBItem> GetAllCBBLoaiTB()
@@ -68,20 +65,20 @@ namespace QuanLyPhongTroLinQ.BLL
                     Ten = ltb.TenLoaiThietBi
                 });
             }
-            return cBBItems; 
+            return cBBItems;
         }
 
         private List<LoaiThietBi> GetLoaiTBByPhong(string idPhong)
         {
-            return db.ThietBis.Where(p=>p.IDPhong==idPhong).Select(p=>p.LoaiThietBi).ToList();
+            return db.ThietBis.Where(p => p.IDPhong == idPhong).Select(p => p.LoaiThietBi).ToList();
         }
 
         public List<ThietBiView> SearchData(ThietBiView tb)
         {
-            List<ThietBiView> thietBiViews = new List<ThietBiView>(); 
-            var l = db.ThietBis.Where(p=>((tb.TenPhong.Ten!="")?p.PhongTro.TenPhong.Contains(tb.TenPhong.Ten):false)||
-            ((tb.TenLoaiTB.Ten != "") ? p.LoaiThietBi.TenLoaiThietBi.Contains(tb.TenLoaiTB.Ten):false)||
-            ((tb.TinhTrang != "") ? (p.TinhTrang==(tb.TinhTrang=="Hong")?true:false):false)).ToList();
+            List<ThietBiView> thietBiViews = new List<ThietBiView>();
+            var l = db.ThietBis.Where(p => ((tb.TenPhong.Ten != "") ? p.PhongTro.TenPhong.Contains(tb.TenPhong.Ten) : false) ||
+            ((tb.TenLoaiTB.Ten != "") ? p.LoaiThietBi.TenLoaiThietBi.Contains(tb.TenLoaiTB.Ten) : false) ||
+            ((tb.TinhTrang != "") ? (p.TinhTrang == (tb.TinhTrang == "Hong") ? true : false) : false)).ToList();
             foreach (ThietBi tbi in l)
             {
                 thietBiViews.Add(new ThietBiView
@@ -96,21 +93,21 @@ namespace QuanLyPhongTroLinQ.BLL
 
         private List<LoaiThietBi> GetDSLoaiTB()
         {
-            return db.LoaiThietBis.ToList(); 
+            return db.LoaiThietBis.ToList();
         }
 
 
 
         private List<ThietBi> GetThietBis()
         {
-            return db.ThietBis.ToList(); 
+            return db.ThietBis.ToList();
         }
 
         public void UpdateTB(ThietBi tb)
         {
-            var tbi = db.ThietBis.Where(p=>(p.IDPhong == tb.IDPhong)&&(p.IDLoaiThietBi==tb.IDLoaiThietBi)).FirstOrDefault();
+            var tbi = db.ThietBis.Where(p => (p.IDPhong == tb.IDPhong) && (p.IDLoaiThietBi == tb.IDLoaiThietBi)).FirstOrDefault();
             tbi.TinhTrang = tb.TinhTrang;
-            db.SaveChanges(); 
+            db.SaveChanges();
         }
     }
 }

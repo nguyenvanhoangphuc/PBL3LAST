@@ -188,19 +188,19 @@ namespace QuanLyPhongTroLinQ.View
                     nd.ID_TK = tk.ID;
                     nd.TrangThai = "Cho";
                     TaiKhoanBLL.Instance.InsertTaiKhoan_NguoiDung(tk, nd);
-                    MessageBox.Show("Đăng kí thành công. Tài khoản của bạn đang chờ được xét duyệt");
+                    lblThongBao.Text="Đăng kí thành công. Tài khoản của bạn đang chờ được xét duyệt";
                     uclDangNhap ucl = new uclDangNhap();
                     this.Hide();
                     Parent.Controls.Add(ucl);
                 }
                 else
                 {
-                    MessageBox.Show(ThongBao);
+                    lblThongBao.Text=ThongBao;
                 }
             }
             else
             {
-                MessageBox.Show("Vui lòng đồng ý với điều khoản sử dụng của chúng tôi");
+                lblThongBao.Text="Vui lòng đồng ý với điều khoản sử dụng của chúng tôi";
             }
         }
 
@@ -255,5 +255,9 @@ namespace QuanLyPhongTroLinQ.View
             }
         }
 
+        private void lblThongBao_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

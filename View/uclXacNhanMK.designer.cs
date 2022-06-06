@@ -36,6 +36,7 @@
             this.pnlTenDangNhap = new System.Windows.Forms.Panel();
             this.txtMaXN = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblThongBao = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -49,7 +50,7 @@
             this.btnGuiLaiMa.Font = new System.Drawing.Font("Palatino Linotype", 13.2F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
                 | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuiLaiMa.ForeColor = System.Drawing.Color.ForestGreen;
-            this.btnGuiLaiMa.Location = new System.Drawing.Point(39, 287);
+            this.btnGuiLaiMa.Location = new System.Drawing.Point(39, 312);
             this.btnGuiLaiMa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnGuiLaiMa.Name = "btnGuiLaiMa";
             this.btnGuiLaiMa.Size = new System.Drawing.Size(185, 46);
@@ -134,11 +135,22 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // lblThongBao
+            // 
+            this.lblThongBao.Font = new System.Drawing.Font("Palatino Linotype", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblThongBao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblThongBao.Location = new System.Drawing.Point(38, 264);
+            this.lblThongBao.Name = "lblThongBao";
+            this.lblThongBao.Size = new System.Drawing.Size(454, 46);
+            this.lblThongBao.TabIndex = 149;
+            this.lblThongBao.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // uclXacNhanMK
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Controls.Add(this.lblThongBao);
             this.Controls.Add(this.btnGuiLaiMa);
             this.Controls.Add(this.lblQuenMK);
             this.Controls.Add(this.pictureBox1);
@@ -163,5 +175,6 @@
         private System.Windows.Forms.Button btnXacNhan;
         private System.Windows.Forms.Panel pnlTenDangNhap;
         private System.Windows.Forms.TextBox txtMaXN;
+        private System.Windows.Forms.Label lblThongBao;
     }
 }

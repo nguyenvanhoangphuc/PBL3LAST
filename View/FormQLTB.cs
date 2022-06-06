@@ -1,14 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using QuanLyPhongTroLinQ.BLL;
+﻿using QuanLyPhongTroLinQ.BLL;
 using QuanLyPhongTroLinQ.DTO;
+using System;
+using System.Windows.Forms;
 
 namespace QuanLyPhongTroLinQ.View
 {
@@ -27,7 +20,7 @@ namespace QuanLyPhongTroLinQ.View
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            if (DGVThietBi.SelectedRows.Count ==1)
+            if (DGVThietBi.SelectedRows.Count == 1)
             {
                 ThietBi tb = new ThietBi
                 {
@@ -35,9 +28,9 @@ namespace QuanLyPhongTroLinQ.View
                     IDLoaiThietBi = ((CBBItem)(DGVThietBi.SelectedRows[0].Cells["TenLoaiTB"].Value)).ID,
                     TinhTrang = (DGVThietBi.SelectedRows[0].Cells["TinhTrang"].Value.ToString() == "Hong")
                 };
-                FormUpdateTB f = new FormUpdateTB(tb.IDPhong,tb.IDLoaiThietBi);
-                f.dShow = new FormUpdateTB.myDel(showDGV); 
-                f.Show(); 
+                FormUpdateTB f = new FormUpdateTB(tb.IDPhong, tb.IDLoaiThietBi);
+                f.dShow = new FormUpdateTB.myDel(showDGV);
+                f.Show();
             }
         }
 

@@ -1,11 +1,7 @@
-﻿using System;
+﻿using QuanLyPhongTroLinQ.DTO;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using QuanLyPhongTroLinQ.DTO;
 
 namespace QuanLyPhongTroLinQ.BLL
 {
@@ -41,7 +37,7 @@ namespace QuanLyPhongTroLinQ.BLL
 
             });
             foreach (NguoiThue x in GetAllNguoiThue(s, HVT, SDT, QQ, CCCD, DT))
-                dt.Rows.Add(x.ID, x.HoTen, x.SDT, x.QueQuan, x.CCCD, x.TinhTrang?"Đang thuê":"Chưa thuê");
+                dt.Rows.Add(x.ID, x.HoTen, x.SDT, x.QueQuan, x.CCCD, x.TinhTrang ? "Đang thuê" : "Chưa thuê");
             return dt;
         }
 
@@ -56,7 +52,7 @@ namespace QuanLyPhongTroLinQ.BLL
             if (CCCD)
                 return db.NguoiThues.Where(x => x.CCCD.Contains(s)).OrderBy(x => x.ID).ToList();
             if (DT)
-                return db.NguoiThues.Where(x => (x.TinhTrang?"Đang thuê":"Chưa thuê").Contains(s)).OrderBy(x => x.ID).ToList();
+                return db.NguoiThues.Where(x => (x.TinhTrang ? "Đang thuê" : "Chưa thuê").Contains(s)).OrderBy(x => x.ID).ToList();
 
             return db.NguoiThues.OrderBy(x => x.ID).ToList();
         }

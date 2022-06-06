@@ -1,10 +1,8 @@
-﻿using System;
+﻿using QuanLyPhongTroLinQ.DTO;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using QuanLyPhongTroLinQ.DTO;
 
 namespace QuanLyPhongTroLinQ.BLL
 {
@@ -34,23 +32,23 @@ namespace QuanLyPhongTroLinQ.BLL
         {
             if (idPhong == "0")
             {
-                return db.LichSuSuaChuas.Where(p => DbFunctions.TruncateTime(p.NgaySuaChua)<=date.Date).ToList(); 
+                return db.LichSuSuaChuas.Where(p => DbFunctions.TruncateTime(p.NgaySuaChua) <= date.Date).ToList();
             }
             else
             {
-                return db.LichSuSuaChuas.Where(p => (DbFunctions.TruncateTime(p.NgaySuaChua) <= date)&&(p.IDPhong == idPhong)).ToList();
+                return db.LichSuSuaChuas.Where(p => (DbFunctions.TruncateTime(p.NgaySuaChua) <= date) && (p.IDPhong == idPhong)).ToList();
             }
         }
 
         public LichSuSuaChua GetLSSuaChuaByID(string id)
         {
-            return db.LichSuSuaChuas.Find(id); 
+            return db.LichSuSuaChuas.Find(id);
         }
 
         public List<LichSuSuaChuaView> GetLSSuaChuaViewByPhong(string idPhong, DateTime date)
         {
             List<LichSuSuaChuaView> lichSus = new List<LichSuSuaChuaView>();
-            foreach (LichSuSuaChua ls in GetLSSuaChuaByPhong(idPhong,date))
+            foreach (LichSuSuaChua ls in GetLSSuaChuaByPhong(idPhong, date))
             {
                 lichSus.Add(new LichSuSuaChuaView
                 {
@@ -58,9 +56,9 @@ namespace QuanLyPhongTroLinQ.BLL
                     TenNhanVien = ls.NhanVien.Ten,
                     TenPhong = ls.ThietBi.PhongTro.TenPhong,
                     TenLoaiThietBi = ls.ThietBi.LoaiThietBi.TenLoaiThietBi,
-                    NgaySuaChua = (DateTime) ls.NgaySuaChua,
+                    NgaySuaChua = (DateTime)ls.NgaySuaChua,
                     SoTienSuaChua = ls.SoTienSuaChua
-                }); 
+                });
             }
             return lichSus;
         }
@@ -110,7 +108,7 @@ namespace QuanLyPhongTroLinQ.BLL
 
         public void Delete(string id)
         {
-            var lssc = db.LichSuSuaChuas.Find(id); 
+            var lssc = db.LichSuSuaChuas.Find(id);
             db.LichSuSuaChuas.Remove(lssc);
             db.SaveChanges();
         }

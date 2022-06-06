@@ -38,6 +38,7 @@
             this.txtNhapLaiMK = new System.Windows.Forms.TextBox();
             this.btnHienMatKhau2 = new System.Windows.Forms.Button();
             this.btnHienMatKhau1 = new System.Windows.Forms.Button();
+            this.lblThongBao = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -161,11 +162,22 @@
             this.btnHienMatKhau1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnHienMatKhau_MouseDown);
             this.btnHienMatKhau1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnHienMatKhau_MouseUp);
             // 
+            // lblThongBao
+            // 
+            this.lblThongBao.Font = new System.Drawing.Font("Palatino Linotype", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblThongBao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblThongBao.Location = new System.Drawing.Point(37, 273);
+            this.lblThongBao.Name = "lblThongBao";
+            this.lblThongBao.Size = new System.Drawing.Size(454, 46);
+            this.lblThongBao.TabIndex = 147;
+            this.lblThongBao.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // uclSetMK
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Controls.Add(this.lblThongBao);
             this.Controls.Add(this.btnHienMatKhau2);
             this.Controls.Add(this.btnHienMatKhau1);
             this.Controls.Add(this.panel1);
@@ -195,5 +207,6 @@
         private System.Windows.Forms.TextBox txtNhapLaiMK;
         private System.Windows.Forms.Button btnHienMatKhau2;
         private System.Windows.Forms.Button btnHienMatKhau1;
+        private System.Windows.Forms.Label lblThongBao;
     }
 }

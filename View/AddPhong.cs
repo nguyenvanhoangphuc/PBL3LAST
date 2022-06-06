@@ -1,14 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using QuanLyPhongTroLinQ.BLL;
+﻿using QuanLyPhongTroLinQ.BLL;
 using QuanLyPhongTroLinQ.DTO;
+using System;
+using System.Windows.Forms;
 
 namespace QuanLyPhongTroLinQ.View
 {
@@ -70,7 +63,7 @@ namespace QuanLyPhongTroLinQ.View
             try
             {
                 phongTro.SoChuDien = Convert.ToInt32(txtSoChuDien.Text);
-            } 
+            }
             catch (Exception ex)
             {
                 MessageBox.Show("Số chữ điện phải là số nguyên.");

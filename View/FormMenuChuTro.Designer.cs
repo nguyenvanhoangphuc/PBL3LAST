@@ -63,6 +63,9 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.pnlTaiKhoan = new System.Windows.Forms.Panel();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.lblTaiKhoan = new System.Windows.Forms.Label();
             this.pnlLoaiPhong.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.pnlThongKe.SuspendLayout();
@@ -83,6 +86,8 @@
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.pnlTaiKhoan.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             this.SuspendLayout();
             // 
             // lblLoaiPhong
@@ -428,7 +433,7 @@
             // 
             this.pnlThoat.BackColor = System.Drawing.SystemColors.Desktop;
             this.pnlThoat.Controls.Add(this.panel3);
-            this.pnlThoat.Location = new System.Drawing.Point(13, 619);
+            this.pnlThoat.Location = new System.Drawing.Point(13, 674);
             this.pnlThoat.Margin = new System.Windows.Forms.Padding(4);
             this.pnlThoat.Name = "pnlThoat";
             this.pnlThoat.Size = new System.Drawing.Size(285, 66);
@@ -450,10 +455,10 @@
             this.panel4.Controls.Add(this.label4);
             this.panel4.Controls.Add(this.label3);
             this.panel4.Controls.Add(this.label2);
-            this.panel4.Location = new System.Drawing.Point(327, 94);
+            this.panel4.Location = new System.Drawing.Point(351, 109);
             this.panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1056, 624);
+            this.panel4.Size = new System.Drawing.Size(1018, 598);
             this.panel4.TabIndex = 10;
             // 
             // label4
@@ -522,11 +527,52 @@
             this.label5.TabIndex = 7;
             this.label5.Text = "Quản lí nhà trọ ";
             // 
+            // pnlTaiKhoan
+            // 
+            this.pnlTaiKhoan.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.pnlTaiKhoan.Controls.Add(this.pictureBox9);
+            this.pnlTaiKhoan.Controls.Add(this.lblTaiKhoan);
+            this.pnlTaiKhoan.Location = new System.Drawing.Point(13, 603);
+            this.pnlTaiKhoan.Margin = new System.Windows.Forms.Padding(4);
+            this.pnlTaiKhoan.Name = "pnlTaiKhoan";
+            this.pnlTaiKhoan.Size = new System.Drawing.Size(285, 60);
+            this.pnlTaiKhoan.TabIndex = 15;
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox9.Image = global::QuanLyPhongTroLinQ.Properties.Resources.TaiKhoan;
+            this.pictureBox9.Location = new System.Drawing.Point(4, 4);
+            this.pictureBox9.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(57, 52);
+            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox9.TabIndex = 7;
+            this.pictureBox9.TabStop = false;
+            // 
+            // lblTaiKhoan
+            // 
+            this.lblTaiKhoan.AutoSize = true;
+            this.lblTaiKhoan.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTaiKhoan.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblTaiKhoan.Location = new System.Drawing.Point(81, 17);
+            this.lblTaiKhoan.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTaiKhoan.Name = "lblTaiKhoan";
+            this.lblTaiKhoan.Size = new System.Drawing.Size(104, 27);
+            this.lblTaiKhoan.TabIndex = 7;
+            this.lblTaiKhoan.Text = "Tài khoản";
+            this.lblTaiKhoan.Click += new System.EventHandler(this.lblTaiKhoan_Click);
+            this.lblTaiKhoan.MouseEnter += new System.EventHandler(this.lbl_MouseEnter);
+            this.lblTaiKhoan.MouseLeave += new System.EventHandler(this.lbl_MouseLeave);
+            // 
             // FormMenuChuTro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1413, 753);
+            this.Controls.Add(this.pnlTaiKhoan);
             this.Controls.Add(this.pnlThoat);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.label5);
@@ -574,6 +620,9 @@
             this.panel4.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.pnlTaiKhoan.ResumeLayout(false);
+            this.pnlTaiKhoan.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -616,5 +665,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Panel pnlTaiKhoan;
+        private System.Windows.Forms.PictureBox pictureBox9;
+        private System.Windows.Forms.Label lblTaiKhoan;
     }
 }

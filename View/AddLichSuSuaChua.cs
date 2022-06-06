@@ -1,14 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using QuanLyPhongTroLinQ.BLL;
+﻿using QuanLyPhongTroLinQ.BLL;
 using QuanLyPhongTroLinQ.DTO;
+using System;
+using System.Windows.Forms;
 
 namespace QuanLyPhongTroLinQ.View
 {
@@ -16,9 +9,9 @@ namespace QuanLyPhongTroLinQ.View
     {
         public delegate void myDel(string idphong, DateTime date);
         public myDel dShow;
-        public string idNhanVien { get; set; }  
+        public string idNhanVien { get; set; }
         public string id { get; set; }
-        public AddLichSuSuaChua(string idNhanVien,string idLS)
+        public AddLichSuSuaChua(string idNhanVien, string idLS)
         {
             InitializeComponent();
             this.idNhanVien = idNhanVien;
@@ -32,7 +25,7 @@ namespace QuanLyPhongTroLinQ.View
             cbbPhong.DataSource = PhongTroBLL.Instance.GetAllCBBPhong().ToArray();
             cbbPhong.ValueMember = "ID";
             cbbPhong.DisplayMember = "Ten";
-            cbbPhong.Text = ""; 
+            cbbPhong.Text = "";
         }
 
         private void GUI()
@@ -70,7 +63,7 @@ namespace QuanLyPhongTroLinQ.View
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            this.Close(); 
+            this.Close();
         }
 
         private void btnAdd_Click(object sender, EventArgs e)

@@ -1,10 +1,7 @@
-﻿using System;
+﻿using QuanLyPhongTroLinQ.DTO;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using QuanLyPhongTroLinQ.DTO;
 
 namespace QuanLyPhongTroLinQ.BLL
 {
@@ -48,7 +45,7 @@ namespace QuanLyPhongTroLinQ.BLL
 
         public List<NhanVienView> GetDSNhanVienViewByID(List<string> list)
         {
-            List<NhanVienView> nhanViens = new List<NhanVienView> ();
+            List<NhanVienView> nhanViens = new List<NhanVienView>();
             foreach (string i in list)
             {
                 nhanViens.Add(new NhanVienView
@@ -60,14 +57,14 @@ namespace QuanLyPhongTroLinQ.BLL
                     CCCD = GetNhanVienByID(i).CCCD
                 });
             }
-            return nhanViens; 
+            return nhanViens;
         }
 
         public void ChapNhanDSNhanVien(List<string> list)
         {
             foreach (string i in list)
             {
-                ChapNhanNhanVien(i); 
+                ChapNhanNhanVien(i);
             }
         }
 
@@ -80,7 +77,7 @@ namespace QuanLyPhongTroLinQ.BLL
 
         public List<NguoiDung> GetDSNhanVien()
         {
-            return db.NguoiDungs.Where(p=>p.TuCach=="NhanVien").ToList();
+            return db.NguoiDungs.Where(p => p.TuCach == "NhanVien").ToList();
         }
         public NguoiDung GetNhanVienByID(string id)
         {
@@ -143,10 +140,10 @@ namespace QuanLyPhongTroLinQ.BLL
 
         public List<NhanVienView> SearchDataNV(NhanVienView nv)
         {
-            var l = db.NguoiDungs.Where(p => (p.TuCach == "NhanVien")&&(
-            ((nv.Ten != "") ? p.Ten.Contains(nv.Ten):false)||
-            ((nv.QueQuan != "") ? p.QueQuan.Contains(nv.QueQuan):false)||
-            ((nv.SDT != "") ? p.SDT.Contains(nv.SDT):false)||
+            var l = db.NguoiDungs.Where(p => (p.TuCach == "NhanVien") && (
+            ((nv.Ten != "") ? p.Ten.Contains(nv.Ten) : false) ||
+            ((nv.QueQuan != "") ? p.QueQuan.Contains(nv.QueQuan) : false) ||
+            ((nv.SDT != "") ? p.SDT.Contains(nv.SDT) : false) ||
             ((nv.CCCD != "") ? p.CCCD.Contains(nv.CCCD) : false))).ToList();
             List<NhanVienView> list = new List<NhanVienView>();
             foreach (NguoiDung nguoidung in l)
@@ -188,7 +185,7 @@ namespace QuanLyPhongTroLinQ.BLL
 
         private List<NguoiDung> GetDSNVChoDuyet()
         {
-            return db.NguoiDungs.Where(p => p.TuCach == "NhanVien" && p.TrangThai == "ChoDuyet").ToList(); 
+            return db.NguoiDungs.Where(p => p.TuCach == "NhanVien" && p.TrangThai == "ChoDuyet").ToList();
         }
         //===========================================
     }

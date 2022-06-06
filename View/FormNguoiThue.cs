@@ -1,16 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-
-using QuanLyPhongTroLinQ.BLL;
+﻿using QuanLyPhongTroLinQ.BLL;
 using QuanLyPhongTroLinQ.DTO;
+using System;
+using System.Windows.Forms;
 
 namespace QuanLyPhongTroLinQ.View
 {
@@ -34,7 +25,7 @@ namespace QuanLyPhongTroLinQ.View
 
         private void btn_Them_Click(object sender, EventArgs e)
         {
-            FormThemNguoi f = new FormThemNguoi("them", new NguoiThue { ID=(dGV_NguoiThue.Rows.Count+1).ToString()});
+            FormThemNguoi f = new FormThemNguoi("them", new NguoiThue { ID = (dGV_NguoiThue.Rows.Count + 1).ToString() });
             f.TrienKhai = new FormThemNguoi.ChuaCongThucTrienKhai(GUI);
             f.Show();
 
@@ -46,7 +37,7 @@ namespace QuanLyPhongTroLinQ.View
             {
                 DataGridViewRow r = dGV_NguoiThue.SelectedRows[0];
 
-                FormThemNguoi f = new FormThemNguoi("sua", NguoiThueBLL.Instance.DoiTuongNguoiThue(r.Cells["ID"].Value.ToString(), r.Cells["Họ và tên"].Value.ToString(), r.Cells["Số điện thoại"].Value.ToString(), r.Cells["Quê quán"].Value.ToString(), r.Cells["Căn cước công dân"].Value.ToString(), r.Cells["Tình trạng"].Value.ToString()=="Đã thuê"?true:false));
+                FormThemNguoi f = new FormThemNguoi("sua", NguoiThueBLL.Instance.DoiTuongNguoiThue(r.Cells["ID"].Value.ToString(), r.Cells["Họ và tên"].Value.ToString(), r.Cells["Số điện thoại"].Value.ToString(), r.Cells["Quê quán"].Value.ToString(), r.Cells["Căn cước công dân"].Value.ToString(), r.Cells["Tình trạng"].Value.ToString() == "Đã thuê" ? true : false));
                 f.TrienKhai = new FormThemNguoi.ChuaCongThucTrienKhai(GUI);
                 f.Show();
             }
@@ -63,7 +54,7 @@ namespace QuanLyPhongTroLinQ.View
                 DialogResult dr = MessageBox.Show("Bạn có chắc muốn xóa những người thuê đã chọn ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (dr == DialogResult.Yes)
                     foreach (DataGridViewRow r in dGV_NguoiThue.SelectedRows)
-                        error += NguoiThueBLL.Instance.XoaNguoiThue(r.Cells["ID"].Value.ToString(), r.Cells["Tình trạng"].Value.ToString()=="Đang thuê"?true:false);
+                        error += NguoiThueBLL.Instance.XoaNguoiThue(r.Cells["ID"].Value.ToString(), r.Cells["Tình trạng"].Value.ToString() == "Đang thuê" ? true : false);
                 if (error > 0)
                     MessageBox.Show(error.ToString() + " hàng không được xóa vì chưa trả phòng khi phòng chỉ còn một người thuê", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 GUI();

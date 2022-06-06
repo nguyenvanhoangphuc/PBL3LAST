@@ -1,14 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using QuanLyPhongTroLinQ.BLL;
+using QuanLyPhongTroLinQ.DTO;
+using System;
 using System.Windows.Forms;
-using QuanLyPhongTroLinQ.BLL;
-using QuanLyPhongTroLinQ.DTO; 
 
 namespace QuanLyPhongTroLinQ.View
 {
@@ -23,7 +16,7 @@ namespace QuanLyPhongTroLinQ.View
             InitializeComponent();
             idphong = IDPhong;
             idloaitb = IDLoaiTB;
-            setCBB(); 
+            setCBB();
             GUI();
             cbbTenPhong.Enabled = false;
             cbbTenLoaiTB.Enabled = false;
@@ -34,7 +27,7 @@ namespace QuanLyPhongTroLinQ.View
             cbbTenPhong.DataSource = PhongTroBLL.Instance.GetAllCBBPhong().ToArray();
             cbbTenPhong.ValueMember = "ID";
             cbbTenPhong.DisplayMember = "Ten";
-            
+
             cbbTenLoaiTB.DataSource = ThietBiBLL.Instance.GetAllCBBLoaiTB().ToArray();
             cbbTenLoaiTB.ValueMember = "ID";
             cbbTenLoaiTB.DisplayMember = "Ten";
@@ -45,7 +38,7 @@ namespace QuanLyPhongTroLinQ.View
             cbbTenPhong.SelectedValue = ThietBiBLL.Instance.GetThietBiByID(idphong, idloaitb).IDPhong;
             cbbTenLoaiTB.SelectedValue = ThietBiBLL.Instance.GetThietBiByID(idphong, idloaitb).IDLoaiThietBi;
             rbutHong.Checked = ThietBiBLL.Instance.GetThietBiByID(idphong, idloaitb).TinhTrang;
-            rbutTot.Checked= !ThietBiBLL.Instance.GetThietBiByID(idphong, idloaitb).TinhTrang; 
+            rbutTot.Checked = !ThietBiBLL.Instance.GetThietBiByID(idphong, idloaitb).TinhTrang;
         }
         private void btnReset_Click(object sender, EventArgs e)
         {
@@ -57,12 +50,12 @@ namespace QuanLyPhongTroLinQ.View
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            this.Close(); 
+            this.Close();
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            if (cbbTenPhong.Text == "" || cbbTenLoaiTB.Text == "" || ((rbutHong.Checked==false)&&(rbutTot.Checked==false)) )
+            if (cbbTenPhong.Text == "" || cbbTenLoaiTB.Text == "" || ((rbutHong.Checked == false) && (rbutTot.Checked == false)))
             {
                 MessageBox.Show("Bạn chưa điền đầy đủ thông tin!");
                 return;
@@ -75,7 +68,7 @@ namespace QuanLyPhongTroLinQ.View
             };
             ThietBiBLL.Instance.UpdateTB(tb);
             dShow();
-            this.Close(); 
+            this.Close();
         }
     }
 }

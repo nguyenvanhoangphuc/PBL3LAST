@@ -49,7 +49,7 @@ namespace QuanLyPhongTroLinQ.View
 
         private void btnGuiLaiMa_Click(object sender, EventArgs e)
         {
-            code=d(em);
+            code = d(em);
         }
 
         private void btnXacNhan_Click(object sender, EventArgs e)
@@ -63,7 +63,7 @@ namespace QuanLyPhongTroLinQ.View
             }
             else
             {
-                MessageBox.Show("Mã xác nhận không đúng!");
+                lblThongBao.Text="Mã xác nhận không đúng!";
             }
         }
     }

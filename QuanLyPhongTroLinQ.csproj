@@ -12,6 +12,7 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -24,7 +25,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -243,6 +243,48 @@
     <Compile Include="View\FormXemThietBiPhong.Designer.cs">
       <DependentUpon>FormXemThietBiPhong.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\QuenMK.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\QuenMK.designer.cs">
+      <DependentUpon>QuenMK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\SetMK.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\SetMK.designer.cs">
+      <DependentUpon>SetMK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\uclDangKy.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\uclDangKy.designer.cs">
+      <DependentUpon>uclDangKy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\uclDangNhap.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\uclDangNhap.designer.cs">
+      <DependentUpon>uclDangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\uclSuaTK.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\uclSuaTK.designer.cs">
+      <DependentUpon>uclSuaTK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\uclThayDoiMK.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\uclThayDoiMK.designer.cs">
+      <DependentUpon>uclThayDoiMK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\uclXacNhanMK.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\uclXacNhanMK.designer.cs">
+      <DependentUpon>uclXacNhanMK.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -264,6 +306,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\FormLichSuSuaChua.resx">
       <DependentUpon>FormLichSuSuaChua.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\FormMenuChuTro.resx">
       <DependentUpon>FormMenuChuTro.cs</DependentUpon>
@@ -294,6 +339,27 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\FormUpdateTB.resx">
       <DependentUpon>FormUpdateTB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\QuenMK.resx">
+      <DependentUpon>QuenMK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\SetMK.resx">
+      <DependentUpon>SetMK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\uclDangKy.resx">
+      <DependentUpon>uclDangKy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\uclDangNhap.resx">
+      <DependentUpon>uclDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\uclSuaTK.resx">
+      <DependentUpon>uclSuaTK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\uclThayDoiMK.resx">
+      <DependentUpon>uclThayDoiMK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\uclXacNhanMK.resx">
+      <DependentUpon>uclXacNhanMK.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

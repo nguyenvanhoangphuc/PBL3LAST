@@ -19,43 +19,39 @@ namespace QuanLyPhongTroLinQ.View
             obj.TenTK = txtTenDangNhap.Text;
             obj.MKhau = txtMatKhau.Text;
             string getuser = TaiKhoanBLL.Instance.CheckLogic(obj);
-            switch (getuser)
-            {
-                case "requied_taikhoan":
-                    MessageBox.Show("Tài khoản không được để trống!");
-                    return;
-                case "requied_password":
-                    MessageBox.Show("Mật khẩu không được để trống!");
-                    return;
-                case null:
-                    MessageBox.Show("Tài khoản hoặc mật khẩu không chính xác!");
-                    return;
-            }
-            //MessageBox.Show("Bạn đã đăng nhập thành công hệ thống!!!");
-            if (TaiKhoanBLL.Instance.CheckTrangThai(getuser))
-            {
-                //Check tư cách để vào form cho mình 
-                if (TaiKhoanBLL.Instance.CheckTuCach(getuser) == "ChuTro")
-                {
-
-                    FormMenuChuTro fCT = new FormMenuChuTro(getuser); //thêm id để sửa tài khoản
-                    fCT.dExit = new FormMenuChuTro.myDel(xuathien);
-                    fCT.Show();
-                    this.Hide();
-                }
-                else if (TaiKhoanBLL.Instance.CheckTuCach(getuser) == "NhanVien")
-                {
-                    FormMenuNhanVien fNV = new FormMenuNhanVien(getuser); //thêm id để sửa tài khoản
-                    fNV.dExit = new FormMenuNhanVien.myDel(xuathien);
-                    fNV.Show();
-                    this.Hide();
-                }
-            }
+            if(getuser == "requied_taikhoan")
+                    lblThongBao.Text="Tài khoản không được để trống!";
+            else if(getuser == "requied_password") 
+                    lblThongBao.Text=("Mật khẩu không được để trống!");
+            else if (getuser == "null")
+                lblThongBao.Text=("Tài khoản hoặc mật khẩu không chính xác!");
             else
             {
-                MessageBox.Show("Tài khoản của bạn chưa được cấp quyền truy cập.");
-            }
+                if (TaiKhoanBLL.Instance.CheckTrangThai(getuser))
+                {
+                    //Check tư cách để vào form cho mình 
+                    if (TaiKhoanBLL.Instance.CheckTuCach(getuser) == "ChuTro")
+                    {
 
+                        FormMenuChuTro fCT = new FormMenuChuTro(getuser); //thêm id để sửa tài khoản
+                        fCT.dExit = new FormMenuChuTro.myDel(xuathien);
+                        fCT.Show();
+                        this.Hide();
+                    }
+                    else if (TaiKhoanBLL.Instance.CheckTuCach(getuser) == "NhanVien")
+                    {
+                        FormMenuNhanVien fNV = new FormMenuNhanVien(getuser); //thêm id để sửa tài khoản
+                        fNV.dExit = new FormMenuNhanVien.myDel(xuathien);
+                        fNV.Show();
+                        this.Hide();
+                    }
+                    lblThongBao.Text = "";
+                }
+                else
+                {
+                    lblThongBao.Text = ("Tài khoản của bạn chưa được cấp quyền truy cập.");
+                }
+            }
         }
         private void xuathien()
         {

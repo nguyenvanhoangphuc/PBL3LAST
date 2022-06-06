@@ -43,6 +43,7 @@
             this.btnHienMatKhau = new System.Windows.Forms.Button();
             this.picMatKhau = new System.Windows.Forms.PictureBox();
             this.picTenDangNhap = new System.Windows.Forms.PictureBox();
+            this.lblThongBao = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMatKhau)).BeginInit();
@@ -66,7 +67,7 @@
             this.btnDangKy.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnDangKy.FlatAppearance.BorderSize = 0;
             this.btnDangKy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDangKy.Font = new System.Drawing.Font("Palatino Linotype", 13.2F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic)
+            this.btnDangKy.Font = new System.Drawing.Font("Palatino Linotype", 13.2F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
                 | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDangKy.ForeColor = System.Drawing.Color.ForestGreen;
             this.btnDangKy.Location = new System.Drawing.Point(292, 608);
@@ -95,10 +96,10 @@
             this.btnQuenMatKhau.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnQuenMatKhau.FlatAppearance.BorderSize = 0;
             this.btnQuenMatKhau.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnQuenMatKhau.Font = new System.Drawing.Font("Palatino Linotype", 13.2F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic)
+            this.btnQuenMatKhau.Font = new System.Drawing.Font("Palatino Linotype", 13.2F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
                 | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQuenMatKhau.ForeColor = System.Drawing.Color.Black;
-            this.btnQuenMatKhau.Location = new System.Drawing.Point(152, 518);
+            this.btnQuenMatKhau.Location = new System.Drawing.Point(153, 539);
             this.btnQuenMatKhau.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnQuenMatKhau.Name = "btnQuenMatKhau";
             this.btnQuenMatKhau.Size = new System.Drawing.Size(241, 46);
@@ -113,7 +114,7 @@
             this.btnDangNhap.BackColor = System.Drawing.Color.ForestGreen;
             this.btnDangNhap.Font = new System.Drawing.Font("Palatino Linotype", 13.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDangNhap.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnDangNhap.Location = new System.Drawing.Point(38, 436);
+            this.btnDangNhap.Location = new System.Drawing.Point(38, 474);
             this.btnDangNhap.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDangNhap.Name = "btnDangNhap";
             this.btnDangNhap.Size = new System.Drawing.Size(454, 46);
@@ -232,11 +233,22 @@
             this.picTenDangNhap.TabIndex = 135;
             this.picTenDangNhap.TabStop = false;
             // 
+            // lblThongBao
+            // 
+            this.lblThongBao.Font = new System.Drawing.Font("Palatino Linotype", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblThongBao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblThongBao.Location = new System.Drawing.Point(38, 404);
+            this.lblThongBao.Name = "lblThongBao";
+            this.lblThongBao.Size = new System.Drawing.Size(454, 46);
+            this.lblThongBao.TabIndex = 145;
+            this.lblThongBao.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // uclDangNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Controls.Add(this.lblThongBao);
             this.Controls.Add(this.pnlMatKhau);
             this.Controls.Add(this.btnDangKy);
             this.Controls.Add(this.lblChuaCoTaiKhoan);
@@ -277,5 +289,6 @@
         private System.Windows.Forms.Label lblDangNhap;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label lblThongBao;
     }
 }

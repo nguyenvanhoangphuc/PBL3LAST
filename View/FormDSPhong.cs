@@ -1,7 +1,7 @@
 ﻿using QuanLyPhongTroLinQ.BLL;
+using QuanLyPhongTroLinQ.DTO;
 using System;
 using System.Windows.Forms;
-using QuanLyPhongTroLinQ.DTO;
 
 namespace QuanLyPhongTroLinQ.View
 {

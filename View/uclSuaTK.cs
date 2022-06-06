@@ -6,12 +6,12 @@ using System.Windows.Forms;
 
 namespace QuanLyPhongTroLinQ.View
 {
-    public partial class uclSuaTKNhanVien : UserControl
+    public partial class uclSuaTK : UserControl
     {
         TaiKhoan tk = new TaiKhoan();
         NguoiDung nd = new NguoiDung();
         string IDNhanVien;
-        public uclSuaTKNhanVien(string ID)
+        public uclSuaTK(string ID)
         {
             IDNhanVien = ID;
             InitializeComponent();
@@ -20,7 +20,6 @@ namespace QuanLyPhongTroLinQ.View
         public void GUI()
         {
             tk = TaiKhoanBLL.Instance.GetTKByID(IDNhanVien);
-            txtTenDangNhap.Text = tk.TenTK;
             nd = TaiKhoanBLL.Instance.GetNDByID(IDNhanVien);
             txtTen.Text = nd.Ten;
             txtQueQuan.Text = nd.QueQuan;
@@ -43,24 +42,6 @@ namespace QuanLyPhongTroLinQ.View
             {
                 txtTen.Text = $"{nd.Ten}";
                 txtTen.ForeColor = Color.Silver;
-            }
-        }
-
-        private void txtTenDangNhap_Leave(object sender, EventArgs e)
-        {
-            if (txtTenDangNhap.Text == "")
-            {
-                txtTenDangNhap.Text = $"{tk.TenTK}";
-                txtTenDangNhap.ForeColor = Color.Silver;
-            }
-        }
-
-        private void txtTenDangNhap_Enter(object sender, EventArgs e)
-        {
-            if (txtTenDangNhap.Text == $"{tk.TenTK}")
-            {
-                txtTenDangNhap.Text = "";
-                txtTenDangNhap.ForeColor = Color.Black;
             }
         }
 
@@ -147,17 +128,9 @@ namespace QuanLyPhongTroLinQ.View
 
         private void txtTen_TextChanged(object sender, EventArgs e)
         {
-            if(txtTen.Text != "")
+            if (txtTen.Text != "")
             {
                 nd.Ten = txtTen.Text;
-            }
-        }
-
-        private void txtTenDangNhap_TextChanged(object sender, EventArgs e)
-        {
-            if(txtTenDangNhap.Text != "")
-            {
-                tk.TenTK = txtTenDangNhap.Text;
             }
         }
 

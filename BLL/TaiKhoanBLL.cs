@@ -1,10 +1,8 @@
-﻿using System.IO;
+﻿using QuanLyPhongTroLinQ.DTO;
+using System.IO;
 using System.Linq;
 using System.Net.Sockets;
 using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using QuanLyPhongTroLinQ.DTO;
 
 namespace QuanLyPhongTroLinQ.BLL
 {
@@ -30,11 +28,11 @@ namespace QuanLyPhongTroLinQ.BLL
         }
         public string CheckLogic(TaiKhoan obj)
         {
-            if (obj.TenTK == "")
+            if (obj.TenTK == "" || obj.TenTK == "Tên đăng nhập")
             {
                 return "requied_taikhoan";
             }
-            if (obj.MKhau == "")
+            if (obj.MKhau == "" || obj.MKhau == "Mật khẩu")
             {
                 return "requied_password";
             }
@@ -43,7 +41,7 @@ namespace QuanLyPhongTroLinQ.BLL
             {
                 return db.TaiKhoans.Where(p => (p.TenTK == obj.TenTK) && (p.MKhau == obj.MKhau)).Select(p => p.ID).FirstOrDefault();
             }
-            else return "null"; 
+            else return "null";
         }
 
         public NguoiDung GetNDByID(string iDNhanVien)
@@ -63,7 +61,7 @@ namespace QuanLyPhongTroLinQ.BLL
             }
             else
             {
-                return db.TaiKhoans.Where(p => p.Email==email).Select(p => p.Email).FirstOrDefault();
+                return db.TaiKhoans.Where(p => p.Email == email).Select(p => p.Email).FirstOrDefault();
             }
         }
         public string SetMK(string email, string MK)
@@ -75,13 +73,13 @@ namespace QuanLyPhongTroLinQ.BLL
         }
         public bool CheckTrangThai(string id)
         {
-            var check = db.NguoiDungs.Where(p => p.ID_TK == id).Select( p=>p.TrangThai ).FirstOrDefault();
+            var check = db.NguoiDungs.Where(p => p.ID_TK == id).Select(p => p.TrangThai).FirstOrDefault();
             if (check == "ChapNhan") return true;
             return false;
         }
         public string GetNowID()
         {
-            return (db.TaiKhoans.Count()+1).ToString();
+            return (int.Parse(db.TaiKhoans.OrderByDescending(p => p.ID).Take(1).Select(p => p.ID).FirstOrDefault()) + 1).ToString();
         }
         public void InsertTaiKhoan_NguoiDung(TaiKhoan tk, NguoiDung nd)
         {
@@ -95,28 +93,11 @@ namespace QuanLyPhongTroLinQ.BLL
             {
                 return "Tên người dùng không được để trống";
             }
-            if (tk.Email == null)
+            else if (tk.Email == null)
             {
                 return "Email không được để trống";
             }
-            else//kiểm tra email hợp lệ    
-            {
-                string KQCheckEmail = CheckEmail(tk.Email);
-
-                if (KQCheckEmail == "Email không hợp lệ")
-                {
-                    return "Email không hợp lệ";
-                }
-                else if (KQCheckEmail == tk.Email)
-                {
-                    return "Email đã tồn tại";
-                }
-                else if (!CheckEmailExxist(tk.Email))
-                {
-                    return "Email không tồn tại";
-                }
-            }
-            if (nd.SDT == null)
+            else if (nd.SDT == null)
             {
                 return "SDT không được để trống";
             }
@@ -139,6 +120,29 @@ namespace QuanLyPhongTroLinQ.BLL
             else if (nd.TuCach == null)
             {
                 return "Bạn chưa lựa chọn tư cách";
+            }
+            else if (tk.Email == null)
+            {
+                return "Email không được để trống";
+            }
+            else if ((db.TaiKhoans.Where(p => (p.TenTK == tk.TenTK) && (p.MKhau == tk.MKhau)).Select(p => p.ID)).Count() > 0) // check Tên đăng nhập + mật khẩu đã tồn tại chưa
+                    return "Tài khoản đã tồn tại";
+            else //kiểm tra email hợp lệ    
+            {
+                string KQCheckEmail = CheckEmail(tk.Email);
+
+                if (KQCheckEmail == "Email không hợp lệ")
+                {
+                    return "Email không hợp lệ";
+                }
+                else if (KQCheckEmail == tk.Email)
+                {
+                    return "Email đã tồn tại";
+                }
+                else if (!CheckEmailExxist(tk.Email))
+                {
+                    return "Email không tồn tại";
+                }
             }
             return "Tài khoản hợp lệ";
         }
@@ -187,19 +191,23 @@ namespace QuanLyPhongTroLinQ.BLL
 
         public TaiKhoan GetTKByID(string IDNhanVien)
         {
-            return db.TaiKhoans.Where(p=>p.ID==IDNhanVien).FirstOrDefault();
+            return db.TaiKhoans.Where(p => p.ID == IDNhanVien).FirstOrDefault();
         }
         public NguoiDung GetNguoiDungDByID(string IDNhanVien)
         {
-            return db.NguoiDungs.Where(p=>p.ID==IDNhanVien).FirstOrDefault();
+            return db.NguoiDungs.Where(p => p.ID == IDNhanVien).FirstOrDefault();
         }
 
         public string DoiMatKhau(string ID, string nowMK, string newMK, string retypeMK)
         {
-            var tk = db.TaiKhoans.Where((p)=>p.ID==ID && p.MKhau==nowMK).FirstOrDefault();
+            var tk = db.TaiKhoans.Where((p) => p.ID == ID && p.MKhau == nowMK).FirstOrDefault();
             if (tk != null)
             {
-                if (newMK == retypeMK)
+                if(newMK == "")
+                {
+                    return "Nhập mật khẩu mới";
+                }
+                else if (newMK == retypeMK)
                 {
                     tk.MKhau = newMK;
                     db.SaveChanges();

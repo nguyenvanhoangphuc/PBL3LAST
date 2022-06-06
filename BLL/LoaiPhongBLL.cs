@@ -1,14 +1,13 @@
-﻿using System;
+﻿using QuanLyPhongTroLinQ.DTO;
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using QuanLyPhongTroLinQ.DTO;
 using System.Data;
+using System.Linq;
 namespace QuanLyPhongTroLinQ.BLL
 {
     public class LoaiPhongBLL
-    { public QLPT db;
+    {
+        public QLPT db;
         private static LoaiPhongBLL _Instance;
         public static LoaiPhongBLL Instance
         {
@@ -22,7 +21,8 @@ namespace QuanLyPhongTroLinQ.BLL
             }
             private set { }
         }
-        private LoaiPhongBLL() {
+        private LoaiPhongBLL()
+        {
             db = new QLPT();
         }
 
@@ -30,21 +30,24 @@ namespace QuanLyPhongTroLinQ.BLL
         public List<LoaiPhong> hienthi()
         {
             List<LoaiPhong> ds = new List<LoaiPhong>();
-            foreach (var i in db.LoaiPhongs.Select(p=>p)) {
-                ds.Add(new LoaiPhong() { 
-                GiaThanh=i.GiaThanh,
-                IDLoaiPhong=i.IDLoaiPhong,
-                TenLoaiPhong=i.TenLoaiPhong,
-                
-                }); 
-            
+            foreach (var i in db.LoaiPhongs.Select(p => p))
+            {
+                ds.Add(new LoaiPhong()
+                {
+                    GiaThanh = i.GiaThanh,
+                    IDLoaiPhong = i.IDLoaiPhong,
+                    TenLoaiPhong = i.TenLoaiPhong,
+
+                });
+
             }
             return ds;
         }
-        
 
 
-        public List<LoaiThietBi_VIew> GetLoaiThietBiByLoaiPhong(string ID) {
+
+        public List<LoaiThietBi_VIew> GetLoaiThietBiByLoaiPhong(string ID)
+        {
             List<LoaiThietBi_VIew> ds = new List<LoaiThietBi_VIew>();
             foreach (var i in db.DanhSachIDLTBs.Where(p => p.IDLoaiPhong == ID).Select(p => p))
             {
@@ -56,7 +59,7 @@ namespace QuanLyPhongTroLinQ.BLL
 
                     });
             }
-            
+
             return ds;
         }
         public string GetTenLoaiPhong(String id)

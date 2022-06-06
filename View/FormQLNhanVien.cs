@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using QuanLyPhongTroLinQ.BLL;
+﻿using QuanLyPhongTroLinQ.BLL;
 using QuanLyPhongTroLinQ.DTO;
+using System;
+using System.Drawing;
+using System.Windows.Forms;
 
 namespace QuanLyPhongTroLinQ.View
 {
@@ -85,7 +79,7 @@ namespace QuanLyPhongTroLinQ.View
         private void lblChoDuyet_Click(object sender, EventArgs e)
         {
             FormNVChoDuyet f = new FormNVChoDuyet();
-            f.Show(); 
+            f.Show();
         }
         private void lbl_MouseEnter(object sender, EventArgs e)
         {

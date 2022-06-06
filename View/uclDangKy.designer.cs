@@ -68,6 +68,7 @@
             this.panel14 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.lblThongBao = new System.Windows.Forms.Label();
             this.panel6.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -277,6 +278,7 @@
             this.pnlMain.AllowDrop = true;
             this.pnlMain.AutoScroll = true;
             this.pnlMain.AutoScrollMargin = new System.Drawing.Size(20, 20);
+            this.pnlMain.Controls.Add(this.lblThongBao);
             this.pnlMain.Controls.Add(this.grpTuCach);
             this.pnlMain.Controls.Add(this.rdoDongY);
             this.pnlMain.Controls.Add(this.btnDangky);
@@ -344,7 +346,7 @@
             this.btnDangky.BackColor = System.Drawing.Color.ForestGreen;
             this.btnDangky.Font = new System.Drawing.Font("Palatino Linotype", 13.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDangky.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnDangky.Location = new System.Drawing.Point(14, 905);
+            this.btnDangky.Location = new System.Drawing.Point(14, 967);
             this.btnDangky.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDangky.Name = "btnDangky";
             this.btnDangky.Size = new System.Drawing.Size(453, 46);
@@ -544,6 +546,17 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // lblThongBao
+            // 
+            this.lblThongBao.Font = new System.Drawing.Font("Palatino Linotype", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblThongBao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblThongBao.Location = new System.Drawing.Point(15, 884);
+            this.lblThongBao.Name = "lblThongBao";
+            this.lblThongBao.Size = new System.Drawing.Size(454, 69);
+            this.lblThongBao.TabIndex = 148;
+            this.lblThongBao.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblThongBao.Click += new System.EventHandler(this.lblThongBao_Click);
+            // 
             // uclDangKy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -619,5 +632,6 @@
         private System.Windows.Forms.RadioButton rdoChuTro;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.RadioButton rdoNhanVien;
+        private System.Windows.Forms.Label lblThongBao;
     }
 }

@@ -64,7 +64,7 @@ namespace QuanLyPhongTroLinQ.View
         private void btnLayMaXacNhan_Click(object sender, EventArgs e)
         {
             string email = txtEmail.Text;
-            string Check=TaiKhoanBLL.Instance.CheckEmail(email);
+            string Check = TaiKhoanBLL.Instance.CheckEmail(email);
             if (Check == email)
             {
                 SendEmail(txtEmail.Text);
@@ -73,13 +73,13 @@ namespace QuanLyPhongTroLinQ.View
                 this.Hide();
                 this.Parent.Controls.Add(uclXacNhanMK);
             }
-            else if(Check == null)
+            else if (Check == null)
             {
-                MessageBox.Show("Tài khoản không tồn tại");
+                lblThongBao.Text="Tài khoản không tồn tại";
             }
             else
             {
-                MessageBox.Show(Check);
+                lblThongBao.Text=Check;
             }
         }
         public string SendEmail(string email)
@@ -106,7 +106,7 @@ namespace QuanLyPhongTroLinQ.View
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                lblThongBao.Text=ex.Message;
             }
             return RandomCode;
         }

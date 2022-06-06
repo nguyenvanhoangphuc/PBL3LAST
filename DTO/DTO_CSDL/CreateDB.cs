@@ -4,7 +4,8 @@ using System.Data.Entity;
 namespace QuanLyPhongTroLinQ.DTO
 {
     public class CreateDB :
-    CreateDatabaseIfNotExists<QLPT>
+    //CreateDatabaseIfNotExists<QLPT>
+    DropCreateDatabaseIfModelChanges<QLPT>
     {
         protected override void Seed(QLPT context)
         {
