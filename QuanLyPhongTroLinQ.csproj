@@ -80,7 +80,9 @@
     <Compile Include="BLL\PhongTroBLL.cs" />
     <Compile Include="BLL\TaiKhoanBLL.cs" />
     <Compile Include="BLL\ThietBiBLL.cs" />
+    <Compile Include="BLL\ThongKe_ADBLL.cs" />
     <Compile Include="BLL\ThongKe_NVBLL.cs" />
+    <Compile Include="BLL\TraTienBLL.cs" />
     <Compile Include="DTO\DTO_CSDL\CreateDB.cs" />
     <Compile Include="DTO\DTO_CSDL\DanhSachIDLTB.cs" />
     <Compile Include="DTO\DTO_CSDL\LichSuSuaChua.cs" />
@@ -93,6 +95,7 @@
     <Compile Include="DTO\DTO_CSDL\QLPT.cs" />
     <Compile Include="DTO\DTO_CSDL\TaiKhoan.cs" />
     <Compile Include="DTO\DTO_CSDL\ThietBi.cs" />
+    <Compile Include="DTO\DTO_CSDL\TienThang.cs" />
     <Compile Include="DTO\DTO_main\CBBItem.cs" />
     <Compile Include="DTO\DTO_main\CBBItemLoaiPhong.cs" />
     <Compile Include="DTO\DTO_main\LichSuSuaChuaView.cs" />
@@ -123,6 +126,12 @@
     <Compile Include="View\AddPhong.Designer.cs">
       <DependentUpon>AddPhong.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\FormAllThang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormAllThang.Designer.cs">
+      <DependentUpon>FormAllThang.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\FormDatPhong.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,6 +143,12 @@
     </Compile>
     <Compile Include="View\FormDSPhong.Designer.cs">
       <DependentUpon>FormDSPhong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormHoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormHoaDon.Designer.cs">
+      <DependentUpon>FormHoaDon.cs</DependentUpon>
     </Compile>
     <Compile Include="View\FormLichSuSuaChua.cs">
       <SubType>Form</SubType>
@@ -201,6 +216,12 @@
     <Compile Include="View\FormThemNguoi.Designer.cs">
       <DependentUpon>FormThemNguoi.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\FormAddFixThang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormAddFixThang.Designer.cs">
+      <DependentUpon>FormAddFixThang.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\FormThongKe.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -213,11 +234,23 @@
     <Compile Include="View\FormDatTraPhong.Designer.cs">
       <DependentUpon>FormDatTraPhong.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\FormThongKeAD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormThongKeAD.Designer.cs">
+      <DependentUpon>FormThongKeAD.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\FormTraPhong.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\FormTraPhong.Designer.cs">
       <DependentUpon>FormTraPhong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormTraTien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormTraTien.Designer.cs">
+      <DependentUpon>FormTraTien.cs</DependentUpon>
     </Compile>
     <Compile Include="View\FormTTPhong.cs">
       <SubType>Form</SubType>
@@ -301,8 +334,14 @@
     <EmbeddedResource Include="View\AddNhanVien.resx">
       <DependentUpon>AddNhanVien.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\FormAllThang.resx">
+      <DependentUpon>FormAllThang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\FormDSPhong.resx">
       <DependentUpon>FormDSPhong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormHoaDon.resx">
+      <DependentUpon>FormHoaDon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\FormLichSuSuaChua.resx">
       <DependentUpon>FormLichSuSuaChua.cs</DependentUpon>
@@ -333,6 +372,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\FormThongKe.resx">
       <DependentUpon>FormThongKe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormThongKeAD.resx">
+      <DependentUpon>FormThongKeAD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormTraTien.resx">
+      <DependentUpon>FormTraTien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\FormTTPhong.resx">
       <DependentUpon>FormTTPhong.cs</DependentUpon>
