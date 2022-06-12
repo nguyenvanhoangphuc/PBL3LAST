@@ -1,7 +1,9 @@
 ﻿using QuanLyPhongTroLinQ.DTO;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Windows.Forms;
 
 namespace QuanLyPhongTroLinQ.BLL
 {
@@ -118,5 +120,9 @@ namespace QuanLyPhongTroLinQ.BLL
             return 0;
         }
 
+        public string GetTenNguoiThueByID(string iD_NguoiThue)
+        {
+            return db.NguoiThues.Find(iD_NguoiThue).HoTen;
+        }
     }
 }

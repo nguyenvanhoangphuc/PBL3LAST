@@ -15,6 +15,7 @@ namespace QuanLyPhongTroLinQ.View
         public FormNguoiThue()
         {
             InitializeComponent();
+            rdo_HVT.Checked = true;
             GUI();
         }
 
