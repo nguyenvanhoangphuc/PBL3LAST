@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMenuChuTro));
             this.lblLoaiPhong = new System.Windows.Forms.Label();
             this.pnlLoaiPhong = new System.Windows.Forms.Panel();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
@@ -56,16 +57,16 @@
             this.lblThoat = new System.Windows.Forms.Label();
             this.pnlThoat = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.pnlTaiKhoan = new System.Windows.Forms.Panel();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.lblTaiKhoan = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.pnlLoaiPhong.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.pnlThongKe.SuspendLayout();
@@ -84,10 +85,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlThoat.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
             this.pnlTaiKhoan.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblLoaiPhong
@@ -107,7 +108,7 @@
             // 
             // pnlLoaiPhong
             // 
-            this.pnlLoaiPhong.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.pnlLoaiPhong.BackColor = System.Drawing.Color.White;
             this.pnlLoaiPhong.Controls.Add(this.pictureBox8);
             this.pnlLoaiPhong.Controls.Add(this.lblLoaiPhong);
             this.pnlLoaiPhong.Location = new System.Drawing.Point(13, 262);
@@ -133,13 +134,13 @@
             // lblQuanLiNhaTro
             // 
             this.lblQuanLiNhaTro.AutoSize = true;
-            this.lblQuanLiNhaTro.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.lblQuanLiNhaTro.Font = new System.Drawing.Font("Palatino Linotype", 25.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblQuanLiNhaTro.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.lblQuanLiNhaTro.Location = new System.Drawing.Point(1212, 21);
+            this.lblQuanLiNhaTro.BackColor = System.Drawing.Color.White;
+            this.lblQuanLiNhaTro.Font = new System.Drawing.Font("Palatino Linotype", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblQuanLiNhaTro.ForeColor = System.Drawing.Color.Black;
+            this.lblQuanLiNhaTro.Location = new System.Drawing.Point(1230, 21);
             this.lblQuanLiNhaTro.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblQuanLiNhaTro.Name = "lblQuanLiNhaTro";
-            this.lblQuanLiNhaTro.Size = new System.Drawing.Size(171, 57);
+            this.lblQuanLiNhaTro.Size = new System.Drawing.Size(134, 45);
             this.lblQuanLiNhaTro.TabIndex = 7;
             this.lblQuanLiNhaTro.Text = "Chủ trọ";
             // 
@@ -220,7 +221,7 @@
             // 
             // pnlThongKe
             // 
-            this.pnlThongKe.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.pnlThongKe.BackColor = System.Drawing.Color.White;
             this.pnlThongKe.Controls.Add(this.pictureBox2);
             this.pnlThongKe.Controls.Add(this.lblThongKe);
             this.pnlThongKe.Location = new System.Drawing.Point(13, 535);
@@ -253,7 +254,7 @@
             // 
             // pnlTraTien
             // 
-            this.pnlTraTien.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.pnlTraTien.BackColor = System.Drawing.Color.White;
             this.pnlTraTien.Controls.Add(this.pictureBox3);
             this.pnlTraTien.Controls.Add(this.lblTraTien);
             this.pnlTraTien.Controls.Add(this.panel11);
@@ -279,7 +280,7 @@
             // 
             // pnlDSNguoiThue
             // 
-            this.pnlDSNguoiThue.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.pnlDSNguoiThue.BackColor = System.Drawing.Color.White;
             this.pnlDSNguoiThue.Controls.Add(this.pictureBox5);
             this.pnlDSNguoiThue.Controls.Add(this.lblDSNguoiThue);
             this.pnlDSNguoiThue.Location = new System.Drawing.Point(13, 330);
@@ -304,7 +305,7 @@
             // 
             // pnlDatPhong
             // 
-            this.pnlDatPhong.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.pnlDatPhong.BackColor = System.Drawing.Color.White;
             this.pnlDatPhong.Controls.Add(this.pictureBox4);
             this.pnlDatPhong.Controls.Add(this.lblDatPhong);
             this.pnlDatPhong.Location = new System.Drawing.Point(13, 398);
@@ -329,7 +330,7 @@
             // 
             // pnlQLNV
             // 
-            this.pnlQLNV.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.pnlQLNV.BackColor = System.Drawing.Color.White;
             this.pnlQLNV.Controls.Add(this.pictureBox6);
             this.pnlQLNV.Controls.Add(this.lblQLNV);
             this.pnlQLNV.Location = new System.Drawing.Point(13, 194);
@@ -354,7 +355,7 @@
             // 
             // pnlDSPhong
             // 
-            this.pnlDSPhong.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.pnlDSPhong.BackColor = System.Drawing.Color.White;
             this.pnlDSPhong.Controls.Add(this.pictureBox7);
             this.pnlDSPhong.Controls.Add(this.lblDSPhong);
             this.pnlDSPhong.ForeColor = System.Drawing.SystemColors.ButtonFace;
@@ -449,49 +450,6 @@
             this.panel3.Size = new System.Drawing.Size(247, 58);
             this.panel3.TabIndex = 4;
             // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.panel4.Controls.Add(this.label4);
-            this.panel4.Controls.Add(this.label3);
-            this.panel4.Controls.Add(this.label2);
-            this.panel4.Location = new System.Drawing.Point(351, 109);
-            this.panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1018, 598);
-            this.panel4.TabIndex = 10;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.label4.Font = new System.Drawing.Font("Palatino Linotype", 64.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(131, 390);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(774, 142);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "quản lí nhà trọ";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Palatino Linotype", 64.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(101, 218);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(847, 142);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "đến với hệ thống";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Palatino Linotype", 64.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(117, 50);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(807, 142);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Chào mừng bạn";
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -517,19 +475,19 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.label5.Font = new System.Drawing.Font("Palatino Linotype", 25.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.BackColor = System.Drawing.Color.White;
+            this.label5.Font = new System.Drawing.Font("Palatino Linotype", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label5.Location = new System.Drawing.Point(676, 20);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(335, 57);
+            this.label5.Size = new System.Drawing.Size(336, 58);
             this.label5.TabIndex = 7;
             this.label5.Text = "Quản lí nhà trọ ";
             // 
             // pnlTaiKhoan
             // 
-            this.pnlTaiKhoan.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.pnlTaiKhoan.BackColor = System.Drawing.Color.White;
             this.pnlTaiKhoan.Controls.Add(this.pictureBox9);
             this.pnlTaiKhoan.Controls.Add(this.lblTaiKhoan);
             this.pnlTaiKhoan.Location = new System.Drawing.Point(13, 603);
@@ -567,10 +525,56 @@
             this.lblTaiKhoan.MouseEnter += new System.EventHandler(this.lbl_MouseEnter);
             this.lblTaiKhoan.MouseLeave += new System.EventHandler(this.lbl_MouseLeave);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.White;
+            this.label2.Font = new System.Drawing.Font("Palatino Linotype", 64.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(117, 50);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(807, 142);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Chào mừng bạn";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Palatino Linotype", 64.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(101, 218);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(847, 142);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "đến với hệ thống";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.White;
+            this.label4.Font = new System.Drawing.Font("Palatino Linotype", 64.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(131, 390);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(774, 142);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "quản lí nhà trọ";
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.White;
+            this.panel4.Controls.Add(this.label4);
+            this.panel4.Controls.Add(this.label3);
+            this.panel4.Controls.Add(this.label2);
+            this.panel4.Location = new System.Drawing.Point(351, 109);
+            this.panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(1018, 598);
+            this.panel4.TabIndex = 10;
+            // 
             // FormMenuChuTro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::QuanLyPhongTroLinQ.Properties.Resources.background;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1413, 753);
             this.Controls.Add(this.pnlTaiKhoan);
             this.Controls.Add(this.pnlThoat);
@@ -586,6 +590,7 @@
             this.Controls.Add(this.pnlDatPhong);
             this.Controls.Add(this.pnlDSNguoiThue);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormMenuChuTro";
@@ -616,13 +621,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnlThoat.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.pnlTaiKhoan.ResumeLayout(false);
             this.pnlTaiKhoan.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -660,13 +665,13 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel pnlTaiKhoan;
         private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.Label lblTaiKhoan;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Panel panel4;
     }
 }
