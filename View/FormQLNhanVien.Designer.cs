@@ -51,7 +51,7 @@
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.panel4.BackColor = System.Drawing.Color.White;
             this.panel4.Controls.Add(this.lblChoDuyet);
             this.panel4.Controls.Add(this.gbSearch);
             this.panel4.Controls.Add(this.label1);

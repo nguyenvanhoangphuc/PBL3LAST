@@ -4,10 +4,12 @@ using System;
 using System.Drawing;
 using System.Windows.Forms;
 
+
 namespace QuanLyPhongTroLinQ.View
 {
     public partial class uclDangNhap : UserControl
     {
+       
         public uclDangNhap()
         {
             InitializeComponent();
@@ -36,7 +38,8 @@ namespace QuanLyPhongTroLinQ.View
                         FormMenuChuTro fCT = new FormMenuChuTro(getuser); //thêm id để sửa tài khoản
                         fCT.dExit = new FormMenuChuTro.myDel(xuathien);
                         fCT.Show();
-                        this.Hide();
+                        
+
                     }
                     else if (TaiKhoanBLL.Instance.CheckTuCach(getuser) == "NhanVien")
                     {

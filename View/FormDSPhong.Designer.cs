@@ -31,27 +31,27 @@ namespace QuanLyPhongTroLinQ.View
         {
             this.panel4 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.gbSearch = new System.Windows.Forms.GroupBox();
+            this.cbID = new System.Windows.Forms.CheckBox();
+            this.cbTT = new System.Windows.Forms.CheckBox();
+            this.cbTen = new System.Windows.Forms.CheckBox();
+            this.cbLoai = new System.Windows.Forms.CheckBox();
+            this.lblTieuDe = new System.Windows.Forms.Label();
             this.DGVPhongTro = new System.Windows.Forms.DataGridView();
             this.btnSearch = new System.Windows.Forms.Button();
-            this.lblTieuDe = new System.Windows.Forms.Label();
-            this.txtSearch = new System.Windows.Forms.TextBox();
-            this.cbLoai = new System.Windows.Forms.CheckBox();
-            this.cbTen = new System.Windows.Forms.CheckBox();
-            this.cbTT = new System.Windows.Forms.CheckBox();
-            this.cbID = new System.Windows.Forms.CheckBox();
-            this.gbSearch = new System.Windows.Forms.GroupBox();
-            this.butDefault = new System.Windows.Forms.Button();
             this.btnDel = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
+            this.butDefault = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
+            this.txtSearch = new System.Windows.Forms.TextBox();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DGVPhongTro)).BeginInit();
             this.gbSearch.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DGVPhongTro)).BeginInit();
             this.SuspendLayout();
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.panel4.BackColor = System.Drawing.Color.White;
             this.panel4.Controls.Add(this.label1);
             this.panel4.Controls.Add(this.gbSearch);
             this.panel4.Controls.Add(this.lblTieuDe);
@@ -78,87 +78,6 @@ namespace QuanLyPhongTroLinQ.View
             this.label1.TabIndex = 6;
             this.label1.Text = "Danh sách phòng trọ";
             // 
-            // DGVPhongTro
-            // 
-            this.DGVPhongTro.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.DGVPhongTro.ColumnHeadersHeight = 30;
-            this.DGVPhongTro.Location = new System.Drawing.Point(50, 293);
-            this.DGVPhongTro.Name = "DGVPhongTro";
-            this.DGVPhongTro.RowHeadersWidth = 80;
-            this.DGVPhongTro.RowTemplate.Height = 24;
-            this.DGVPhongTro.Size = new System.Drawing.Size(935, 292);
-            this.DGVPhongTro.TabIndex = 2;
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnSearch.ForeColor = System.Drawing.Color.Yellow;
-            this.btnSearch.Location = new System.Drawing.Point(611, 89);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(92, 54);
-            this.btnSearch.TabIndex = 1;
-            this.btnSearch.Text = "Search";
-            this.btnSearch.UseVisualStyleBackColor = false;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
-            // 
-            // lblTieuDe
-            // 
-            this.lblTieuDe.AutoSize = true;
-            this.lblTieuDe.Font = new System.Drawing.Font("Palatino Linotype", 22.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTieuDe.Location = new System.Drawing.Point(249, 241);
-            this.lblTieuDe.Name = "lblTieuDe";
-            this.lblTieuDe.Size = new System.Drawing.Size(516, 49);
-            this.lblTieuDe.TabIndex = 3;
-            this.lblTieuDe.Text = "Bảng danh sách các phòng trọ";
-            // 
-            // txtSearch
-            // 
-            this.txtSearch.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearch.Location = new System.Drawing.Point(753, 98);
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(155, 34);
-            this.txtSearch.TabIndex = 0;
-            // 
-            // cbLoai
-            // 
-            this.cbLoai.AutoSize = true;
-            this.cbLoai.Location = new System.Drawing.Point(278, 18);
-            this.cbLoai.Name = "cbLoai";
-            this.cbLoai.Size = new System.Drawing.Size(96, 20);
-            this.cbLoai.TabIndex = 4;
-            this.cbLoai.Text = "Loại phòng";
-            this.cbLoai.UseVisualStyleBackColor = true;
-            // 
-            // cbTen
-            // 
-            this.cbTen.AutoSize = true;
-            this.cbTen.Location = new System.Drawing.Point(132, 18);
-            this.cbTen.Name = "cbTen";
-            this.cbTen.Size = new System.Drawing.Size(94, 20);
-            this.cbTen.TabIndex = 4;
-            this.cbTen.Text = "Tên phòng";
-            this.cbTen.UseVisualStyleBackColor = true;
-            // 
-            // cbTT
-            // 
-            this.cbTT.AutoSize = true;
-            this.cbTT.Location = new System.Drawing.Point(428, 18);
-            this.cbTT.Name = "cbTT";
-            this.cbTT.Size = new System.Drawing.Size(88, 20);
-            this.cbTT.TabIndex = 4;
-            this.cbTT.Text = "Tình trạng";
-            this.cbTT.UseVisualStyleBackColor = true;
-            // 
-            // cbID
-            // 
-            this.cbID.AutoSize = true;
-            this.cbID.Location = new System.Drawing.Point(33, 18);
-            this.cbID.Name = "cbID";
-            this.cbID.Size = new System.Drawing.Size(42, 20);
-            this.cbID.TabIndex = 4;
-            this.cbID.Text = "ID";
-            this.cbID.UseVisualStyleBackColor = true;
-            // 
             // gbSearch
             // 
             this.gbSearch.Controls.Add(this.cbID);
@@ -172,22 +91,86 @@ namespace QuanLyPhongTroLinQ.View
             this.gbSearch.TabStop = false;
             this.gbSearch.Text = "Search theo:";
             // 
-            // butDefault
+            // cbID
             // 
-            this.butDefault.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.butDefault.ForeColor = System.Drawing.Color.Yellow;
-            this.butDefault.Location = new System.Drawing.Point(94, 178);
-            this.butDefault.Name = "butDefault";
-            this.butDefault.Size = new System.Drawing.Size(134, 54);
-            this.butDefault.TabIndex = 1;
-            this.butDefault.Text = "Default";
-            this.butDefault.UseVisualStyleBackColor = false;
-            this.butDefault.Click += new System.EventHandler(this.butDefault_Click);
+            this.cbID.AutoSize = true;
+            this.cbID.Location = new System.Drawing.Point(33, 18);
+            this.cbID.Name = "cbID";
+            this.cbID.Size = new System.Drawing.Size(42, 20);
+            this.cbID.TabIndex = 4;
+            this.cbID.Text = "ID";
+            this.cbID.UseVisualStyleBackColor = true;
+            // 
+            // cbTT
+            // 
+            this.cbTT.AutoSize = true;
+            this.cbTT.Location = new System.Drawing.Point(428, 18);
+            this.cbTT.Name = "cbTT";
+            this.cbTT.Size = new System.Drawing.Size(88, 20);
+            this.cbTT.TabIndex = 4;
+            this.cbTT.Text = "Tình trạng";
+            this.cbTT.UseVisualStyleBackColor = true;
+            // 
+            // cbTen
+            // 
+            this.cbTen.AutoSize = true;
+            this.cbTen.Location = new System.Drawing.Point(132, 18);
+            this.cbTen.Name = "cbTen";
+            this.cbTen.Size = new System.Drawing.Size(94, 20);
+            this.cbTen.TabIndex = 4;
+            this.cbTen.Text = "Tên phòng";
+            this.cbTen.UseVisualStyleBackColor = true;
+            // 
+            // cbLoai
+            // 
+            this.cbLoai.AutoSize = true;
+            this.cbLoai.Location = new System.Drawing.Point(278, 18);
+            this.cbLoai.Name = "cbLoai";
+            this.cbLoai.Size = new System.Drawing.Size(96, 20);
+            this.cbLoai.TabIndex = 4;
+            this.cbLoai.Text = "Loại phòng";
+            this.cbLoai.UseVisualStyleBackColor = true;
+            // 
+            // lblTieuDe
+            // 
+            this.lblTieuDe.AutoSize = true;
+            this.lblTieuDe.Font = new System.Drawing.Font("Palatino Linotype", 22.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTieuDe.Location = new System.Drawing.Point(249, 241);
+            this.lblTieuDe.Name = "lblTieuDe";
+            this.lblTieuDe.Size = new System.Drawing.Size(516, 49);
+            this.lblTieuDe.TabIndex = 3;
+            this.lblTieuDe.Text = "Bảng danh sách các phòng trọ";
+            // 
+            // DGVPhongTro
+            // 
+            this.DGVPhongTro.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.DGVPhongTro.BackgroundColor = System.Drawing.Color.White;
+            this.DGVPhongTro.ColumnHeadersHeight = 30;
+            this.DGVPhongTro.Location = new System.Drawing.Point(50, 293);
+            this.DGVPhongTro.Name = "DGVPhongTro";
+            this.DGVPhongTro.RowHeadersWidth = 80;
+            this.DGVPhongTro.RowTemplate.Height = 24;
+            this.DGVPhongTro.Size = new System.Drawing.Size(935, 292);
+            this.DGVPhongTro.TabIndex = 2;
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch.ForeColor = System.Drawing.Color.Lime;
+            this.btnSearch.Location = new System.Drawing.Point(611, 89);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(92, 54);
+            this.btnSearch.TabIndex = 1;
+            this.btnSearch.Text = "Search";
+            this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // btnDel
             // 
             this.btnDel.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnDel.ForeColor = System.Drawing.Color.Yellow;
+            this.btnDel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDel.ForeColor = System.Drawing.Color.Lime;
             this.btnDel.Location = new System.Drawing.Point(441, 89);
             this.btnDel.Name = "btnDel";
             this.btnDel.Size = new System.Drawing.Size(92, 54);
@@ -199,7 +182,8 @@ namespace QuanLyPhongTroLinQ.View
             // btnUpdate
             // 
             this.btnUpdate.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnUpdate.ForeColor = System.Drawing.Color.Yellow;
+            this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdate.ForeColor = System.Drawing.Color.Lime;
             this.btnUpdate.Location = new System.Drawing.Point(267, 89);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(92, 54);
@@ -208,10 +192,24 @@ namespace QuanLyPhongTroLinQ.View
             this.btnUpdate.UseVisualStyleBackColor = false;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
+            // butDefault
+            // 
+            this.butDefault.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.butDefault.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butDefault.ForeColor = System.Drawing.Color.Lime;
+            this.butDefault.Location = new System.Drawing.Point(94, 178);
+            this.butDefault.Name = "butDefault";
+            this.butDefault.Size = new System.Drawing.Size(134, 54);
+            this.butDefault.TabIndex = 1;
+            this.butDefault.Text = "Default";
+            this.butDefault.UseVisualStyleBackColor = false;
+            this.butDefault.Click += new System.EventHandler(this.butDefault_Click);
+            // 
             // btnAdd
             // 
             this.btnAdd.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnAdd.ForeColor = System.Drawing.Color.Yellow;
+            this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd.ForeColor = System.Drawing.Color.Lime;
             this.btnAdd.Location = new System.Drawing.Point(94, 89);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(92, 54);
@@ -219,6 +217,14 @@ namespace QuanLyPhongTroLinQ.View
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // txtSearch
+            // 
+            this.txtSearch.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearch.Location = new System.Drawing.Point(753, 98);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(155, 34);
+            this.txtSearch.TabIndex = 0;
             // 
             // FormDSPhong
             // 
@@ -234,9 +240,9 @@ namespace QuanLyPhongTroLinQ.View
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DGVPhongTro)).EndInit();
             this.gbSearch.ResumeLayout(false);
             this.gbSearch.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DGVPhongTro)).EndInit();
             this.ResumeLayout(false);
 
         }
