@@ -117,6 +117,10 @@ namespace QuanLyPhongTroLinQ.DTO
                 new LichSuSuaChua {ID_LichSuSuaChua= "2", IDNhanVien="4", IDPhong="2", ID_LoaiThietBi="2", NgaySuaChua = new DateTime(2021,09,15), SoTienSuaChua =70000},
                 new LichSuSuaChua {ID_LichSuSuaChua= "3", IDNhanVien="5", IDPhong="3", ID_LoaiThietBi="3", NgaySuaChua = new DateTime(2021,02,03), SoTienSuaChua =40000}
             });
+            context.TienThangs.AddRange(new DTO_CSDL.TienThang[]
+            {
+                new DTO_CSDL.TienThang {}
+            });
         }
     }
 }
