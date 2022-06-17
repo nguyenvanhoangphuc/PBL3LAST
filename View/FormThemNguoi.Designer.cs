@@ -122,6 +122,7 @@
             this.btn_Cancel.TabIndex = 2;
             this.btn_Cancel.Text = "Cancel";
             this.btn_Cancel.UseVisualStyleBackColor = true;
+            this.btn_Cancel.Click += new System.EventHandler(this.btn_Cancel_Click);
             // 
             // FormThemNguoi
             // 
@@ -139,6 +140,7 @@
             this.Controls.Add(this.txt_SDT);
             this.Controls.Add(this.txt_HVT);
             this.Name = "FormThemNguoi";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add or Update";
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -502,7 +502,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox9.Image = global::QuanLyPhongTroLinQ.Properties.Resources.TaiKhoan;
-            this.pictureBox9.Location = new System.Drawing.Point(4, 4);
+            this.pictureBox9.Location = new System.Drawing.Point(14, 4);
             this.pictureBox9.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(57, 52);

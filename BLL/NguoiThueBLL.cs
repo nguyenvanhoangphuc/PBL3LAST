@@ -35,12 +35,46 @@ namespace QuanLyPhongTroLinQ.BLL
                 new DataColumn("Quê quán"),
                 new DataColumn("Căn cước công dân"),
                 new DataColumn("Tình trạng")
-
-
             });
             foreach (NguoiThue x in GetAllNguoiThue(s, HVT, SDT, QQ, CCCD, DT))
                 dt.Rows.Add(x.ID, x.HoTen, x.SDT, x.QueQuan, x.CCCD, x.TinhTrang ? "Đang thuê" : "Chưa thuê");
             return dt;
+        }
+
+        public DataTable GetNguoiThueViewByPhongTro(string ID)
+        {
+            DataTable dt = new DataTable();
+            dt.Columns.AddRange(new DataColumn[]
+            {
+                new DataColumn("ID"),
+                new DataColumn("Họ và tên"),
+                new DataColumn("Số điện thoại"),
+                new DataColumn("Quê quán"),
+                new DataColumn("Căn cước công dân"),
+                new DataColumn("Tình trạng")
+            });
+            foreach (NguoiThue x in GetNguoiThueByPhongTro(ID))
+                dt.Rows.Add(x.ID, x.HoTen, x.SDT, x.QueQuan, x.CCCD, x.TinhTrang ? "Đang thuê" : "Chưa thuê");
+            return dt;
+        }
+        public List<NguoiThue> GetNguoiThueByPhongTro(string ID)
+        {
+            List<NguoiThue> nguoiThues = new List<NguoiThue> ();
+            foreach (string Id in GetIDNguoiThueByPhongTro(ID))
+            {
+                nguoiThues.Add(GetNguoiThueByID(Id));
+            }
+            return nguoiThues; 
+        }
+
+        private NguoiThue GetNguoiThueByID(string id)
+        {
+            return db.NguoiThues.Find(id); 
+        }
+
+        public List<string> GetIDNguoiThueByPhongTro(string ID)
+        {
+            return db.QLDatPhongs.Where(p => p.ID_Phong == ID).Select(p=>p.ID_NguoiThue).ToList(); 
         }
 
         public List<NguoiThue> GetAllNguoiThue(string s, bool HVT, bool SDT, bool QQ, bool CCCD, bool DT)

@@ -10,12 +10,14 @@ namespace QuanLyPhongTroLinQ.View
         public FormDSPhong()
         {
             InitializeComponent();
+            cbID.Visible = false;
             ShowDGV();
         }
 
         private void ShowDGV()
         {
             DGVPhongTro.DataSource = PhongTroBLL.Instance.GetDSPhongTroView(); //return List<PhongTroView>
+            DGVPhongTro.Columns[0].Visible = false; 
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -77,6 +79,23 @@ namespace QuanLyPhongTroLinQ.View
             }
             txtSearch.Text = "";
             ShowDGV();
+        }
+
+        private void butXemNguoiThue_Click(object sender, EventArgs e)
+        {
+            if (DGVPhongTro.SelectedRows.Count == 1)
+            {
+                if (DGVPhongTro.SelectedRows[0].Cells["TinhTrang"].Value.ToString()=="True")
+                {
+                    FormShowNguoiThue f = new FormShowNguoiThue(DGVPhongTro.SelectedRows[0].Cells["ID"].Value.ToString());
+                    f.Show(); 
+                }
+                else
+                {
+                    MessageBox.Show("Phòng này chưa có người thuê!"); 
+                }
+            }
+
         }
     }
 }

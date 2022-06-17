@@ -42,32 +42,35 @@
             // 
             // panel30
             // 
-            this.panel30.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.panel30.BackColor = System.Drawing.Color.White;
             this.panel30.Controls.Add(this.txtSDT);
             this.panel30.Controls.Add(this.lblSDT);
             this.panel30.Controls.Add(this.lblHeader);
             this.panel30.Controls.Add(this.dgv);
             this.panel30.Controls.Add(this.btnDatPhong);
             this.panel30.Controls.Add(this.btnTraPhong);
-            this.panel30.Location = new System.Drawing.Point(10, 7);
+            this.panel30.Location = new System.Drawing.Point(13, 9);
+            this.panel30.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel30.Name = "panel30";
-            this.panel30.Size = new System.Drawing.Size(776, 496);
+            this.panel30.Size = new System.Drawing.Size(1035, 610);
             this.panel30.TabIndex = 1;
             // 
             // txtSDT
             // 
-            this.txtSDT.Location = new System.Drawing.Point(79, 77);
+            this.txtSDT.Location = new System.Drawing.Point(172, 156);
+            this.txtSDT.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtSDT.Name = "txtSDT";
-            this.txtSDT.Size = new System.Drawing.Size(150, 20);
+            this.txtSDT.Size = new System.Drawing.Size(199, 22);
             this.txtSDT.TabIndex = 17;
             this.txtSDT.TextChanged += new System.EventHandler(this.txtSDT_TextChanged);
             // 
             // lblSDT
             // 
             this.lblSDT.AutoSize = true;
-            this.lblSDT.Location = new System.Drawing.Point(30, 80);
+            this.lblSDT.Location = new System.Drawing.Point(107, 159);
+            this.lblSDT.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSDT.Name = "lblSDT";
-            this.lblSDT.Size = new System.Drawing.Size(29, 13);
+            this.lblSDT.Size = new System.Drawing.Size(35, 16);
             this.lblSDT.TabIndex = 16;
             this.lblSDT.Text = "SDT";
             // 
@@ -76,9 +79,10 @@
             this.lblHeader.AutoSize = true;
             this.lblHeader.Font = new System.Drawing.Font("Palatino Linotype", 22.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.lblHeader.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblHeader.Location = new System.Drawing.Point(269, 26);
+            this.lblHeader.Location = new System.Drawing.Point(359, 32);
+            this.lblHeader.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblHeader.Name = "lblHeader";
-            this.lblHeader.Size = new System.Drawing.Size(238, 40);
+            this.lblHeader.Size = new System.Drawing.Size(292, 49);
             this.lblHeader.TabIndex = 8;
             this.lblHeader.Text = "Đặt - Trả Phòng";
             // 
@@ -94,11 +98,12 @@
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgv.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dgv.Location = new System.Drawing.Point(80, 138);
+            this.dgv.Location = new System.Drawing.Point(105, 243);
+            this.dgv.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgv.MultiSelect = false;
             this.dgv.Name = "dgv";
             this.dgv.RowHeadersWidth = 51;
-            this.dgv.Size = new System.Drawing.Size(616, 136);
+            this.dgv.Size = new System.Drawing.Size(821, 167);
             this.dgv.TabIndex = 15;
             // 
             // btnDatPhong
@@ -106,9 +111,10 @@
             this.btnDatPhong.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnDatPhong.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDatPhong.ForeColor = System.Drawing.Color.Yellow;
-            this.btnDatPhong.Location = new System.Drawing.Point(80, 319);
+            this.btnDatPhong.Location = new System.Drawing.Point(105, 466);
+            this.btnDatPhong.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnDatPhong.Name = "btnDatPhong";
-            this.btnDatPhong.Size = new System.Drawing.Size(258, 41);
+            this.btnDatPhong.Size = new System.Drawing.Size(344, 50);
             this.btnDatPhong.TabIndex = 14;
             this.btnDatPhong.Text = "Đặt phòng";
             this.btnDatPhong.UseVisualStyleBackColor = false;
@@ -119,9 +125,10 @@
             this.btnTraPhong.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnTraPhong.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTraPhong.ForeColor = System.Drawing.Color.Yellow;
-            this.btnTraPhong.Location = new System.Drawing.Point(439, 319);
+            this.btnTraPhong.Location = new System.Drawing.Point(583, 466);
+            this.btnTraPhong.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnTraPhong.Name = "btnTraPhong";
-            this.btnTraPhong.Size = new System.Drawing.Size(258, 41);
+            this.btnTraPhong.Size = new System.Drawing.Size(344, 50);
             this.btnTraPhong.TabIndex = 13;
             this.btnTraPhong.Text = "Trả Phòng";
             this.btnTraPhong.UseVisualStyleBackColor = false;
@@ -129,12 +136,13 @@
             // 
             // FormDatTraPhong
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(794, 514);
+            this.ClientSize = new System.Drawing.Size(1059, 633);
             this.Controls.Add(this.panel30);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Location = new System.Drawing.Point(250, 70);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FormDatTraPhong";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "FormLoaiPhong";

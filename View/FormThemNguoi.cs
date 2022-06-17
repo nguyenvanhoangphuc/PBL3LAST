@@ -34,5 +34,10 @@ namespace QuanLyPhongTroLinQ.View
             TrienKhai();
             this.Close();
         }
+
+        private void btn_Cancel_Click(object sender, EventArgs e)
+        {
+            this.Close(); 
+        }
     }
 }

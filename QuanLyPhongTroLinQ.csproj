@@ -210,6 +210,12 @@
     <Compile Include="View\FormQLTB.Designer.cs">
       <DependentUpon>FormQLTB.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\FormShowNguoiThue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormShowNguoiThue.Designer.cs">
+      <DependentUpon>FormShowNguoiThue.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\FormThemNguoi.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -337,6 +343,9 @@
     <EmbeddedResource Include="View\FormAllThang.resx">
       <DependentUpon>FormAllThang.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\FormDatTraPhong.resx">
+      <DependentUpon>FormDatTraPhong.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\FormDSPhong.resx">
       <DependentUpon>FormDSPhong.cs</DependentUpon>
     </EmbeddedResource>
@@ -345,6 +354,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\FormLichSuSuaChua.resx">
       <DependentUpon>FormLichSuSuaChua.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormLoaiPhong.resx">
+      <DependentUpon>FormLoaiPhong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
@@ -366,6 +378,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\FormQLTB.resx">
       <DependentUpon>FormQLTB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormShowNguoiThue.resx">
+      <DependentUpon>FormShowNguoiThue.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\FormThemNguoi.resx">
       <DependentUpon>FormThemNguoi.cs</DependentUpon>

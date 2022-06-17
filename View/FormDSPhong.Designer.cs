@@ -32,7 +32,6 @@ namespace QuanLyPhongTroLinQ.View
             this.panel4 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.gbSearch = new System.Windows.Forms.GroupBox();
-            this.cbID = new System.Windows.Forms.CheckBox();
             this.cbTT = new System.Windows.Forms.CheckBox();
             this.cbTen = new System.Windows.Forms.CheckBox();
             this.cbLoai = new System.Windows.Forms.CheckBox();
@@ -41,9 +40,11 @@ namespace QuanLyPhongTroLinQ.View
             this.btnSearch = new System.Windows.Forms.Button();
             this.btnDel = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.butDefault = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
+            this.cbID = new System.Windows.Forms.CheckBox();
             this.panel4.SuspendLayout();
             this.gbSearch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGVPhongTro)).BeginInit();
@@ -59,6 +60,7 @@ namespace QuanLyPhongTroLinQ.View
             this.panel4.Controls.Add(this.btnSearch);
             this.panel4.Controls.Add(this.btnDel);
             this.panel4.Controls.Add(this.btnUpdate);
+            this.panel4.Controls.Add(this.button1);
             this.panel4.Controls.Add(this.butDefault);
             this.panel4.Controls.Add(this.btnAdd);
             this.panel4.Controls.Add(this.txtSearch);
@@ -90,16 +92,6 @@ namespace QuanLyPhongTroLinQ.View
             this.gbSearch.TabIndex = 5;
             this.gbSearch.TabStop = false;
             this.gbSearch.Text = "Search theo:";
-            // 
-            // cbID
-            // 
-            this.cbID.AutoSize = true;
-            this.cbID.Location = new System.Drawing.Point(33, 18);
-            this.cbID.Name = "cbID";
-            this.cbID.Size = new System.Drawing.Size(42, 20);
-            this.cbID.TabIndex = 4;
-            this.cbID.Text = "ID";
-            this.cbID.UseVisualStyleBackColor = true;
             // 
             // cbTT
             // 
@@ -192,6 +184,19 @@ namespace QuanLyPhongTroLinQ.View
             this.btnUpdate.UseVisualStyleBackColor = false;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.Lime;
+            this.button1.Location = new System.Drawing.Point(267, 165);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(110, 67);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "Xem danh sách người thuê";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.butXemNguoiThue_Click);
+            // 
             // butDefault
             // 
             this.butDefault.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -199,7 +204,7 @@ namespace QuanLyPhongTroLinQ.View
             this.butDefault.ForeColor = System.Drawing.Color.Lime;
             this.butDefault.Location = new System.Drawing.Point(94, 178);
             this.butDefault.Name = "butDefault";
-            this.butDefault.Size = new System.Drawing.Size(134, 54);
+            this.butDefault.Size = new System.Drawing.Size(114, 54);
             this.butDefault.TabIndex = 1;
             this.butDefault.Text = "Default";
             this.butDefault.UseVisualStyleBackColor = false;
@@ -225,6 +230,16 @@ namespace QuanLyPhongTroLinQ.View
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(155, 34);
             this.txtSearch.TabIndex = 0;
+            // 
+            // cbID
+            // 
+            this.cbID.AutoSize = true;
+            this.cbID.Location = new System.Drawing.Point(33, 18);
+            this.cbID.Name = "cbID";
+            this.cbID.Size = new System.Drawing.Size(42, 20);
+            this.cbID.TabIndex = 4;
+            this.cbID.Text = "ID";
+            this.cbID.UseVisualStyleBackColor = true;
             // 
             // FormDSPhong
             // 
@@ -253,7 +268,6 @@ namespace QuanLyPhongTroLinQ.View
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox gbSearch;
-        private System.Windows.Forms.CheckBox cbID;
         private System.Windows.Forms.CheckBox cbTT;
         private System.Windows.Forms.CheckBox cbTen;
         private System.Windows.Forms.CheckBox cbLoai;
@@ -263,5 +277,7 @@ namespace QuanLyPhongTroLinQ.View
         private System.Windows.Forms.Button butDefault;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.TextBox txtSearch;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.CheckBox cbID;
     }
 }

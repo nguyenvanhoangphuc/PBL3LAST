@@ -132,7 +132,7 @@ namespace QuanLyPhongTroLinQ.View
             lblTraTien.ForeColor = Color.Blue;
             FormTraTien f = new FormTraTien();
             f.MdiParent = this;
-            f.Show();
+            f.Show();   
         }
 
         private void lblDatPhong_Click(object sender, EventArgs e)
