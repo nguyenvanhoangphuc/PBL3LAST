@@ -39,8 +39,8 @@ namespace QuanLyPhongTroLinQ.DTO
             });
             context.PhongTros.AddRange(new PhongTro[]
             {
-                new PhongTro {ID="1", TenPhong = "P1", ID_LoaiPhong = "1", TinhTrang = true, NgayThue = new DateTime(2021,09,18), SoChuDien = 100, TienHienTai=0},
-                new PhongTro {ID="2", TenPhong = "P2", ID_LoaiPhong = "2", TinhTrang = true, NgayThue = new DateTime(2020,08,12), SoChuDien = 200, TienHienTai=0},
+                new PhongTro {ID="1", TenPhong = "P1", ID_LoaiPhong = "1", TinhTrang = true, NgayThue = new DateTime(2022,04,01), SoChuDien = 100, TienHienTai=0},
+                new PhongTro {ID="2", TenPhong = "P2", ID_LoaiPhong = "2", TinhTrang = true, NgayThue = new DateTime(2022,04,01), SoChuDien = 200, TienHienTai=0},
                 new PhongTro {ID="3", TenPhong = "P3", ID_LoaiPhong = "3", TinhTrang = true, NgayThue = new DateTime(2021,12,06), SoChuDien = 500, TienHienTai=0},
                 new PhongTro {ID="4", TenPhong = "P4", ID_LoaiPhong = "4", TinhTrang = false, NgayThue = new DateTime(), SoChuDien = 100, TienHienTai=0},
                 new PhongTro {ID="5", TenPhong = "P5", ID_LoaiPhong = "1", TinhTrang = false, NgayThue = new DateTime(), SoChuDien = 100, TienHienTai=0},
@@ -120,9 +120,10 @@ namespace QuanLyPhongTroLinQ.DTO
             });
             context.TienThangs.AddRange(new TienThang[]
             {
-                new TienThang {ID= "1", ID_Phong= "1", NgayThu= new DateTime(2021,05,01), TienPhong= 1000000, ChuDien= 150, ChuNuoc= 10, TienMotChuDien= 3000, TienMotChuNuoc= 10000, DaNop= true},
-                new TienThang {ID= "2", ID_Phong= "2", NgayThu= new DateTime(2021,05,01), TienPhong= 1700000, ChuDien= 170, ChuNuoc= 15, TienMotChuDien= 3000, TienMotChuNuoc= 10000, DaNop= false}
-            }); 
+                new TienThang {ID= "1", ID_Phong= "1", NgayThu= new DateTime(2022,04,01), TienPhong= 0, ChuDien= 0, ChuNuoc=0, TienMotChuDien=0, TienMotChuNuoc=0, DaNop= true},
+                new TienThang {ID= "2", ID_Phong= "1", NgayThu= new DateTime(2022,06,18), TienPhong= 1000000, ChuDien= 0, ChuNuoc=0, TienMotChuDien=0, TienMotChuNuoc=0, DaNop= false}
+                //new TienThang {ID= "2", ID_Phong= "2", NgayThu= new DateTime(2022,05,01), TienPhong= 1700000, ChuDien= 170, ChuNuoc= 15, TienMotChuDien= 3000, TienMotChuNuoc= 10000, DaNop= false}
+            });
         }
     }
 }

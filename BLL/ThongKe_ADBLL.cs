@@ -74,14 +74,14 @@ namespace QuanLyPhongTroLinQ.BLL
             });
 
             Total = 0;
-            foreach(TienThang sau in db.TienThangs.OrderBy(x=>x.ID_Phong).Where(x=>(x.NgayThu.Year.ToString()==nam || nam=="All") && (x.NgayThu.Month.ToString() == thang || thang=="All") && x.TienPhong != 0))
+            foreach(TienThang sau in db.TienThangs.OrderBy(x=>x.ID_Phong).Where(x=>(x.NgayThu.Year.ToString()==nam || nam=="All") && (x.NgayThu.Month.ToString() == thang || thang=="All") && x.TienPhong != 0 && x.DaNop == true))
             {
                 TienThang truoc = db.TienThangs.OrderByDescending(x => x.NgayThu).Where(x => x.NgayThu < sau.NgayThu && x.ID_Phong == sau.ID_Phong).FirstOrDefault();
 
-                int TienDien = (sau.ChuNuoc - truoc.ChuNuoc) * sau.TienMotChuNuoc;
+                int TienDien = (sau.ChuDien - truoc.ChuDien) * sau.TienMotChuDien;
                 int TienNuoc = (sau.ChuNuoc - truoc.ChuNuoc) * sau.TienMotChuNuoc;
                 int TienSCTB = TraTienBLL.Instance.GetTienSuaChuaTB(sau.ID_Phong, sau.NgayThu)- TraTienBLL.Instance.GetTienSuaChuaTB(truoc.ID_Phong, truoc.NgayThu);
-                int TongTien= TienDien + TienNuoc + TienSCTB;
+                int TongTien= sau.TienPhong + TienDien + TienNuoc + TienSCTB;
                 Total += TongTien;
 
                 dt.Rows.Add(sau.ID, sau.NgayThu.ToString("d"), ThongKe_ADBLL.Instance.GetTenPhong(sau.ID_Phong), TongTien);

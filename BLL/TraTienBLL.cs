@@ -11,19 +11,24 @@ namespace QuanLyPhongTroLinQ.BLL
 {
     public class TraTienBLL
     {
-        QLPT db = new QLPT();
+        QLPT db;
         private static TraTienBLL _Instance;
         public static TraTienBLL Instance
         {
             get
             {
-                if (_Instance == null)
-                {
-                    _Instance = new TraTienBLL();
-                }
-                return _Instance;
+                //if (_Instance == null)
+                //{
+                //    _Instance = new TraTienBLL();
+                //}
+                //return _Instance;
+                return new TraTienBLL();
             }
             private set { }
+        }
+        public TraTienBLL()
+        {
+            db = new QLPT();
         }
 
         public TienThang EpVeTienThang(string ID, string ID_Phong, DateTime NgayThu, int TienPhong, int ChuDien, int ChuNuoc, int TienMotChuDien, int TienMotChuNuoc, bool DaNop)
