@@ -11,6 +11,7 @@ namespace QuanLyPhongTroLinQ.DTO
         {
             this.ThietBis = new HashSet<ThietBi>();
             this.QLDatPhongs = new HashSet<QLDatPhong>();
+            this.TienThangs = new HashSet<TienThang>();
         }
         [Key]
         [StringLength(9)]
@@ -27,5 +28,6 @@ namespace QuanLyPhongTroLinQ.DTO
         public virtual LoaiPhong LoaiPhong { get; set; }
         public virtual ICollection<ThietBi> ThietBis { get; set; }
         public virtual ICollection<QLDatPhong> QLDatPhongs { get; set; }
+        public virtual ICollection<TienThang> TienThangs { get; set; }
     }
 }

@@ -6,11 +6,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace QuanLyPhongTroLinQ.DTO.DTO_CSDL
+namespace QuanLyPhongTroLinQ.DTO
 {
     public class TienThang
     {
         [Key]
+        [StringLength(9)]
         [Required]
         public string ID { get; set; }
 

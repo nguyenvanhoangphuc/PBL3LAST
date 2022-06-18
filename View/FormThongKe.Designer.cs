@@ -29,25 +29,33 @@
         private void InitializeComponent()
         {
             this.panel4 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.lblPhongHienTai = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.btnXemChiTiet = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblSophong = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnRevert = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.DGVThongKe = new System.Windows.Forms.DataGridView();
-            this.btnXemChiTiet = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.lblPhongHienTai = new System.Windows.Forms.Label();
-            this.btnRevert = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.cbbYear = new System.Windows.Forms.ComboBox();
+            this.cbbMonth = new System.Windows.Forms.ComboBox();
             this.panel4.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGVThongKe)).BeginInit();
-            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.panel4.Controls.Add(this.cbbMonth);
+            this.panel4.Controls.Add(this.cbbYear);
+            this.panel4.Controls.Add(this.label5);
+            this.panel4.Controls.Add(this.label4);
             this.panel4.Controls.Add(this.panel2);
             this.panel4.Controls.Add(this.panel1);
             this.panel4.Controls.Add(this.btnRevert);
@@ -58,6 +66,51 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1034, 611);
             this.panel4.TabIndex = 11;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.PaleGreen;
+            this.panel2.Controls.Add(this.lblPhongHienTai);
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.btnXemChiTiet);
+            this.panel2.Location = new System.Drawing.Point(785, 248);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(233, 222);
+            this.panel2.TabIndex = 8;
+            // 
+            // lblPhongHienTai
+            // 
+            this.lblPhongHienTai.AutoSize = true;
+            this.lblPhongHienTai.Font = new System.Drawing.Font("Palatino Linotype", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPhongHienTai.Location = new System.Drawing.Point(96, 74);
+            this.lblPhongHienTai.Name = "lblPhongHienTai";
+            this.lblPhongHienTai.Size = new System.Drawing.Size(31, 41);
+            this.lblPhongHienTai.TabIndex = 3;
+            this.lblPhongHienTai.Text = "?";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Blue;
+            this.label3.Location = new System.Drawing.Point(22, 20);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(189, 25);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Chi tiết phòng số:";
+            // 
+            // btnXemChiTiet
+            // 
+            this.btnXemChiTiet.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnXemChiTiet.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXemChiTiet.ForeColor = System.Drawing.Color.Yellow;
+            this.btnXemChiTiet.Location = new System.Drawing.Point(29, 143);
+            this.btnXemChiTiet.Name = "btnXemChiTiet";
+            this.btnXemChiTiet.Size = new System.Drawing.Size(171, 64);
+            this.btnXemChiTiet.TabIndex = 1;
+            this.btnXemChiTiet.Text = "Xem chi tiết";
+            this.btnXemChiTiet.UseVisualStyleBackColor = false;
+            this.btnXemChiTiet.Click += new System.EventHandler(this.btnXemChiTiet_Click);
             // 
             // panel1
             // 
@@ -91,6 +144,19 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Số phòng hiện có:";
             // 
+            // btnRevert
+            // 
+            this.btnRevert.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnRevert.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRevert.ForeColor = System.Drawing.Color.Yellow;
+            this.btnRevert.Location = new System.Drawing.Point(814, 493);
+            this.btnRevert.Name = "btnRevert";
+            this.btnRevert.Size = new System.Drawing.Size(171, 64);
+            this.btnRevert.TabIndex = 1;
+            this.btnRevert.Text = "Trở lại";
+            this.btnRevert.UseVisualStyleBackColor = false;
+            this.btnRevert.Click += new System.EventHandler(this.btnRevert_Click);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -105,70 +171,48 @@
             // 
             this.DGVThongKe.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DGVThongKe.ColumnHeadersHeight = 30;
-            this.DGVThongKe.Location = new System.Drawing.Point(53, 109);
+            this.DGVThongKe.Location = new System.Drawing.Point(53, 188);
             this.DGVThongKe.Name = "DGVThongKe";
             this.DGVThongKe.RowHeadersWidth = 80;
             this.DGVThongKe.RowTemplate.Height = 24;
-            this.DGVThongKe.Size = new System.Drawing.Size(700, 448);
+            this.DGVThongKe.Size = new System.Drawing.Size(700, 369);
             this.DGVThongKe.TabIndex = 2;
             // 
-            // btnXemChiTiet
+            // label4
             // 
-            this.btnXemChiTiet.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnXemChiTiet.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXemChiTiet.ForeColor = System.Drawing.Color.Yellow;
-            this.btnXemChiTiet.Location = new System.Drawing.Point(29, 143);
-            this.btnXemChiTiet.Name = "btnXemChiTiet";
-            this.btnXemChiTiet.Size = new System.Drawing.Size(171, 64);
-            this.btnXemChiTiet.TabIndex = 1;
-            this.btnXemChiTiet.Text = "Xem chi tiết";
-            this.btnXemChiTiet.UseVisualStyleBackColor = false;
-            this.btnXemChiTiet.Click += new System.EventHandler(this.btnXemChiTiet_Click);
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(109, 121);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(182, 23);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "Thống kê theo năm: ";
             // 
-            // panel2
+            // label5
             // 
-            this.panel2.BackColor = System.Drawing.Color.PaleGreen;
-            this.panel2.Controls.Add(this.lblPhongHienTai);
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.btnXemChiTiet);
-            this.panel2.Location = new System.Drawing.Point(785, 248);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(233, 222);
-            this.panel2.TabIndex = 8;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(440, 121);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(104, 23);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "vào tháng: ";
             // 
-            // label3
+            // cbbYear
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Blue;
-            this.label3.Location = new System.Drawing.Point(22, 20);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(189, 25);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Chi tiết phòng số:";
+            this.cbbYear.FormattingEnabled = true;
+            this.cbbYear.Location = new System.Drawing.Point(297, 123);
+            this.cbbYear.Name = "cbbYear";
+            this.cbbYear.Size = new System.Drawing.Size(121, 24);
+            this.cbbYear.TabIndex = 10;
             // 
-            // lblPhongHienTai
+            // cbbMonth
             // 
-            this.lblPhongHienTai.AutoSize = true;
-            this.lblPhongHienTai.Font = new System.Drawing.Font("Palatino Linotype", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPhongHienTai.Location = new System.Drawing.Point(96, 74);
-            this.lblPhongHienTai.Name = "lblPhongHienTai";
-            this.lblPhongHienTai.Size = new System.Drawing.Size(31, 41);
-            this.lblPhongHienTai.TabIndex = 3;
-            this.lblPhongHienTai.Text = "?";
-            // 
-            // btnRevert
-            // 
-            this.btnRevert.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnRevert.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRevert.ForeColor = System.Drawing.Color.Yellow;
-            this.btnRevert.Location = new System.Drawing.Point(814, 493);
-            this.btnRevert.Name = "btnRevert";
-            this.btnRevert.Size = new System.Drawing.Size(171, 64);
-            this.btnRevert.TabIndex = 1;
-            this.btnRevert.Text = "Trở lại";
-            this.btnRevert.UseVisualStyleBackColor = false;
-            this.btnRevert.Click += new System.EventHandler(this.btnRevert_Click);
+            this.cbbMonth.FormattingEnabled = true;
+            this.cbbMonth.Location = new System.Drawing.Point(570, 123);
+            this.cbbMonth.Name = "cbbMonth";
+            this.cbbMonth.Size = new System.Drawing.Size(121, 24);
+            this.cbbMonth.TabIndex = 10;
             // 
             // FormThongKe
             // 
@@ -183,11 +227,11 @@
             this.Text = "FormThongKe";
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGVThongKe)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -205,5 +249,9 @@
         private System.Windows.Forms.Label lblPhongHienTai;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnRevert;
+        private System.Windows.Forms.ComboBox cbbMonth;
+        private System.Windows.Forms.ComboBox cbbYear;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
     }
 }

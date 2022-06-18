@@ -6,7 +6,6 @@ using System.Text;
 using System.Threading.Tasks;
 
 using QuanLyPhongTroLinQ.DTO;
-using QuanLyPhongTroLinQ.DTO.DTO_CSDL;
 
 namespace QuanLyPhongTroLinQ.BLL
 {

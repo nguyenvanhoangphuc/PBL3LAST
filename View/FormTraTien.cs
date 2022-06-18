@@ -11,7 +11,6 @@ using System.Windows.Forms;
 using QuanLyPhongTroLinQ.BLL;
 
 using QuanLyPhongTroLinQ.DTO;
-using QuanLyPhongTroLinQ.DTO.DTO_CSDL;
 
 namespace QuanLyPhongTroLinQ.View
 {

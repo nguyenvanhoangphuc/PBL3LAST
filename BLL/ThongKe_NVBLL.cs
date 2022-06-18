@@ -20,9 +20,14 @@ namespace QuanLyPhongTroLinQ.BLL
             }
             private set { }
         }
+        public ThongKe_NVBLL()
+        {
+            db = new QLPT();
+        }
 
         public List<TKLSSC> GetTKLSSCTB()
         {
+            db = new QLPT();
             List<TKLSSC> list = new List<TKLSSC>();
             int sum = 0;
             foreach (PhongTro pt in PhongTroBLL.Instance.GetDSPhongTro())
@@ -49,9 +54,5 @@ namespace QuanLyPhongTroLinQ.BLL
             return db.PhongTros.Count();
         }
 
-        public ThongKe_NVBLL()
-        {
-            db = new QLPT();
-        }
     }
 }

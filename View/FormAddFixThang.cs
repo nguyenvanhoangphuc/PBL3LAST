@@ -7,9 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using QuanLyPhongTroLinQ.DTO;
 using QuanLyPhongTroLinQ.BLL;
-using QuanLyPhongTroLinQ.DTO.DTO_CSDL;
 
 namespace QuanLyPhongTroLinQ.View
 {
