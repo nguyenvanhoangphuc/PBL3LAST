@@ -23,20 +23,27 @@ namespace QuanLyPhongTroLinQ.BLL
             private set { }
         }
 
+        //public List<int> GetNamOfLSSC()
+        //{
+        //    db = new QLPT(); 
+        //    db.LichSuSuaChuas.
+        //}
+
         public LichSuSuaChuaBLL()
         {
-            db = new QLPT();
+            db = new QLPT(); 
         }
 
         public List<LichSuSuaChua> GetLSSuaChuaByPhong(string idPhong, DateTime date)
         {
+            db = new QLPT();
             if (idPhong == "0")
             {
                 return db.LichSuSuaChuas.Where(p => DbFunctions.TruncateTime(p.NgaySuaChua) <= date.Date).ToList();
             }
             else
             {
-                return db.LichSuSuaChuas.Where(p => (DbFunctions.TruncateTime(p.NgaySuaChua) <= date) && (p.IDPhong == idPhong)).ToList();
+                return db.LichSuSuaChuas.Where(p => (DbFunctions.TruncateTime(p.NgaySuaChua) <= date.Date) && (p.IDPhong == idPhong)).ToList();
             }
         }
 
@@ -47,6 +54,7 @@ namespace QuanLyPhongTroLinQ.BLL
 
         public List<LichSuSuaChuaView> GetLSSuaChuaViewByPhong(string idPhong, DateTime date)
         {
+            db = new QLPT();
             List<LichSuSuaChuaView> lichSus = new List<LichSuSuaChuaView>();
             foreach (LichSuSuaChua ls in GetLSSuaChuaByPhong(idPhong, date))
             {

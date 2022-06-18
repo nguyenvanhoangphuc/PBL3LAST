@@ -1,4 +1,3 @@
-using QuanLyPhongTroLinQ.DTO.DTO_CSDL;
 using System.Data.Entity;
 
 namespace QuanLyPhongTroLinQ.DTO
@@ -20,7 +19,6 @@ namespace QuanLyPhongTroLinQ.DTO
         public virtual DbSet<QLDatPhong> QLDatPhongs { get; set; }
         public virtual DbSet<NguoiThue> NguoiThues { get; set; }
         public virtual DbSet<LichSuSuaChua> LichSuSuaChuas { get; set; }
-
         public virtual DbSet<TienThang> TienThangs { get; set; }
 
     }

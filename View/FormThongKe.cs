@@ -11,6 +11,12 @@ namespace QuanLyPhongTroLinQ.View
             InitializeComponent();
             TKSoPhong();
             ShowDGV();
+            SetCBB();
+        }
+
+        private void SetCBB()
+        {
+            //cbbYear.Items.AddRange(LichSuSuaChuaBLL.Instance.GetNamOfLSSC()); 
         }
 
         private void ShowDGV()

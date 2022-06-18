@@ -52,6 +52,7 @@ namespace QuanLyPhongTroLinQ.BLL
 
         public List<PhongTro> GetDSPhongTro()
         {
+            db = new QLPT(); 
             return db.PhongTros.ToList();
         }
 
