@@ -23,15 +23,25 @@ namespace QuanLyPhongTroLinQ.BLL
             private set { }
         }
 
-        //public List<int> GetNamOfLSSC()
-        //{
-        //    db = new QLPT(); 
-        //    db.LichSuSuaChuas.
-        //}
-
         public LichSuSuaChuaBLL()
         {
             db = new QLPT(); 
+        }
+
+        public List<string> GetThangOfLSSC(string Nam)
+        {
+            db = new QLPT(); 
+            if (Nam == "All")
+            {
+                return db.LichSuSuaChuas.Select(p=>p.NgaySuaChua.Value.Month.ToString()).ToList();
+            }
+            else return db.LichSuSuaChuas.Where(p=>p.NgaySuaChua.Value.Year.ToString() == Nam).Select(p => p.NgaySuaChua.Value.Month.ToString()).ToList();
+        }
+
+        public List<string> GetNamOfLSSC()
+        {
+            db = new QLPT();
+            return db.LichSuSuaChuas.Select(p => p.NgaySuaChua.Value.Year.ToString()).ToList();
         }
 
         public List<LichSuSuaChua> GetLSSuaChuaByPhong(string idPhong, DateTime date)
@@ -47,6 +57,61 @@ namespace QuanLyPhongTroLinQ.BLL
             }
         }
 
+        public List<LichSuSuaChua> GetThongKeLSSuaChuaByPhong(string idPhong, string year, string month)
+        {
+            db = new QLPT();
+            if (idPhong == "0")
+            {
+                if (year == "All")
+                {
+                    if (month == "All")
+                    {
+                        return db.LichSuSuaChuas.ToList();
+                    }
+                    else
+                    {
+                        return db.LichSuSuaChuas.Where(p=>p.NgaySuaChua.Value.Month.ToString()==month).ToList();
+                    }
+                }
+                else
+                {
+                    if (month == "All")
+                    {
+                        return db.LichSuSuaChuas.Where(p => p.NgaySuaChua.Value.Year.ToString() == year).ToList();
+                    } 
+                    else
+                    {
+                        return db.LichSuSuaChuas.Where(p => (p.NgaySuaChua.Value.Month.ToString() == month)&&(p.NgaySuaChua.Value.Year.ToString() == year)).ToList();
+                    }
+                }
+            }
+            else
+            {
+                if (year == "All")
+                {
+                    if (month == "All")
+                    {
+                        return db.LichSuSuaChuas.Where(p=>p.IDPhong==idPhong).ToList();
+                    }
+                    else
+                    {
+                        return db.LichSuSuaChuas.Where(p => (p.NgaySuaChua.Value.Month.ToString() == month)&& (p.IDPhong == idPhong)).ToList();
+                    }
+                }
+                else
+                {
+                    if (month == "All")
+                    {
+                        return db.LichSuSuaChuas.Where(p => (p.NgaySuaChua.Value.Year.ToString() == year) && (p.IDPhong == idPhong)).ToList();
+                    }
+                    else
+                    {
+                        return db.LichSuSuaChuas.Where(p => (p.NgaySuaChua.Value.Month.ToString() == month) && (p.NgaySuaChua.Value.Year.ToString() == year) && (p.IDPhong == idPhong)).ToList();
+                    }
+                }
+            }
+        }
+
         public LichSuSuaChua GetLSSuaChuaByID(string id)
         {
             return db.LichSuSuaChuas.Find(id);
@@ -57,6 +122,25 @@ namespace QuanLyPhongTroLinQ.BLL
             db = new QLPT();
             List<LichSuSuaChuaView> lichSus = new List<LichSuSuaChuaView>();
             foreach (LichSuSuaChua ls in GetLSSuaChuaByPhong(idPhong, date))
+            {
+                lichSus.Add(new LichSuSuaChuaView
+                {
+                    ID_LichSuSuaChua = ls.ID_LichSuSuaChua,
+                    TenNhanVien = ls.NhanVien.Ten,
+                    TenPhong = ls.ThietBi.PhongTro.TenPhong,
+                    TenLoaiThietBi = ls.ThietBi.LoaiThietBi.TenLoaiThietBi,
+                    NgaySuaChua = (DateTime)ls.NgaySuaChua,
+                    SoTienSuaChua = ls.SoTienSuaChua
+                });
+            }
+            return lichSus;
+        }
+
+        public List<LichSuSuaChuaView> GetThongKeLSSuaChuaViewByPhong(string idPhong, string year, string month)
+        {
+            db = new QLPT();
+            List<LichSuSuaChuaView> lichSus = new List<LichSuSuaChuaView>();
+            foreach (LichSuSuaChua ls in GetThongKeLSSuaChuaByPhong(idPhong, year, month))
             {
                 lichSus.Add(new LichSuSuaChuaView
                 {

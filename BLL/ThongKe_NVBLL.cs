@@ -25,7 +25,7 @@ namespace QuanLyPhongTroLinQ.BLL
             db = new QLPT();
         }
 
-        public List<TKLSSC> GetTKLSSCTB()
+        public List<TKLSSC> GetTKLSSCTB(string year, string month)
         {
             db = new QLPT();
             List<TKLSSC> list = new List<TKLSSC>();
@@ -37,7 +37,31 @@ namespace QuanLyPhongTroLinQ.BLL
                 {
                     foreach (LichSuSuaChua lssc in tb.LichSuSuaChuas)
                     {
-                        sum += lssc.SoTienSuaChua;
+                        if (year == "All")
+                        {
+                            if (month == "All")
+                            {
+                                sum += lssc.SoTienSuaChua;
+                            }
+                            else if (lssc.NgaySuaChua.Value.Month.ToString() == month)
+                            {
+                                sum += lssc.SoTienSuaChua;
+                            }
+                        }
+                        else
+                        {
+                            if (month == "All")
+                            {
+                                if (lssc.NgaySuaChua.Value.Year.ToString() == year)
+                                {
+                                    sum += lssc.SoTienSuaChua;
+                                }
+                            }
+                            else if ((lssc.NgaySuaChua.Value.Year.ToString() == year) && (lssc.NgaySuaChua.Value.Month.ToString() == month))
+                            { 
+                                sum += lssc.SoTienSuaChua; 
+                            }
+                        }
                     }
                 }
                 list.Add(new TKLSSC

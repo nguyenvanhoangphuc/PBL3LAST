@@ -340,6 +340,9 @@
     <EmbeddedResource Include="View\AddNhanVien.resx">
       <DependentUpon>AddNhanVien.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\AddPhong.resx">
+      <DependentUpon>AddPhong.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\FormAllThang.resx">
       <DependentUpon>FormAllThang.cs</DependentUpon>
     </EmbeddedResource>

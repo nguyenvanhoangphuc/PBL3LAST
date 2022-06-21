@@ -100,9 +100,9 @@ namespace QuanLyPhongTroLinQ.View
         {
             Default();
             panel4.Hide();
-            lblLichSuSuaChua.MouseLeave -= new EventHandler(this.lbl_MouseLeave);
+            lblLoaiPhong.MouseLeave -= new EventHandler(this.lbl_MouseLeave);
             pnlLoaiPhong.BackColor = SystemColors.ControlDarkDark;
-            lblLichSuSuaChua.ForeColor = Color.Blue;
+            lblLoaiPhong.ForeColor = Color.Blue;
             FormPhong_NV f = new FormPhong_NV();
             f.MdiParent = this;
             f.Show();

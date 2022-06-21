@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             this.panel4 = new System.Windows.Forms.Panel();
+            this.cbbMonth = new System.Windows.Forms.ComboBox();
+            this.cbbYear = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblPhongHienTai = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -39,10 +43,6 @@
             this.btnRevert = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.DGVThongKe = new System.Windows.Forms.DataGridView();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.cbbYear = new System.Windows.Forms.ComboBox();
-            this.cbbMonth = new System.Windows.Forms.ComboBox();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -66,6 +66,44 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1034, 611);
             this.panel4.TabIndex = 11;
+            // 
+            // cbbMonth
+            // 
+            this.cbbMonth.FormattingEnabled = true;
+            this.cbbMonth.Location = new System.Drawing.Point(570, 123);
+            this.cbbMonth.Name = "cbbMonth";
+            this.cbbMonth.Size = new System.Drawing.Size(121, 24);
+            this.cbbMonth.TabIndex = 10;
+            this.cbbMonth.SelectedIndexChanged += new System.EventHandler(this.cbbMonth_SelectedIndexChanged);
+            // 
+            // cbbYear
+            // 
+            this.cbbYear.FormattingEnabled = true;
+            this.cbbYear.Location = new System.Drawing.Point(297, 123);
+            this.cbbYear.Name = "cbbYear";
+            this.cbbYear.Size = new System.Drawing.Size(121, 24);
+            this.cbbYear.TabIndex = 10;
+            this.cbbYear.SelectedIndexChanged += new System.EventHandler(this.cbbYear_SelectedIndexChanged);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(440, 121);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(104, 23);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "vào tháng: ";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(109, 121);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(182, 23);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "Thống kê theo năm: ";
             // 
             // panel2
             // 
@@ -177,42 +215,6 @@
             this.DGVThongKe.RowTemplate.Height = 24;
             this.DGVThongKe.Size = new System.Drawing.Size(700, 369);
             this.DGVThongKe.TabIndex = 2;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(109, 121);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(182, 23);
-            this.label4.TabIndex = 9;
-            this.label4.Text = "Thống kê theo năm: ";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(440, 121);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(104, 23);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "vào tháng: ";
-            // 
-            // cbbYear
-            // 
-            this.cbbYear.FormattingEnabled = true;
-            this.cbbYear.Location = new System.Drawing.Point(297, 123);
-            this.cbbYear.Name = "cbbYear";
-            this.cbbYear.Size = new System.Drawing.Size(121, 24);
-            this.cbbYear.TabIndex = 10;
-            // 
-            // cbbMonth
-            // 
-            this.cbbMonth.FormattingEnabled = true;
-            this.cbbMonth.Location = new System.Drawing.Point(570, 123);
-            this.cbbMonth.Name = "cbbMonth";
-            this.cbbMonth.Size = new System.Drawing.Size(121, 24);
-            this.cbbMonth.TabIndex = 10;
             // 
             // FormThongKe
             // 

@@ -44,7 +44,6 @@ namespace QuanLyPhongTroLinQ.View
             this.butDefault = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
-            this.cbID = new System.Windows.Forms.CheckBox();
             this.panel4.SuspendLayout();
             this.gbSearch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGVPhongTro)).BeginInit();
@@ -82,7 +81,6 @@ namespace QuanLyPhongTroLinQ.View
             // 
             // gbSearch
             // 
-            this.gbSearch.Controls.Add(this.cbID);
             this.gbSearch.Controls.Add(this.cbTT);
             this.gbSearch.Controls.Add(this.cbTen);
             this.gbSearch.Controls.Add(this.cbLoai);
@@ -106,7 +104,7 @@ namespace QuanLyPhongTroLinQ.View
             // cbTen
             // 
             this.cbTen.AutoSize = true;
-            this.cbTen.Location = new System.Drawing.Point(132, 18);
+            this.cbTen.Location = new System.Drawing.Point(106, 18);
             this.cbTen.Name = "cbTen";
             this.cbTen.Size = new System.Drawing.Size(94, 20);
             this.cbTen.TabIndex = 4;
@@ -231,16 +229,6 @@ namespace QuanLyPhongTroLinQ.View
             this.txtSearch.Size = new System.Drawing.Size(155, 34);
             this.txtSearch.TabIndex = 0;
             // 
-            // cbID
-            // 
-            this.cbID.AutoSize = true;
-            this.cbID.Location = new System.Drawing.Point(33, 18);
-            this.cbID.Name = "cbID";
-            this.cbID.Size = new System.Drawing.Size(42, 20);
-            this.cbID.TabIndex = 4;
-            this.cbID.Text = "ID";
-            this.cbID.UseVisualStyleBackColor = true;
-            // 
             // FormDSPhong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -278,6 +266,5 @@ namespace QuanLyPhongTroLinQ.View
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.CheckBox cbID;
     }
 }

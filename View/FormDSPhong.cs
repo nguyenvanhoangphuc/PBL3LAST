@@ -10,7 +10,6 @@ namespace QuanLyPhongTroLinQ.View
         public FormDSPhong()
         {
             InitializeComponent();
-            cbID.Visible = false;
             ShowDGV();
         }
 
@@ -63,7 +62,7 @@ namespace QuanLyPhongTroLinQ.View
             //Lấy dữ liệu check box đưa vào PhongTro
             PhongTroView pt = new PhongTroView
             {
-                ID = (cbID.Checked) ? txtSearch.Text : "",
+                ID = "",
                 TenPhong = (cbTen.Checked) ? txtSearch.Text : "",
                 TenLoaiPhong = (cbLoai.Checked) ? txtSearch.Text : "",
                 TinhTrang = (cbTT.Checked) ? txtSearch.Text : ""

@@ -56,6 +56,17 @@ namespace QuanLyPhongTroLinQ.BLL
             return db.PhongTros.ToList();
         }
 
+        public string GetIDNew()
+        {
+            db = new QLPT();
+            int max= Convert.ToInt32(db.PhongTros.FirstOrDefault().ID);
+            foreach (PhongTro pt in db.PhongTros)
+            {
+                if (Convert.ToInt32(pt.ID) > max) max = Convert.ToInt32(pt.ID);
+            }
+            return (max+1).ToString(); 
+        }
+
         public List<PhongTroView> GetDSPhongTroView()
         {
             List<PhongTroView> list = new List<PhongTroView>();
@@ -135,7 +146,7 @@ namespace QuanLyPhongTroLinQ.BLL
                 tt = Convert.ToBoolean(pt.TinhTrang);
                 kt = true;
             }
-            var l = db.PhongTros.Where(p => ((pt.ID != "") ? p.ID.Contains(pt.ID) : false) ||
+            var l = db.PhongTros.Where(p => 
             ((pt.TenPhong != "") ? p.TenPhong.Contains(pt.TenPhong) : false) ||
             ((pt.TenLoaiPhong != "") ? p.LoaiPhong.TenLoaiPhong.Contains(pt.TenLoaiPhong) : false) ||
             ((kt != false) ? (p.TinhTrang == tt) : false)).ToList();

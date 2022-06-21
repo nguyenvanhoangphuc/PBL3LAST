@@ -26,8 +26,7 @@ namespace QuanLyPhongTroLinQ.View
         {
             if (id != "")
             {
-                txtID.Text = id;
-                txtID.Enabled = false;
+                //update
                 txtTen.Text = PhongTroBLL.Instance.GetPhongByID(id).TenPhong;
                 cbbLoaiPhong.Text = PhongTroBLL.Instance.GetLoaiPhongByID(PhongTroBLL.Instance.GetPhongByID(id).ID_LoaiPhong).TenLoaiPhong;
                 rbutTT.Checked = PhongTroBLL.Instance.GetPhongByID(id).TinhTrang;
@@ -37,7 +36,6 @@ namespace QuanLyPhongTroLinQ.View
         }
         private void btnReset_Click(object sender, EventArgs e)
         {
-            if (ID == "") txtID.Text = "";
             txtTen.Text = "";
             cbbLoaiPhong.Text = "";
             rbutTTF.Checked = true;
@@ -51,7 +49,7 @@ namespace QuanLyPhongTroLinQ.View
         private void btnAdd_Click(object sender, EventArgs e)
         {
             PhongTro phongTro = new PhongTro();
-            phongTro.ID = txtID.Text;
+            phongTro.ID = (ID!="")?ID:(PhongTroBLL.Instance.GetIDNew());
             phongTro.TenPhong = txtTen.Text;
             if (cbbLoaiPhong.Text == "")
             {

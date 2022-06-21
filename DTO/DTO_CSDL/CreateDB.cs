@@ -4,8 +4,9 @@ using System.Data.Entity;
 namespace QuanLyPhongTroLinQ.DTO
 {
     public class CreateDB :
+    CreateDatabaseIfNotExists<QLPT>
     //DropCreateDatabaseIfModelChanges<QLPT>
-    DropCreateDatabaseAlways<QLPT>
+    //DropCreateDatabaseAlways<QLPT>
     {
         protected override void Seed(QLPT context)
         {
@@ -114,7 +115,7 @@ namespace QuanLyPhongTroLinQ.DTO
             });
             context.LichSuSuaChuas.AddRange(new LichSuSuaChua[]
             {
-                new LichSuSuaChua {ID_LichSuSuaChua= "1", IDNhanVien="2", IDPhong="1", ID_LoaiThietBi="1", NgaySuaChua = new DateTime(2022,10,10), SoTienSuaChua =50000},
+                new LichSuSuaChua {ID_LichSuSuaChua= "1", IDNhanVien="2", IDPhong="1", ID_LoaiThietBi="1", NgaySuaChua = new DateTime(2022,5,10), SoTienSuaChua =50000},
                 new LichSuSuaChua {ID_LichSuSuaChua= "2", IDNhanVien="4", IDPhong="2", ID_LoaiThietBi="2", NgaySuaChua = new DateTime(2021,09,15), SoTienSuaChua =70000},
                 new LichSuSuaChua {ID_LichSuSuaChua= "3", IDNhanVien="5", IDPhong="3", ID_LoaiThietBi="3", NgaySuaChua = new DateTime(2021,02,03), SoTienSuaChua =40000}
             });

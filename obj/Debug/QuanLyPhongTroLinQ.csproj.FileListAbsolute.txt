@@ -290,3 +290,4 @@ F:\Data\ki4\PBL3\LastPBL3\PBL3CNPMPNPC\obj\Debug\QuanLyPhongTroLinQ.pdb
 F:\Data\ki4\PBL3\LastPBL3\PBL3CNPMPNPC\obj\Debug\QuanLyPhongTroLinQ.View.FormShowNguoiThue.resources
 F:\Data\ki4\PBL3\LastPBL3\PBL3CNPMPNPC\obj\Debug\QuanLyPhongTroLinQ.View.FormDatTraPhong.resources
 F:\Data\ki4\PBL3\LastPBL3\PBL3CNPMPNPC\obj\Debug\QuanLyPhongTroLinQ.View.FormLoaiPhong.resources
+F:\Data\ki4\PBL3\LastPBL3\PBL3CNPMPNPC\obj\Debug\QuanLyPhongTroLinQ.View.AddPhong.resources

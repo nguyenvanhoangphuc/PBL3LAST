@@ -13,7 +13,7 @@ namespace QuanLyPhongTroLinQ.View
             InitializeComponent();
             this.idNhanVien = idNhanVien;
             SetCBB();
-            ShowDGV("0", new DateTime(2022-10-8));
+            ShowDGV("0", DateTime.Now);
         }
 
         private void SetCBB()
