@@ -17,6 +17,7 @@ namespace QuanLyPhongTroLinQ.View
         public FormThongKeAD()
         {
             InitializeComponent();
+            TraTienBLL.Instance.CreateDB();
             SetComboBox();
             SetLabel();
         }
