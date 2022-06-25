@@ -68,5 +68,17 @@ namespace QuanLyPhongTroLinQ.View
             else MessageBox.Show("Vui lòng chọn một hàng để xem chi tiết", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
            
         }
+
+        private void btn_xem_Click_1(object sender, EventArgs e)
+        {
+            if (dgv_TraTien.SelectedRows.Count == 1 && dgv_TraTien.SelectedRows[0].Index != dgv_TraTien.Rows.Count - 1)
+            {
+                var r = dgv_TraTien.SelectedRows[0];
+                FormAllThang f = new FormAllThang(r.Cells["ID_Phong"].Value.ToString(), r.Cells["Tên phòng"].Value.ToString());
+                f.TrienKhai1 = new FormAllThang.HamTrienKhai1(GUI);
+                f.Show();
+            }
+            else MessageBox.Show("Vui lòng chọn một hàng để xem chi tiết", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }
     }
 }
