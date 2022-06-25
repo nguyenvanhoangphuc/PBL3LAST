@@ -34,6 +34,9 @@ namespace QuanLyPhongTroLinQ.View
             this.Close(); 
         }
 
-   
+        private void btnOK_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
