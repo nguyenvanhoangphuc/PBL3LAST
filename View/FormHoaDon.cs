@@ -42,5 +42,16 @@ namespace QuanLyPhongTroLinQ.View
             else
                 MessageBox.Show("Vui lòng click vào Browse để chọn đường dẫn xuất file", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
+
+        private void btn_xuat_Click_1(object sender, EventArgs e)
+        {
+            if (txt_Path.Text != "")
+            {
+                File.WriteAllText(txt_Path.Text + "\\HoaDon" + TenPhong + ".txt", text_HoaDon.Text);
+                this.Close();
+            }
+            else
+                MessageBox.Show("Vui lòng click vào Browse để chọn đường dẫn xuất file", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }
     }
 }
