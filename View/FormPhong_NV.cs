@@ -15,16 +15,18 @@ namespace QuanLyPhongTroLinQ.View
         private void ShowDGV()
         {
             DGVPhongTro.DataSource = PhongTroBLL.Instance.GetDSPhongTroView(); //return List<PhongTroView>
+            DGVPhongTro.Columns[0].Visible = false;
+            DGVPhongTro.Columns["TenPhong"].HeaderText = "Tên phòng";
+            DGVPhongTro.Columns["TenLoaiPhong"].HeaderText = "Tên loại phòng";
+            DGVPhongTro.Columns["TinhTrang"].HeaderText = "Tình trạng";
         }
-
-
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
             //Lấy dữ liệu check box đưa vào PhongTro
             DTO.PhongTroView pt = new DTO.PhongTroView
             {
-                ID = (cbID.Checked) ? txtSearch.Text : "",
+                ID = "",
                 TenPhong = (cbTen.Checked) ? txtSearch.Text : "",
                 TenLoaiPhong = (cbLoai.Checked) ? txtSearch.Text : "",
                 TinhTrang = (cbTT.Checked) ? txtSearch.Text : ""

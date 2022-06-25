@@ -50,7 +50,7 @@
             this.panel30.Controls.Add(this.btnDatPhong);
             this.panel30.Controls.Add(this.btnTraPhong);
             this.panel30.Location = new System.Drawing.Point(13, 9);
-            this.panel30.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel30.Margin = new System.Windows.Forms.Padding(4);
             this.panel30.Name = "panel30";
             this.panel30.Size = new System.Drawing.Size(1035, 610);
             this.panel30.TabIndex = 1;
@@ -58,7 +58,7 @@
             // txtSDT
             // 
             this.txtSDT.Location = new System.Drawing.Point(172, 156);
-            this.txtSDT.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSDT.Margin = new System.Windows.Forms.Padding(4);
             this.txtSDT.Name = "txtSDT";
             this.txtSDT.Size = new System.Drawing.Size(199, 22);
             this.txtSDT.TabIndex = 17;
@@ -99,7 +99,7 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgv.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgv.Location = new System.Drawing.Point(105, 243);
-            this.dgv.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgv.Margin = new System.Windows.Forms.Padding(4);
             this.dgv.MultiSelect = false;
             this.dgv.Name = "dgv";
             this.dgv.RowHeadersWidth = 51;
@@ -112,7 +112,7 @@
             this.btnDatPhong.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDatPhong.ForeColor = System.Drawing.Color.Yellow;
             this.btnDatPhong.Location = new System.Drawing.Point(105, 466);
-            this.btnDatPhong.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDatPhong.Margin = new System.Windows.Forms.Padding(4);
             this.btnDatPhong.Name = "btnDatPhong";
             this.btnDatPhong.Size = new System.Drawing.Size(344, 50);
             this.btnDatPhong.TabIndex = 14;
@@ -126,7 +126,7 @@
             this.btnTraPhong.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTraPhong.ForeColor = System.Drawing.Color.Yellow;
             this.btnTraPhong.Location = new System.Drawing.Point(583, 466);
-            this.btnTraPhong.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnTraPhong.Margin = new System.Windows.Forms.Padding(4);
             this.btnTraPhong.Name = "btnTraPhong";
             this.btnTraPhong.Size = new System.Drawing.Size(344, 50);
             this.btnTraPhong.TabIndex = 13;
@@ -142,7 +142,7 @@
             this.Controls.Add(this.panel30);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Location = new System.Drawing.Point(250, 70);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormDatTraPhong";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "FormLoaiPhong";

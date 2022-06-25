@@ -35,11 +35,9 @@
             this.txtSDT = new System.Windows.Forms.TextBox();
             this.txtQueQuan = new System.Windows.Forms.TextBox();
             this.txtTen = new System.Windows.Forms.TextBox();
-            this.txtID = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.txtCCCD = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -111,14 +109,6 @@
             this.txtTen.Size = new System.Drawing.Size(236, 34);
             this.txtTen.TabIndex = 9;
             // 
-            // txtID
-            // 
-            this.txtID.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtID.Location = new System.Drawing.Point(248, 112);
-            this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(236, 34);
-            this.txtID.TabIndex = 10;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -148,16 +138,6 @@
             this.label3.Size = new System.Drawing.Size(50, 25);
             this.label3.TabIndex = 5;
             this.label3.Text = "Tên";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(50, 115);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(38, 25);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "ID";
             // 
             // label6
             // 
@@ -210,13 +190,12 @@
             this.Controls.Add(this.txtTen);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.txtID);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "AddNhanVien";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddNhanVien";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -232,11 +211,9 @@
         private System.Windows.Forms.TextBox txtSDT;
         private System.Windows.Forms.TextBox txtQueQuan;
         private System.Windows.Forms.TextBox txtTen;
-        private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtCCCD;
         private System.Windows.Forms.Label label7;

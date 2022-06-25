@@ -75,17 +75,17 @@ namespace QuanLyPhongTroLinQ.View
             }
             else if (Check == null)
             {
-                lblThongBao.Text="Tài khoản không tồn tại";
+                lblThongBao.Text = "Tài khoản không tồn tại";
             }
             else
             {
-                lblThongBao.Text=Check;
+                lblThongBao.Text = Check;
             }
         }
         public string SendEmail(string email)
         {
             string FromEmail = "p2ncteam@gmail.com";
-            string PWFromEmail = "p2ncteamvip";
+            string PWFromEmail = "vwlhuzgohqjyuwxc";
             Random rand = new Random();
             RandomCode = (rand.Next(999999)).ToString();
             string MessageBody = $"Mã xác nhận của bạn là {RandomCode}";
@@ -106,7 +106,7 @@ namespace QuanLyPhongTroLinQ.View
             }
             catch (Exception ex)
             {
-                lblThongBao.Text=ex.Message;
+                lblThongBao.Text = ex.Message;
             }
             return RandomCode;
         }

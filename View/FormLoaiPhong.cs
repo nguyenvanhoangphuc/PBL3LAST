@@ -15,6 +15,7 @@ namespace QuanLyPhongTroLinQ.View
         {
             LoaiPhong lp = new LoaiPhong();
             dgv.DataSource = BLL.LoaiPhongBLL.Instance.hienthi();
+            dgv.Columns["IDLoaiPhong"].Visible = false;
             dgv.Columns["PhongTros"].Visible = false;
             dgv.Columns["DanhSachIDLTB"].Visible = false;
 

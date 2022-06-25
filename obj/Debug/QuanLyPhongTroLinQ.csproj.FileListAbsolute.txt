@@ -291,3 +291,9 @@ F:\Data\ki4\PBL3\LastPBL3\PBL3CNPMPNPC\obj\Debug\QuanLyPhongTroLinQ.View.FormSho
 F:\Data\ki4\PBL3\LastPBL3\PBL3CNPMPNPC\obj\Debug\QuanLyPhongTroLinQ.View.FormDatTraPhong.resources
 F:\Data\ki4\PBL3\LastPBL3\PBL3CNPMPNPC\obj\Debug\QuanLyPhongTroLinQ.View.FormLoaiPhong.resources
 F:\Data\ki4\PBL3\LastPBL3\PBL3CNPMPNPC\obj\Debug\QuanLyPhongTroLinQ.View.AddPhong.resources
+F:\Data\ki4\PBL3\LastPBL3\PBL3CNPMPNPC\obj\Debug\QuanLyPhongTroLinQ.View.FormPhong_NV.resources
+F:\Data\ki4\PBL3\LastPBL3\PBL3CNPMPNPC\obj\Debug\QuanLyPhongTroLinQ.View.FormAddFixThang.resources
+F:\Data\ki4\PBL3\LastPBL3\PBL3CNPMPNPC\obj\Debug\QuanLyPhongTroLinQ.View.FormDatPhong.resources
+F:\Data\ki4\PBL3\LastPBL3\PBL3CNPMPNPC\obj\Debug\QuanLyPhongTroLinQ.View.FormTraPhong.resources
+F:\Data\ki4\PBL3\LastPBL3\PBL3CNPMPNPC\obj\Debug\QuanLyPhongTroLinQ.View.FormViewTB_LoaiPhong.resources
+F:\Data\ki4\PBL3\LastPBL3\PBL3CNPMPNPC\obj\Debug\QuanLyPhongTroLinQ.View.FormXemThietBiPhong.resources

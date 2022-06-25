@@ -16,7 +16,10 @@ namespace QuanLyPhongTroLinQ.View
         private void ShowDGV()
         {
             DGVPhongTro.DataSource = PhongTroBLL.Instance.GetDSPhongTroView(); //return List<PhongTroView>
-            DGVPhongTro.Columns[0].Visible = false; 
+            DGVPhongTro.Columns[0].Visible = false;
+            DGVPhongTro.Columns["TenPhong"].HeaderText = "Tên phòng";
+            DGVPhongTro.Columns["TenLoaiPhong"].HeaderText = "Tên loại phòng";
+            DGVPhongTro.Columns["TinhTrang"].HeaderText = "Tình trạng"; 
         }
 
         private void btnAdd_Click(object sender, EventArgs e)

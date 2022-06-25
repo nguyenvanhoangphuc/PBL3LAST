@@ -343,8 +343,14 @@
     <EmbeddedResource Include="View\AddPhong.resx">
       <DependentUpon>AddPhong.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\FormAddFixThang.resx">
+      <DependentUpon>FormAddFixThang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\FormAllThang.resx">
       <DependentUpon>FormAllThang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormDatPhong.resx">
+      <DependentUpon>FormDatPhong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\FormDatTraPhong.resx">
       <DependentUpon>FormDatTraPhong.cs</DependentUpon>
@@ -376,6 +382,9 @@
     <EmbeddedResource Include="View\FormNVChoDuyet.resx">
       <DependentUpon>FormNVChoDuyet.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\FormPhong_NV.resx">
+      <DependentUpon>FormPhong_NV.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\FormQLNhanVien.resx">
       <DependentUpon>FormQLNhanVien.cs</DependentUpon>
     </EmbeddedResource>
@@ -394,6 +403,9 @@
     <EmbeddedResource Include="View\FormThongKeAD.resx">
       <DependentUpon>FormThongKeAD.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\FormTraPhong.resx">
+      <DependentUpon>FormTraPhong.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\FormTraTien.resx">
       <DependentUpon>FormTraTien.cs</DependentUpon>
     </EmbeddedResource>
@@ -402,6 +414,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\FormUpdateTB.resx">
       <DependentUpon>FormUpdateTB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormViewTB_LoaiPhong.resx">
+      <DependentUpon>FormViewTB_LoaiPhong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormXemThietBiPhong.resx">
+      <DependentUpon>FormXemThietBiPhong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\QuenMK.resx">
       <DependentUpon>QuenMK.cs</DependentUpon>

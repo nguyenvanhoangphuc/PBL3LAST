@@ -16,6 +16,7 @@ namespace QuanLyPhongTroLinQ.View
         private void showDGV()
         {
             DGVNVChon.DataSource = NhanVienBLL.Instance.GetDSNVViewChoDuyet();
+            DGVNVChon.Columns[0].Visible = false;
         }
 
         private void btnChoose_Click(object sender, EventArgs e)
@@ -33,12 +34,35 @@ namespace QuanLyPhongTroLinQ.View
 
         private void butConf_Click(object sender, EventArgs e)
         {
-            List<string> list = new List<string>();
-            foreach (DataGridViewRow dgvr in DGVNVDuyet.SelectedRows)
+            if (DGVNVDuyet.Rows.Count > 0)
             {
-                list.Add(dgvr.Cells[0].Value.ToString());
+                List<string> list = new List<string>();
+                foreach (DataGridViewRow dgvr in DGVNVDuyet.Rows)
+                {
+                    list.Add(dgvr.Cells[0].Value.ToString());
+                }
+                NhanVienBLL.Instance.ChapNhanDSNhanVien(list);
+                MessageBox.Show("Đã duyệt nhân viên trên thành nhân viên chính thức.");
+                showDGV();
+                DGVNVDuyet.DataSource = null; 
             }
-            NhanVienBLL.Instance.ChapNhanDSNhanVien(list);
+        }
+
+        private void btnUnChoose_Click(object sender, EventArgs e)
+        {
+            if (DGVNVDuyet.SelectedRows.Count > 0)
+            {
+                List<string> list = new List<string>();
+                foreach (DataGridViewRow dgvr in DGVNVDuyet.Rows)
+                {
+                    list.Add(dgvr.Cells[0].Value.ToString());
+                }
+                foreach (DataGridViewRow noDGVR in DGVNVDuyet.SelectedRows)
+                {
+                    list.Remove(noDGVR.Cells[0].Value.ToString());
+                }
+                DGVNVDuyet.DataSource = NhanVienBLL.Instance.GetDSNhanVienViewByID(list);
+            }
         }
     }
 }

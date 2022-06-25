@@ -71,7 +71,7 @@ namespace QuanLyPhongTroLinQ.BLL
         private void ChapNhanNhanVien(string id)
         {
             var nhanVien = db.NguoiDungs.Where(p => p.ID == id).FirstOrDefault();
-            nhanVien.TrangThai = "ChoDuyet";
+            nhanVien.TrangThai = "ChapNhan";
             db.SaveChanges();
         }
 
@@ -168,6 +168,7 @@ namespace QuanLyPhongTroLinQ.BLL
         }
         public List<NhanVienView> GetDSNVViewChoDuyet()
         {
+            db = new QLPT(); 
             List<NhanVienView> dschoduyet = new List<NhanVienView>();
             foreach (NguoiDung nguoi in GetDSNVChoDuyet())
             {

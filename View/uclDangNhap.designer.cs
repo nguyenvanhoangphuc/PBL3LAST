@@ -98,10 +98,10 @@
             this.btnQuenMatKhau.Font = new System.Drawing.Font("Palatino Linotype", 13.2F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
                 | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQuenMatKhau.ForeColor = System.Drawing.Color.Black;
-            this.btnQuenMatKhau.Location = new System.Drawing.Point(153, 539);
+            this.btnQuenMatKhau.Location = new System.Drawing.Point(163, 541);
             this.btnQuenMatKhau.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnQuenMatKhau.Name = "btnQuenMatKhau";
-            this.btnQuenMatKhau.Size = new System.Drawing.Size(241, 46);
+            this.btnQuenMatKhau.Size = new System.Drawing.Size(188, 46);
             this.btnQuenMatKhau.TabIndex = 140;
             this.btnQuenMatKhau.Text = "Quên mật khẩu?";
             this.btnQuenMatKhau.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -159,7 +159,6 @@
             this.txtTenDangNhap.Size = new System.Drawing.Size(375, 30);
             this.txtTenDangNhap.TabIndex = 133;
             this.txtTenDangNhap.Text = "Tên đăng nhập";
-            this.txtTenDangNhap.TextChanged += new System.EventHandler(this.txtTenDangNhap_TextChanged);
             this.txtTenDangNhap.Enter += new System.EventHandler(this.txtTenDangNhap_Enter);
             this.txtTenDangNhap.Leave += new System.EventHandler(this.txtTenDangNhap_Leave);
             // 
@@ -188,7 +187,7 @@
             // 
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox1.Image = global::QuanLyPhongTroLinQ.Properties.Resources.homeicon;
-            this.pictureBox1.Location = new System.Drawing.Point(2, 3);
+            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(75, 54);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

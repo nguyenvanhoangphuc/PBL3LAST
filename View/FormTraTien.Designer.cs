@@ -57,6 +57,7 @@
             // btn_xem
             // 
             this.btn_xem.BackColor = System.Drawing.Color.Black;
+            this.btn_xem.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_xem.ForeColor = System.Drawing.Color.Yellow;
             this.btn_xem.Location = new System.Drawing.Point(616, 487);
             this.btn_xem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -72,11 +73,12 @@
             this.groupBox1.Controls.Add(this.rdo_CaHai);
             this.groupBox1.Controls.Add(this.rdo_DaNop);
             this.groupBox1.Controls.Add(this.rdo_ChuaNop);
-            this.groupBox1.Location = new System.Drawing.Point(81, 224);
+            this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(81, 242);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox1.Size = new System.Drawing.Size(236, 178);
+            this.groupBox1.Size = new System.Drawing.Size(271, 170);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Chế độ hiển thị";
@@ -87,7 +89,7 @@
             this.rdo_CaHai.Location = new System.Drawing.Point(51, 130);
             this.rdo_CaHai.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rdo_CaHai.Name = "rdo_CaHai";
-            this.rdo_CaHai.Size = new System.Drawing.Size(66, 20);
+            this.rdo_CaHai.Size = new System.Drawing.Size(85, 27);
             this.rdo_CaHai.TabIndex = 0;
             this.rdo_CaHai.TabStop = true;
             this.rdo_CaHai.Text = "Cả hai";
@@ -100,7 +102,7 @@
             this.rdo_DaNop.Location = new System.Drawing.Point(51, 84);
             this.rdo_DaNop.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rdo_DaNop.Name = "rdo_DaNop";
-            this.rdo_DaNop.Size = new System.Drawing.Size(136, 20);
+            this.rdo_DaNop.Size = new System.Drawing.Size(180, 27);
             this.rdo_DaNop.TabIndex = 0;
             this.rdo_DaNop.TabStop = true;
             this.rdo_DaNop.Text = "Phòng đã nộp tiền";
@@ -113,7 +115,7 @@
             this.rdo_ChuaNop.Location = new System.Drawing.Point(51, 39);
             this.rdo_ChuaNop.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rdo_ChuaNop.Name = "rdo_ChuaNop";
-            this.rdo_ChuaNop.Size = new System.Drawing.Size(134, 20);
+            this.rdo_ChuaNop.Size = new System.Drawing.Size(180, 27);
             this.rdo_ChuaNop.TabIndex = 0;
             this.rdo_ChuaNop.TabStop = true;
             this.rdo_ChuaNop.Text = "Phòng còn nợ tiền";
@@ -122,19 +124,21 @@
             // 
             // txt_TimKiem
             // 
+            this.txt_TimKiem.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_TimKiem.Location = new System.Drawing.Point(81, 135);
             this.txt_TimKiem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_TimKiem.Name = "txt_TimKiem";
-            this.txt_TimKiem.Size = new System.Drawing.Size(236, 22);
+            this.txt_TimKiem.Size = new System.Drawing.Size(236, 30);
             this.txt_TimKiem.TabIndex = 3;
             this.txt_TimKiem.TextChanged += new System.EventHandler(this.txt_TimKiem_TextChanged);
             // 
             // lbl_TimKiem
             // 
             this.lbl_TimKiem.AutoSize = true;
+            this.lbl_TimKiem.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_TimKiem.Location = new System.Drawing.Point(79, 94);
             this.lbl_TimKiem.Name = "lbl_TimKiem";
-            this.lbl_TimKiem.Size = new System.Drawing.Size(153, 16);
+            this.lbl_TimKiem.Size = new System.Drawing.Size(218, 23);
             this.lbl_TimKiem.TabIndex = 4;
             this.lbl_TimKiem.Text = "Tìm kiếm theo tên phòng";
             // 

@@ -42,7 +42,7 @@ namespace QuanLyPhongTroLinQ.View
         {
             if (DGVNhanVien.SelectedRows.Count > 0)
             {
-                DialogResult dlrs = MessageBox.Show("Bạn có chắc muốn xoá phòng này?", "Xoá", MessageBoxButtons.OKCancel);
+                DialogResult dlrs = MessageBox.Show("Bạn có chắc muốn xoá nhân viên này?", "Xoá", MessageBoxButtons.OKCancel);
                 if (dlrs == DialogResult.OK)
                 {
                     foreach (DataGridViewRow i in DGVNhanVien.SelectedRows)

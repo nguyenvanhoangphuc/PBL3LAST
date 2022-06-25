@@ -9,7 +9,7 @@ namespace QuanLyPhongTroLinQ.BLL
 {
     public class NguoiThueBLL
     {
-        QLPT db = new QLPT();
+        QLPT db;
         private static NguoiThueBLL _Instance;
         public static NguoiThueBLL Instance
         {
@@ -23,9 +23,14 @@ namespace QuanLyPhongTroLinQ.BLL
             }
             private set { }
         }
+        public NguoiThueBLL()
+        {
+            db = new QLPT();
+        }
 
         public DataTable GetAllNguoiThueView(string s = "", bool HVT = false, bool SDT = false, bool QQ = false, bool CCCD = false, bool DT = false)
         {
+            db = new QLPT();
             DataTable dt = new DataTable();
             dt.Columns.AddRange(new DataColumn[]
             {

@@ -25,6 +25,8 @@ namespace QuanLyPhongTroLinQ.View
         private void ShowDGV()
         {
             DGVThongKe.DataSource = ThongKe_NVBLL.Instance.GetTKLSSCTB(cbbYear.Text, cbbMonth.Text);
+            DGVThongKe.Columns["TenPhong"].HeaderText = "Tên phòng";
+            DGVThongKe.Columns["TienSuaChua"].HeaderText = "Tiền sửa chữa"; 
         }
 
         private void TKSoPhong()

@@ -112,6 +112,12 @@ namespace QuanLyPhongTroLinQ.BLL
             }
         }
 
+        public string GetIDNew()
+        {
+            db = new QLPT();
+            return (db.LichSuSuaChuas.ToList().Count + 1).ToString(); 
+        }
+
         public LichSuSuaChua GetLSSuaChuaByID(string id)
         {
             return db.LichSuSuaChuas.Find(id);

@@ -24,8 +24,6 @@ namespace QuanLyPhongTroLinQ.View
             if (id != "")
             {
                 //update
-                txtID.Text = id;
-                txtID.Enabled = false;
                 txtTen.Text = NhanVienBLL.Instance.GetNhanVienByID(id).Ten;
                 txtQueQuan.Text = NhanVienBLL.Instance.GetNhanVienByID(id).QueQuan;
                 txtSDT.Text = NhanVienBLL.Instance.GetNhanVienByID(id).SDT;
@@ -35,7 +33,7 @@ namespace QuanLyPhongTroLinQ.View
         private void btnAdd_Click(object sender, EventArgs e)
         {
             NguoiDung nhanvien = new NguoiDung();
-            nhanvien.ID = txtID.Text;
+            nhanvien.ID = (ID!="")?ID:NguoiDungBLL.Instance.GetNewID();
             nhanvien.Ten = txtTen.Text;
             nhanvien.QueQuan = txtQueQuan.Text;
             nhanvien.SDT = txtSDT.Text;
@@ -85,7 +83,6 @@ namespace QuanLyPhongTroLinQ.View
 
         private void btnReset_Click(object sender, EventArgs e)
         {
-            if (ID == "") txtID.Text = "";
             txtTen.Text = "";
             txtQueQuan.Text = "";
             txtSDT.Text = "";

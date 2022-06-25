@@ -37,34 +37,36 @@
             // 
             // text_HoaDon
             // 
-            this.text_HoaDon.Location = new System.Drawing.Point(40, 81);
+            this.text_HoaDon.Location = new System.Drawing.Point(40, 91);
             this.text_HoaDon.Name = "text_HoaDon";
-            this.text_HoaDon.Size = new System.Drawing.Size(438, 331);
+            this.text_HoaDon.Size = new System.Drawing.Size(495, 373);
             this.text_HoaDon.TabIndex = 0;
             this.text_HoaDon.Text = "";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F);
-            this.label1.Location = new System.Drawing.Point(36, 24);
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(36, 32);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(40, 16);
+            this.label1.Size = new System.Drawing.Size(61, 23);
             this.label1.TabIndex = 1;
             this.label1.Text = "Path :";
             // 
             // txt_Path
             // 
-            this.txt_Path.Location = new System.Drawing.Point(82, 24);
+            this.txt_Path.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Path.Location = new System.Drawing.Point(103, 29);
             this.txt_Path.Name = "txt_Path";
-            this.txt_Path.Size = new System.Drawing.Size(288, 22);
+            this.txt_Path.Size = new System.Drawing.Size(336, 30);
             this.txt_Path.TabIndex = 2;
             // 
             // but_Browse
             // 
-            this.but_Browse.Location = new System.Drawing.Point(403, 23);
+            this.but_Browse.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.but_Browse.Location = new System.Drawing.Point(445, 24);
             this.but_Browse.Name = "but_Browse";
-            this.but_Browse.Size = new System.Drawing.Size(75, 23);
+            this.but_Browse.Size = new System.Drawing.Size(90, 39);
             this.but_Browse.TabIndex = 3;
             this.but_Browse.Text = "Browse";
             this.but_Browse.UseVisualStyleBackColor = true;
@@ -72,9 +74,10 @@
             // 
             // btn_xuat
             // 
-            this.btn_xuat.Location = new System.Drawing.Point(198, 433);
+            this.btn_xuat.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_xuat.Location = new System.Drawing.Point(189, 470);
             this.btn_xuat.Name = "btn_xuat";
-            this.btn_xuat.Size = new System.Drawing.Size(111, 35);
+            this.btn_xuat.Size = new System.Drawing.Size(202, 35);
             this.btn_xuat.TabIndex = 4;
             this.btn_xuat.Text = "Xuất hóa đơn";
             this.btn_xuat.UseVisualStyleBackColor = true;
@@ -84,13 +87,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(515, 486);
+            this.ClientSize = new System.Drawing.Size(572, 539);
             this.Controls.Add(this.btn_xuat);
             this.Controls.Add(this.but_Browse);
             this.Controls.Add(this.txt_Path);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.text_HoaDon);
             this.Name = "FormHoaDon";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Xuất hóa đơn";
             this.ResumeLayout(false);
             this.PerformLayout();

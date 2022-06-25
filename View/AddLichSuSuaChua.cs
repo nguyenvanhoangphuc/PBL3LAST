@@ -32,8 +32,6 @@ namespace QuanLyPhongTroLinQ.View
         {
             if (id != "")
             {
-                txtID.Text = id;
-                txtID.Enabled = false;
                 cbbPhong.SelectedValue = LichSuSuaChuaBLL.Instance.GetLSSuaChuaByID(id).IDPhong;
                 cbbLoaiTB.SelectedValue = LichSuSuaChuaBLL.Instance.GetLSSuaChuaByID(id).ID_LoaiThietBi;
                 dateSuaChua.Value = (DateTime)LichSuSuaChuaBLL.Instance.GetLSSuaChuaByID(id).NgaySuaChua;
@@ -45,7 +43,6 @@ namespace QuanLyPhongTroLinQ.View
         {
             if (id == "")
             {
-                txtID.Text = "";
                 cbbPhong.Text = "";
                 cbbLoaiTB.Text = "";
                 dateSuaChua.Value = DateTime.Now;
@@ -70,7 +67,7 @@ namespace QuanLyPhongTroLinQ.View
         {
             LichSuSuaChua lssc = new LichSuSuaChua
             {
-                ID_LichSuSuaChua = txtID.Text,
+                ID_LichSuSuaChua = (id != "") ? id : (LichSuSuaChuaBLL.Instance.GetIDNew()),
                 IDNhanVien = idNhanVien,
                 IDPhong = ((CBBItem)cbbPhong.SelectedItem).ID,
                 ID_LoaiThietBi = ((CBBItem)cbbLoaiTB.SelectedItem).ID,

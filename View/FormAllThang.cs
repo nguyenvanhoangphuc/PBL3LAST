@@ -84,14 +84,20 @@ namespace QuanLyPhongTroLinQ.View
 
         private void btn_Sua_Click(object sender, EventArgs e)
         {
-            DialogResult dr = MessageBox.Show("Bạn có chắc muốn chỉnh sửa tháng mới nhất ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (dr == DialogResult.Yes)
+            if (dgv_DSThang.Rows.Count >= 2)
             {
-                 
-                FormAddFixThang f = new FormAddFixThang(ID_Phong, dgv_DSThang.Rows[dgv_DSThang.Rows.Count - 2].Cells["ID"].Value.ToString());
-                f.TrienKhai = new FormAddFixThang.HamTrienKhai(GUI);
-                f.TrienKhai1 = new FormAddFixThang.HamTrienKhai1(TrienKhai1);
-                f.Show();
+                DialogResult dr = MessageBox.Show("Bạn có chắc muốn chỉnh sửa tháng mới nhất ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dr == DialogResult.Yes)
+                {
+                    FormAddFixThang f = new FormAddFixThang(ID_Phong, dgv_DSThang.Rows[dgv_DSThang.Rows.Count - 2].Cells["ID"].Value.ToString());
+                    f.TrienKhai = new FormAddFixThang.HamTrienKhai(GUI);
+                    f.TrienKhai1 = new FormAddFixThang.HamTrienKhai1(TrienKhai1);
+                    f.Show();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Phòng này hiện không có thông tin thu trả tiền!"); 
             }
         }
 

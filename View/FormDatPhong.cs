@@ -30,13 +30,15 @@ namespace QuanLyPhongTroLinQ.View
                 if (i.TenLoaiPhong == cboLoaiPhong.SelectedItem.ToString())
                 {
                     dgvPhong.DataSource = BLL_DatTraPhong.Instance.GetPhongTroViewByLoaiPhong(i.ID);
+                    dgvPhong.Columns["IDPhong"].Visible = false;
+                    dgvPhong.Columns["TenPhong"].HeaderText = "Tên phòng";
+                    dgvPhong.Columns["TenLoaiPhong"].HeaderText = "Tên loại phòng";
+                    dgvPhong.Columns["NgayThue"].HeaderText = "Ngày thuê";
+                    dgvPhong.Columns["TinhTrang"].HeaderText = "Tình trạng";
+                    break;
                 }
-
             }
-
-
         }
-
 
         private void btnHuy_Click(object sender, EventArgs e)
         {
@@ -46,8 +48,15 @@ namespace QuanLyPhongTroLinQ.View
 
         private void txtSDT_TextChanged(object sender, EventArgs e)
         {
-
             dgvCoTheChon.DataSource = BLL_DatTraPhong.Instance.GetNguoiChuaThueVaLoaiTru(txtSDT.Text, nguoith.SDT);
+
+            dgvCoTheChon.Columns["ID"].Visible = false;
+            dgvCoTheChon.Columns["HoTen"].HeaderText = "Họ tên";
+            dgvCoTheChon.Columns["SDT"].HeaderText = "SDT";
+            dgvCoTheChon.Columns["QueQuan"].HeaderText = "Quê quán";
+            dgvCoTheChon.Columns["CCCD"].HeaderText = "CCCD";
+            dgvCoTheChon.Columns["TinhTrang"].HeaderText = "Tình trạng";
+            dgvCoTheChon.Columns["QLDatPhongs"].Visible = false;
         }
 
         private void btnChon_Click(object sender, EventArgs e)
@@ -74,12 +83,17 @@ namespace QuanLyPhongTroLinQ.View
                         SDT = i.Cells["SDT"].Value.ToString(),
                         TinhTrang = Convert.ToBoolean(i.Cells["TinhTrang"].Value.ToString())
                     });
-                    ;
-
 
                 }
                 dgvDaChon.DataSource = null;
                 dgvDaChon.DataSource = ds;
+                dgvDaChon.Columns["ID"].Visible = false;
+                dgvDaChon.Columns["HoTen"].HeaderText = "Họ tên";
+                dgvDaChon.Columns["SDT"].HeaderText = "SDT";
+                dgvDaChon.Columns["QueQuan"].HeaderText = "Quê quán";
+                dgvDaChon.Columns["CCCD"].HeaderText = "CCCD";
+                dgvDaChon.Columns["TinhTrang"].HeaderText = "Tình trạng";
+                dgvDaChon.Columns["QLDatPhongs"].Visible = false;
             }
         }
 
@@ -105,6 +119,11 @@ namespace QuanLyPhongTroLinQ.View
 
         private void btnDatPhong_Click(object sender, EventArgs e)
         {
+            if (dgvPhong.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Bạn chưa chọn phòng! Vui lòng chọn phòng trống.");
+                return;
+            }
             ds.Add(nguoith);
             BLL_DatTraPhong.Instance.DatPhong(ds, dgvPhong.SelectedRows[0].Cells["IDPhong"].Value.ToString());
             foreach (CBBItemLoaiPhong i in BLL_DatTraPhong.Instance.GetCBBItemLoaiPhong())
@@ -115,6 +134,9 @@ namespace QuanLyPhongTroLinQ.View
                 }
 
             }
+            MessageBox.Show("Bạn đã đặt phòng thành công.");
+            t();
+            this.Close(); 
         }
     }
 }

@@ -17,11 +17,6 @@ namespace QuanLyPhongTroLinQ.BLL
         {
             get
             {
-                //if (_Instance == null)
-                //{
-                //    _Instance = new TraTienBLL();
-                //}
-                //return _Instance;
                 return new TraTienBLL();
             }
             private set { }
@@ -60,7 +55,7 @@ namespace QuanLyPhongTroLinQ.BLL
             {
                 bool have = false;
                 foreach (TienThang t in db.TienThangs)
-                    if (p.ID == t.ID_Phong)
+                    if (p.ID == t.ID_Phong && t.TienPhong==0)
                     {
                         have = true;
                         break;

@@ -1,7 +1,9 @@
 ﻿using QuanLyPhongTroLinQ.DTO;
+using System;
 using System.IO;
 using System.Linq;
 using System.Net.Sockets;
+using System.Security.Cryptography;
 using System.Text;
 
 namespace QuanLyPhongTroLinQ.BLL
@@ -39,7 +41,7 @@ namespace QuanLyPhongTroLinQ.BLL
             var l = db.TaiKhoans.Where(p => (p.TenTK == obj.TenTK) && (p.MKhau == obj.MKhau)).Select(p => p.ID);
             if (l.Any())
             {
-                return db.TaiKhoans.Where(p => (p.TenTK == obj.TenTK) && (p.MKhau == obj.MKhau)).Select(p => p.ID).FirstOrDefault();
+                return l.FirstOrDefault();
             }
             else return "null";
         }
@@ -126,7 +128,7 @@ namespace QuanLyPhongTroLinQ.BLL
                 return "Email không được để trống";
             }
             else if ((db.TaiKhoans.Where(p => (p.TenTK == tk.TenTK) && (p.MKhau == tk.MKhau)).Select(p => p.ID)).Count() > 0) // check Tên đăng nhập + mật khẩu đã tồn tại chưa
-                    return "Tài khoản đã tồn tại";
+                return "Tài khoản đã tồn tại";
             else //kiểm tra email hợp lệ    
             {
                 string KQCheckEmail = CheckEmail(tk.Email);
@@ -200,16 +202,17 @@ namespace QuanLyPhongTroLinQ.BLL
 
         public string DoiMatKhau(string ID, string nowMK, string newMK, string retypeMK)
         {
-            var tk = db.TaiKhoans.Where((p) => p.ID == ID && p.MKhau == nowMK).FirstOrDefault();
+            string CheckMK = HashPass(nowMK);
+            var tk = db.TaiKhoans.Where((p) => p.ID == ID && p.MKhau == CheckMK).FirstOrDefault();
             if (tk != null)
             {
-                if(newMK == "")
+                if (newMK == "")
                 {
                     return "Nhập mật khẩu mới";
                 }
                 else if (newMK == retypeMK)
                 {
-                    tk.MKhau = newMK;
+                    tk.MKhau = HashPass(newMK);
                     db.SaveChanges();
                     return "Cập nhật mật khẩu thành công";
                 }
@@ -228,6 +231,13 @@ namespace QuanLyPhongTroLinQ.BLL
             var p = db.TaiKhoans.Find(tk.ID);
             p.TenTK = tk.TenTK;
             db.SaveChanges();
+        }
+        public string HashPass(string password)
+        {
+            SHA1CryptoServiceProvider sha1 = new SHA1CryptoServiceProvider();
+            byte[] password_bytes = Encoding.ASCII.GetBytes(password);
+            byte[] encrypted_bytes = sha1.ComputeHash(password_bytes);
+            return Convert.ToBase64String(encrypted_bytes);
         }
     }
 }

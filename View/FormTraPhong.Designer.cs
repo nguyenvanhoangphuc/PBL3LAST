@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel30 = new System.Windows.Forms.Panel();
             this.lblNote = new System.Windows.Forms.Label();
             this.lblLoaiPhong = new System.Windows.Forms.Label();
@@ -51,9 +51,10 @@
             this.panel30.Controls.Add(this.dgvPhong);
             this.panel30.Controls.Add(this.btnHuy);
             this.panel30.Controls.Add(this.btnTraPhong);
-            this.panel30.Location = new System.Drawing.Point(10, 7);
+            this.panel30.Location = new System.Drawing.Point(13, 9);
+            this.panel30.Margin = new System.Windows.Forms.Padding(4);
             this.panel30.Name = "panel30";
-            this.panel30.Size = new System.Drawing.Size(776, 496);
+            this.panel30.Size = new System.Drawing.Size(1035, 610);
             this.panel30.TabIndex = 1;
             // 
             // lblNote
@@ -61,9 +62,10 @@
             this.lblNote.AutoSize = true;
             this.lblNote.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
             this.lblNote.ForeColor = System.Drawing.Color.Maroon;
-            this.lblNote.Location = new System.Drawing.Point(35, 457);
+            this.lblNote.Location = new System.Drawing.Point(47, 562);
+            this.lblNote.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNote.Name = "lblNote";
-            this.lblNote.Size = new System.Drawing.Size(344, 32);
+            this.lblNote.Size = new System.Drawing.Size(422, 40);
             this.lblNote.TabIndex = 21;
             this.lblNote.Text = "Ghi chú : nếu muốn xem thông tin phòng\r\ncó thể nhấn double click chuột trái vào t" +
     "ên phòng";
@@ -73,18 +75,20 @@
             this.lblLoaiPhong.AutoSize = true;
             this.lblLoaiPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
             this.lblLoaiPhong.ForeColor = System.Drawing.Color.Maroon;
-            this.lblLoaiPhong.Location = new System.Drawing.Point(116, 68);
+            this.lblLoaiPhong.Location = new System.Drawing.Point(127, 102);
+            this.lblLoaiPhong.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblLoaiPhong.Name = "lblLoaiPhong";
-            this.lblLoaiPhong.Size = new System.Drawing.Size(85, 16);
+            this.lblLoaiPhong.Size = new System.Drawing.Size(101, 20);
             this.lblLoaiPhong.TabIndex = 18;
             this.lblLoaiPhong.Text = "Loại phòng";
             // 
             // cboLoaiPhong
             // 
             this.cboLoaiPhong.FormattingEnabled = true;
-            this.cboLoaiPhong.Location = new System.Drawing.Point(204, 65);
+            this.cboLoaiPhong.Location = new System.Drawing.Point(244, 98);
+            this.cboLoaiPhong.Margin = new System.Windows.Forms.Padding(4);
             this.cboLoaiPhong.Name = "cboLoaiPhong";
-            this.cboLoaiPhong.Size = new System.Drawing.Size(121, 21);
+            this.cboLoaiPhong.Size = new System.Drawing.Size(160, 24);
             this.cboLoaiPhong.TabIndex = 17;
             this.cboLoaiPhong.SelectedIndexChanged += new System.EventHandler(this.cboLoaiPhong_SelectedIndexChanged);
             // 
@@ -93,9 +97,10 @@
             this.lblTraPhong.AutoSize = true;
             this.lblTraPhong.Font = new System.Drawing.Font("Palatino Linotype", 22.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.lblTraPhong.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblTraPhong.Location = new System.Drawing.Point(311, 22);
+            this.lblTraPhong.Location = new System.Drawing.Point(415, 27);
+            this.lblTraPhong.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTraPhong.Name = "lblTraPhong";
-            this.lblTraPhong.Size = new System.Drawing.Size(155, 40);
+            this.lblTraPhong.Size = new System.Drawing.Size(192, 49);
             this.lblTraPhong.TabIndex = 8;
             this.lblTraPhong.Text = "Trả phòng";
             // 
@@ -103,19 +108,20 @@
             // 
             this.dgvPhong.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvPhong.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvPhong.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvPhong.Location = new System.Drawing.Point(116, 115);
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvPhong.DefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvPhong.Location = new System.Drawing.Point(108, 165);
+            this.dgvPhong.Margin = new System.Windows.Forms.Padding(4);
             this.dgvPhong.MultiSelect = false;
             this.dgvPhong.Name = "dgvPhong";
             this.dgvPhong.RowHeadersWidth = 51;
-            this.dgvPhong.Size = new System.Drawing.Size(544, 235);
+            this.dgvPhong.Size = new System.Drawing.Size(819, 266);
             this.dgvPhong.TabIndex = 15;
             this.dgvPhong.RowHeaderMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvPhong_RowHeaderMouseDoubleClick);
             // 
@@ -124,9 +130,10 @@
             this.btnHuy.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnHuy.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHuy.ForeColor = System.Drawing.Color.Yellow;
-            this.btnHuy.Location = new System.Drawing.Point(535, 389);
+            this.btnHuy.Location = new System.Drawing.Point(713, 479);
+            this.btnHuy.Margin = new System.Windows.Forms.Padding(4);
             this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(145, 41);
+            this.btnHuy.Size = new System.Drawing.Size(193, 50);
             this.btnHuy.TabIndex = 14;
             this.btnHuy.Text = "Hủy";
             this.btnHuy.UseVisualStyleBackColor = false;
@@ -137,9 +144,10 @@
             this.btnTraPhong.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnTraPhong.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTraPhong.ForeColor = System.Drawing.Color.Yellow;
-            this.btnTraPhong.Location = new System.Drawing.Point(99, 389);
+            this.btnTraPhong.Location = new System.Drawing.Point(132, 479);
+            this.btnTraPhong.Margin = new System.Windows.Forms.Padding(4);
             this.btnTraPhong.Name = "btnTraPhong";
-            this.btnTraPhong.Size = new System.Drawing.Size(145, 41);
+            this.btnTraPhong.Size = new System.Drawing.Size(193, 50);
             this.btnTraPhong.TabIndex = 13;
             this.btnTraPhong.Text = "Trả phòng";
             this.btnTraPhong.UseVisualStyleBackColor = false;
@@ -147,12 +155,13 @@
             // 
             // FormTraPhong
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(794, 514);
+            this.ClientSize = new System.Drawing.Size(1059, 633);
             this.Controls.Add(this.panel30);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Location = new System.Drawing.Point(250, 70);
+            this.Location = new System.Drawing.Point(490, 170);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormTraPhong";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "FormLoaiPhong";

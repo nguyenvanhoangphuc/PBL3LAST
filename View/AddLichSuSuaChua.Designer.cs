@@ -34,10 +34,8 @@
             this.btnCancel = new System.Windows.Forms.Button();
             this.txtSoTien = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtID = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.cbbLoaiTB = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -48,7 +46,7 @@
             // 
             this.cbbPhong.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold);
             this.cbbPhong.FormattingEnabled = true;
-            this.cbbPhong.Location = new System.Drawing.Point(292, 151);
+            this.cbbPhong.Location = new System.Drawing.Point(322, 107);
             this.cbbPhong.Name = "cbbPhong";
             this.cbbPhong.Size = new System.Drawing.Size(236, 33);
             this.cbbPhong.TabIndex = 18;
@@ -87,7 +85,7 @@
             // txtSoTien
             // 
             this.txtSoTien.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSoTien.Location = new System.Drawing.Point(292, 313);
+            this.txtSoTien.Location = new System.Drawing.Point(322, 269);
             this.txtSoTien.Name = "txtSoTien";
             this.txtSoTien.Size = new System.Drawing.Size(236, 34);
             this.txtSoTien.TabIndex = 11;
@@ -97,25 +95,17 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(52, 316);
+            this.label6.Location = new System.Drawing.Point(82, 272);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(177, 25);
             this.label6.TabIndex = 5;
             this.label6.Text = "Số tiền sửa chữa";
             // 
-            // txtID
-            // 
-            this.txtID.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtID.Location = new System.Drawing.Point(292, 99);
-            this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(236, 34);
-            this.txtID.TabIndex = 13;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(52, 151);
+            this.label4.Location = new System.Drawing.Point(82, 107);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(119, 25);
             this.label4.TabIndex = 7;
@@ -125,21 +115,11 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(52, 204);
+            this.label3.Location = new System.Drawing.Point(82, 160);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(165, 25);
             this.label3.TabIndex = 8;
             this.label3.Text = "Tên loại thiết bị";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(52, 99);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(38, 25);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "ID";
             // 
             // label1
             // 
@@ -156,7 +136,7 @@
             // 
             this.cbbLoaiTB.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold);
             this.cbbLoaiTB.FormattingEnabled = true;
-            this.cbbLoaiTB.Location = new System.Drawing.Point(292, 201);
+            this.cbbLoaiTB.Location = new System.Drawing.Point(322, 157);
             this.cbbLoaiTB.Name = "cbbLoaiTB";
             this.cbbLoaiTB.Size = new System.Drawing.Size(236, 33);
             this.cbbLoaiTB.TabIndex = 18;
@@ -165,7 +145,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(53, 263);
+            this.label5.Location = new System.Drawing.Point(83, 219);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(161, 25);
             this.label5.TabIndex = 9;
@@ -175,7 +155,7 @@
             // 
             this.dateSuaChua.CalendarFont = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateSuaChua.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateSuaChua.Location = new System.Drawing.Point(292, 263);
+            this.dateSuaChua.Location = new System.Drawing.Point(322, 219);
             this.dateSuaChua.Name = "dateSuaChua";
             this.dateSuaChua.Size = new System.Drawing.Size(236, 30);
             this.dateSuaChua.TabIndex = 19;
@@ -193,13 +173,12 @@
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.txtSoTien);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.txtID);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "AddLichSuSuaChua";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddLichSuSuaChua";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -214,10 +193,8 @@
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.TextBox txtSoTien;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cbbLoaiTB;
         private System.Windows.Forms.Label label5;

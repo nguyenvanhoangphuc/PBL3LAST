@@ -12,7 +12,5 @@ namespace QuanLyPhongTroLinQ.View
             InitializeComponent();
            
         }
-
-        
     }
 }

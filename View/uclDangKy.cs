@@ -2,6 +2,8 @@
 using QuanLyPhongTroLinQ.DTO;
 using System;
 using System.Drawing;
+using System.Security.Cryptography;
+using System.Text;
 using System.Windows.Forms;
 
 namespace QuanLyPhongTroLinQ.View
@@ -188,25 +190,25 @@ namespace QuanLyPhongTroLinQ.View
                     nd.ID_TK = tk.ID;
                     nd.TrangThai = "Cho";
                     TaiKhoanBLL.Instance.InsertTaiKhoan_NguoiDung(tk, nd);
-                    lblThongBao.Text="Đăng kí thành công. Tài khoản của bạn đang chờ được xét duyệt";
+                    lblThongBao.Text = "Đăng kí thành công. Tài khoản của bạn đang chờ được xét duyệt";
                     uclDangNhap ucl = new uclDangNhap();
                     this.Hide();
                     Parent.Controls.Add(ucl);
                 }
                 else
                 {
-                    lblThongBao.Text=ThongBao;
+                    lblThongBao.Text = ThongBao;
                 }
             }
             else
             {
-                lblThongBao.Text="Vui lòng đồng ý với điều khoản sử dụng của chúng tôi";
+                lblThongBao.Text = "Vui lòng đồng ý với điều khoản sử dụng của chúng tôi";
             }
         }
 
         private void txtMK_TextChanged(object sender, EventArgs e)
         {
-            tk.MKhau = txtMK.Text;
+            tk.MKhau = HashPass(txtMK.Text);
         }
 
         private void txtName_TextChanged(object sender, EventArgs e)
@@ -254,10 +256,17 @@ namespace QuanLyPhongTroLinQ.View
                 nd.TuCach = "NhanVien";
             }
         }
-
         private void lblThongBao_Click(object sender, EventArgs e)
         {
 
         }
+        public string HashPass(string password)
+        {
+            SHA1CryptoServiceProvider sha1 = new SHA1CryptoServiceProvider();
+            byte[] password_bytes = Encoding.ASCII.GetBytes(password);
+            byte[] encrypted_bytes = sha1.ComputeHash(password_bytes);
+            return Convert.ToBase64String(encrypted_bytes);
+        }
+
     }
 }

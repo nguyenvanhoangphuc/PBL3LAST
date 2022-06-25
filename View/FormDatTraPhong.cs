@@ -9,6 +9,7 @@ namespace QuanLyPhongTroLinQ.View
         public FormDatTraPhong()
         {
             InitializeComponent();
+            Refreshdgv(); 
         }
 
         private void txtSDT_TextChanged(object sender, EventArgs e)
@@ -34,10 +35,21 @@ namespace QuanLyPhongTroLinQ.View
                 f.t = new FormDatPhong.Mydel(Refreshdgv);
                 f.Show();
             }
+            else
+            {
+                MessageBox.Show("Vui lòng chọn người thuê làm chủ phòng!");
+            }
         }
         public void Refreshdgv()
         {
             dgv.DataSource = BLL_DatTraPhong.Instance.GetNguoiChuaThueBySDT(txtSDT.Text);
+            dgv.Columns["ID"].Visible = false;
+            dgv.Columns["HoTen"].HeaderText = "Họ tên";
+            dgv.Columns["SDT"].HeaderText = "SDT";
+            dgv.Columns["QueQuan"].HeaderText = "Quê quán";
+            dgv.Columns["CCCD"].HeaderText = "CCCD";
+            dgv.Columns["TinhTrang"].HeaderText = "Tình trạng";
+            dgv.Columns["QLDatPhongs"].Visible = false; 
         }
 
         private void btnTraPhong_Click(object sender, EventArgs e)
@@ -45,8 +57,6 @@ namespace QuanLyPhongTroLinQ.View
             FormTraPhong f = new FormTraPhong();
             f.t = new FormTraPhong.Mydel(Refresh);
             f.Show();
-
-
         }
     }
 }

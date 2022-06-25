@@ -1,6 +1,8 @@
 ﻿using QuanLyPhongTroLinQ.BLL;
 using System;
 using System.Drawing;
+using System.Security.Cryptography;
+using System.Text;
 using System.Windows.Forms;
 namespace QuanLyPhongTroLinQ.View
 {
@@ -95,14 +97,14 @@ namespace QuanLyPhongTroLinQ.View
         {
             if (txtNhapLaiMK.Text == txtNhapMKMoi.Text)
             {
-                lblThongBao.Text=TaiKhoanBLL.Instance.SetMK(em, txtNhapMKMoi.Text);
+                lblThongBao.Text = TaiKhoanBLL.Instance.SetMK(em, HashPass(txtNhapMKMoi.Text));
                 uclDangNhap dn = new uclDangNhap();
                 this.Hide();
                 this.Parent.Controls.Add(dn);
             }
             else
             {
-                lblThongBao.Text="Mật khẩu không trùng khớp";
+                lblThongBao.Text = "Mật khẩu không trùng khớp";
             }
         }
 
@@ -111,6 +113,13 @@ namespace QuanLyPhongTroLinQ.View
             uclXacNhanMK u = new uclXacNhanMK(em, "000000");
             this.Hide();
             this.Parent.Controls.Add(u);
+        }
+        public string HashPass(string password)
+        {
+            SHA1CryptoServiceProvider sha1 = new SHA1CryptoServiceProvider();
+            byte[] password_bytes = Encoding.ASCII.GetBytes(password);
+            byte[] encrypted_bytes = sha1.ComputeHash(password_bytes);
+            return Convert.ToBase64String(encrypted_bytes);
         }
     }
 }

@@ -16,6 +16,9 @@ namespace QuanLyPhongTroLinQ.View
         public void showDGV()
         {
             DGVThietBi.DataSource = ThietBiBLL.Instance.GetThietBiViews();
+            DGVThietBi.Columns["TenPhong"].HeaderText = "Tên phòng";
+            DGVThietBi.Columns["TenLoaiTB"].HeaderText = "Tên loại TB";
+            DGVThietBi.Columns["TinhTrang"].HeaderText = "Tình trạng"; 
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
@@ -43,6 +46,9 @@ namespace QuanLyPhongTroLinQ.View
                 TinhTrang = (cbTT.Checked) ? txtSearch.Text : ""
             };
             DGVThietBi.DataSource = ThietBiBLL.Instance.SearchData(tb);
+            DGVThietBi.Columns["TenPhong"].HeaderText = "Tên phòng";
+            DGVThietBi.Columns["TenLoaiTB"].HeaderText = "Tên loại TB";
+            DGVThietBi.Columns["TinhTrang"].HeaderText = "Tình trạng";
         }
 
         private void butDefault_Click(object sender, EventArgs e)

@@ -49,20 +49,21 @@ namespace QuanLyPhongTroLinQ.View
             this.panel4.Controls.Add(this.lblTieuDe);
             this.panel4.Controls.Add(this.DGVPhongTro);
             this.panel4.Controls.Add(this.txtTenPhong);
-            this.panel4.Location = new System.Drawing.Point(9, 9);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2);
+            this.panel4.Location = new System.Drawing.Point(12, 11);
+            this.panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(498, 496);
+            this.panel4.Size = new System.Drawing.Size(1034, 609);
             this.panel4.TabIndex = 10;
             // 
             // btnDong
             // 
             this.btnDong.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnDong.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDong.ForeColor = System.Drawing.Color.Yellow;
-            this.btnDong.Location = new System.Drawing.Point(193, 426);
-            this.btnDong.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDong.Location = new System.Drawing.Point(424, 509);
+            this.btnDong.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDong.Name = "btnDong";
-            this.btnDong.Size = new System.Drawing.Size(69, 44);
+            this.btnDong.Size = new System.Drawing.Size(201, 54);
             this.btnDong.TabIndex = 9;
             this.btnDong.Text = "Đóng";
             this.btnDong.UseVisualStyleBackColor = false;
@@ -71,9 +72,11 @@ namespace QuanLyPhongTroLinQ.View
             // lblTenPhong
             // 
             this.lblTenPhong.AutoSize = true;
-            this.lblTenPhong.Location = new System.Drawing.Point(29, 73);
+            this.lblTenPhong.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTenPhong.Location = new System.Drawing.Point(339, 149);
+            this.lblTenPhong.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTenPhong.Name = "lblTenPhong";
-            this.lblTenPhong.Size = new System.Drawing.Size(59, 13);
+            this.lblTenPhong.Size = new System.Drawing.Size(119, 25);
             this.lblTenPhong.TabIndex = 8;
             this.lblTenPhong.Text = "Tên phòng";
             // 
@@ -81,10 +84,9 @@ namespace QuanLyPhongTroLinQ.View
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Palatino Linotype", 22.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(15, 10);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(301, 37);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(358, 40);
+            this.label1.Size = new System.Drawing.Size(434, 49);
             this.label1.TabIndex = 6;
             this.label1.Text = "Danh sách thiết bị phòng";
             // 
@@ -92,10 +94,9 @@ namespace QuanLyPhongTroLinQ.View
             // 
             this.lblTieuDe.AutoSize = true;
             this.lblTieuDe.Font = new System.Drawing.Font("Palatino Linotype", 22.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTieuDe.Location = new System.Drawing.Point(15, 122);
-            this.lblTieuDe.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTieuDe.Location = new System.Drawing.Point(316, 198);
             this.lblTieuDe.Name = "lblTieuDe";
-            this.lblTieuDe.Size = new System.Drawing.Size(338, 40);
+            this.lblTieuDe.Size = new System.Drawing.Size(409, 49);
             this.lblTieuDe.TabIndex = 3;
             this.lblTieuDe.Text = "Bảng danh sách thiết bị";
             // 
@@ -103,32 +104,33 @@ namespace QuanLyPhongTroLinQ.View
             // 
             this.DGVPhongTro.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DGVPhongTro.ColumnHeadersHeight = 30;
-            this.DGVPhongTro.Location = new System.Drawing.Point(22, 183);
-            this.DGVPhongTro.Margin = new System.Windows.Forms.Padding(2);
+            this.DGVPhongTro.Location = new System.Drawing.Point(164, 261);
+            this.DGVPhongTro.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DGVPhongTro.Name = "DGVPhongTro";
             this.DGVPhongTro.RowHeadersWidth = 80;
             this.DGVPhongTro.RowTemplate.Height = 24;
-            this.DGVPhongTro.Size = new System.Drawing.Size(443, 191);
+            this.DGVPhongTro.Size = new System.Drawing.Size(702, 235);
             this.DGVPhongTro.TabIndex = 2;
             // 
             // txtTenPhong
             // 
             this.txtTenPhong.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTenPhong.Location = new System.Drawing.Point(104, 65);
-            this.txtTenPhong.Margin = new System.Windows.Forms.Padding(2);
+            this.txtTenPhong.Location = new System.Drawing.Point(520, 146);
+            this.txtTenPhong.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTenPhong.Name = "txtTenPhong";
-            this.txtTenPhong.Size = new System.Drawing.Size(117, 29);
+            this.txtTenPhong.Size = new System.Drawing.Size(155, 34);
             this.txtTenPhong.TabIndex = 0;
             // 
             // FormXemThietBiPhong
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(509, 506);
+            this.ClientSize = new System.Drawing.Size(1058, 633);
             this.Controls.Add(this.panel4);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Location = new System.Drawing.Point(250, 70);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FormXemThietBiPhong";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.panel4.ResumeLayout(false);

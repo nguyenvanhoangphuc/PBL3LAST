@@ -11,7 +11,7 @@ namespace QuanLyPhongTroLinQ.BLL
 {
     public class ThongKe_ADBLL
     {
-        QLPT db= new QLPT();
+        QLPT db;
         public int Total = 0;
 
         private static ThongKe_ADBLL _Instance;
@@ -26,6 +26,10 @@ namespace QuanLyPhongTroLinQ.BLL
                 return _Instance;
             }
             private set { }
+        }
+        public ThongKe_ADBLL()
+        {
+            db = new QLPT(); 
         }
 
         public List<string> GetAllYear()

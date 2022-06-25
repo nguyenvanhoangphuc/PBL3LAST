@@ -31,10 +31,9 @@ namespace QuanLyPhongTroLinQ.BLL
         public List<NguoiThue> GetNguoiChuaThueBySDT(string s)
         {
             List<NguoiThue> ds = new List<NguoiThue>();
-            foreach (NguoiThue i in db.NguoiThues.Select(p => p))
-
+            foreach (NguoiThue i in db.NguoiThues.Where(p => (p.TinhTrang == false) && ((s == "") ? true : p.SDT.Contains(s))))
             {
-                if (i.TinhTrang == false && i.SDT.Contains(s) == true) ds.Add(new NguoiThue()
+                ds.Add(new NguoiThue()
                 {
                     ID = i.ID,
                     CCCD = i.CCCD,
@@ -67,7 +66,7 @@ namespace QuanLyPhongTroLinQ.BLL
 
         public List<PhongTro_DatPhongView> GetPhongTroViewByLoaiPhong(string id)
         {
-
+            db = new QLPT(); 
             List<PhongTro_DatPhongView> ds = new List<PhongTro_DatPhongView>();
             foreach (PhongTro i in db.PhongTros.Where(p => p.LoaiPhong.IDLoaiPhong == id).Select(p => p))
             {
@@ -107,48 +106,64 @@ namespace QuanLyPhongTroLinQ.BLL
 
             foreach (NguoiThue i in a)
             {
-                var j = db.NguoiThues.Where(p => p.ID == i.ID).FirstOrDefault();
-                j.TinhTrang = true;
+                using (QLPT db = new QLPT())
+                {
+                    var j = db.NguoiThues.Where(p => p.ID == i.ID).FirstOrDefault();
+                    j.TinhTrang = true;
+                    db.SaveChanges();
+                }
+            }
+            using (QLPT db = new QLPT())
+            {
+                var j1 = db.PhongTros.Where(p => p.ID == id_phong).FirstOrDefault();
+                j1.TinhTrang = true;
+                j1.NgayThue = DateTime.Now;
                 db.SaveChanges();
             }
-            var j1 = db.PhongTros.Where(p => p.ID == id_phong).FirstOrDefault();
-            j1.TinhTrang = true;
-            j1.NgayThue = DateTime.Now;
-            db.SaveChanges();
 
             foreach (NguoiThue i in a)
             {
-                db.QLDatPhongs.Add(new QLDatPhong()
+                using (QLPT db = new QLPT())
                 {
-                    ID_NguoiThue = i.ID,
-                    ID_Phong = id_phong,
-
-                });
-                db.SaveChanges();
-
+                    db.QLDatPhongs.Add(new QLDatPhong()
+                    {
+                        ID_NguoiThue = i.ID,
+                        ID_Phong = id_phong
+                    });
+                    db.SaveChanges();
+                }
             }
 
         }
 
         public void TraPhong(string idphong)
         {
-            foreach (QLDatPhong i in db.QLDatPhongs.Select(p => p))
-            {
-                var temp = db.NguoiThues.Where(p => p.ID == i.ID_NguoiThue).Select(p => p).FirstOrDefault();
-                temp.TinhTrang = false;
+            // khi trả phòng với idphong thì ta sẽ
+            // xoá hết các QLdatphong của idphongdo
+            // chuyển người thuê về tình trạng chưa thuê
+            // chuyển phòng về tình trạng còn trống, chưa cho thuê
 
-                if (i.ID_Phong == idphong)
+            foreach (QLDatPhong qLDatPhong in db.PhongTros.Find(idphong).QLDatPhongs)
+            {
+                using (QLPT db = new QLPT())
                 {
-                    db.QLDatPhongs.Remove(i);
+                    var nguoiThue = db.NguoiThues.Find(qLDatPhong.ID_NguoiThue);
+                    nguoiThue.TinhTrang = false;
+                    db.SaveChanges();
                 }
             }
-            db.SaveChanges();
-            var j = db.PhongTros.Where(p => p.ID == idphong).Select(p => p).FirstOrDefault();
-            j.TinhTrang = false;
-            j.NgayThue = null;
-            db.SaveChanges();
-
-
+            using (QLPT db = new QLPT())
+            {
+                db.QLDatPhongs.RemoveRange(db.PhongTros.Find(idphong).QLDatPhongs);
+                db.SaveChanges();
+            }
+            using (QLPT db = new QLPT())
+            {
+                var j = db.PhongTros.Find(idphong);
+                j.TinhTrang = false;
+                j.NgayThue = null;
+                db.SaveChanges();
+            }
         }
 
 

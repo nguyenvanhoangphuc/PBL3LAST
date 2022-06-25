@@ -2,6 +2,8 @@
 using QuanLyPhongTroLinQ.DTO;
 using System;
 using System.Drawing;
+using System.Security.Cryptography;
+using System.Text;
 using System.Windows.Forms;
 
 
@@ -9,7 +11,7 @@ namespace QuanLyPhongTroLinQ.View
 {
     public partial class uclDangNhap : UserControl
     {
-       
+
         public uclDangNhap()
         {
             InitializeComponent();
@@ -19,14 +21,14 @@ namespace QuanLyPhongTroLinQ.View
             //gọi đến class MatKhau
             TaiKhoan obj = new TaiKhoan();
             obj.TenTK = txtTenDangNhap.Text;
-            obj.MKhau = txtMatKhau.Text;
+            obj.MKhau = HashPass(txtMatKhau.Text);
             string getuser = TaiKhoanBLL.Instance.CheckLogic(obj);
-            if(getuser == "requied_taikhoan")
-                    lblThongBao.Text="Tài khoản không được để trống!";
-            else if(getuser == "requied_password") 
-                    lblThongBao.Text=("Mật khẩu không được để trống!");
+            if (getuser == "requied_taikhoan")
+                lblThongBao.Text = "Tài khoản không được để trống!";
+            else if (getuser == "requied_password")
+                lblThongBao.Text = ("Mật khẩu không được để trống!");
             else if (getuser == "null")
-                lblThongBao.Text=("Tài khoản hoặc mật khẩu không chính xác!");
+                lblThongBao.Text = ("Tài khoản hoặc mật khẩu không chính xác!");
             else
             {
                 if (TaiKhoanBLL.Instance.CheckTrangThai(getuser))
@@ -38,7 +40,7 @@ namespace QuanLyPhongTroLinQ.View
                         FormMenuChuTro fCT = new FormMenuChuTro(getuser); //thêm id để sửa tài khoản
                         fCT.dExit = new FormMenuChuTro.myDel(xuathien);
                         fCT.Show();
-                        
+
 
                     }
                     else if (TaiKhoanBLL.Instance.CheckTuCach(getuser) == "NhanVien")
@@ -127,10 +129,12 @@ namespace QuanLyPhongTroLinQ.View
             this.Hide();
             this.Parent.Controls.Add(quenMK);
         }
-
-        private void txtTenDangNhap_TextChanged(object sender, EventArgs e)
+        public string HashPass(string password)
         {
-
+            SHA1CryptoServiceProvider sha1 = new SHA1CryptoServiceProvider();
+            byte[] password_bytes = Encoding.ASCII.GetBytes(password);
+            byte[] encrypted_bytes = sha1.ComputeHash(password_bytes);
+            return Convert.ToBase64String(encrypted_bytes);
         }
     }
 }

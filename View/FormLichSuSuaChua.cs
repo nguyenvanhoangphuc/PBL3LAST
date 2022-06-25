@@ -26,6 +26,12 @@ namespace QuanLyPhongTroLinQ.View
         private void ShowDGV(string idPhong, DateTime date)
         {
             DGVLSSuaChua.DataSource = LichSuSuaChuaBLL.Instance.GetLSSuaChuaViewByPhong(idPhong, date);
+            DGVLSSuaChua.Columns["ID_LichSuSuaChua"].Visible = false;
+            DGVLSSuaChua.Columns["TenNhanVien"].HeaderText = "Tên nhân viên";
+            DGVLSSuaChua.Columns["TenPhong"].HeaderText = "Tên phòng";
+            DGVLSSuaChua.Columns["TenLoaiThietBi"].HeaderText = "Tên loại thiết bị";
+            DGVLSSuaChua.Columns["NgaySuaChua"].HeaderText = "Ngày sửa chữa";
+            DGVLSSuaChua.Columns["SoTienSuaChua"].HeaderText = "Số tiền sửa chữa"; 
         }
 
         private void btnAdd_Click(object sender, EventArgs e)

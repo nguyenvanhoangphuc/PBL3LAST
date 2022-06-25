@@ -41,9 +41,10 @@ namespace QuanLyPhongTroLinQ.View
             this.button1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.button1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(199, 298);
+            this.button1.Location = new System.Drawing.Point(390, 377);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(180, 30);
+            this.button1.Size = new System.Drawing.Size(180, 54);
             this.button1.TabIndex = 18;
             this.button1.Text = "Thoát";
             this.button1.UseVisualStyleBackColor = false;
@@ -54,39 +55,45 @@ namespace QuanLyPhongTroLinQ.View
             this.lblTenLoaiPhong.AutoSize = true;
             this.lblTenLoaiPhong.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTenLoaiPhong.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblTenLoaiPhong.Location = new System.Drawing.Point(55, 41);
+            this.lblTenLoaiPhong.Location = new System.Drawing.Point(73, 50);
+            this.lblTenLoaiPhong.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTenLoaiPhong.Name = "lblTenLoaiPhong";
-            this.lblTenLoaiPhong.Size = new System.Drawing.Size(107, 19);
+            this.lblTenLoaiPhong.Size = new System.Drawing.Size(132, 23);
             this.lblTenLoaiPhong.TabIndex = 20;
             this.lblTenLoaiPhong.Text = "Tên loại phòng";
             // 
             // txtTenLoaiPhong
             // 
             this.txtTenLoaiPhong.Enabled = false;
-            this.txtTenLoaiPhong.Location = new System.Drawing.Point(209, 41);
+            this.txtTenLoaiPhong.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTenLoaiPhong.Location = new System.Drawing.Point(297, 47);
+            this.txtTenLoaiPhong.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtTenLoaiPhong.Name = "txtTenLoaiPhong";
-            this.txtTenLoaiPhong.Size = new System.Drawing.Size(170, 20);
+            this.txtTenLoaiPhong.Size = new System.Drawing.Size(225, 30);
             this.txtTenLoaiPhong.TabIndex = 21;
             // 
             // dgv
             // 
             this.dgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv.Location = new System.Drawing.Point(12, 77);
+            this.dgv.Location = new System.Drawing.Point(61, 95);
+            this.dgv.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgv.Name = "dgv";
-            this.dgv.Size = new System.Drawing.Size(382, 215);
+            this.dgv.RowHeadersWidth = 51;
+            this.dgv.Size = new System.Drawing.Size(509, 265);
             this.dgv.TabIndex = 22;
             // 
             // FormViewTB_LoaiPhong
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(415, 357);
+            this.ClientSize = new System.Drawing.Size(631, 454);
             this.Controls.Add(this.dgv);
             this.Controls.Add(this.txtTenLoaiPhong);
             this.Controls.Add(this.lblTenLoaiPhong);
             this.Controls.Add(this.button1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FormViewTB_LoaiPhong";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormViewTB_LoaiPhong";

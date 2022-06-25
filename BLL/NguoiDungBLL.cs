@@ -1,4 +1,5 @@
 ﻿using QuanLyPhongTroLinQ.DTO;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -40,6 +41,17 @@ namespace QuanLyPhongTroLinQ.BLL
                 });
             }
             return nguoiDungViews;
+        }
+
+        public string GetNewID()
+        {
+            db = new QLPT();
+            int max = Convert.ToInt32(db.NguoiDungs.FirstOrDefault().ID);
+            foreach (NguoiDung nd in db.NguoiDungs)
+            {
+                if (Convert.ToInt32(nd.ID) > max) max = Convert.ToInt32(nd.ID);
+            }
+            return (max + 1).ToString();
         }
 
         private List<NguoiDung> GetNguoiDungs()

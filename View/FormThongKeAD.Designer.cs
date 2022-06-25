@@ -229,12 +229,12 @@
             this.dgv_ThongKe.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_ThongKe.BackgroundColor = System.Drawing.SystemColors.Info;
             this.dgv_ThongKe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_ThongKe.Location = new System.Drawing.Point(160, 97);
+            this.dgv_ThongKe.Location = new System.Drawing.Point(109, 97);
             this.dgv_ThongKe.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgv_ThongKe.Name = "dgv_ThongKe";
             this.dgv_ThongKe.RowHeadersWidth = 51;
             this.dgv_ThongKe.RowTemplate.Height = 24;
-            this.dgv_ThongKe.Size = new System.Drawing.Size(611, 196);
+            this.dgv_ThongKe.Size = new System.Drawing.Size(718, 196);
             this.dgv_ThongKe.TabIndex = 5;
             // 
             // cbb_thang

@@ -34,6 +34,7 @@
             this.DGVNVDuyet = new System.Windows.Forms.DataGridView();
             this.butConf = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnUnChoose = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DGVNVChon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DGVNVDuyet)).BeginInit();
             this.SuspendLayout();
@@ -63,7 +64,7 @@
             this.btnChoose.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnChoose.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnChoose.ForeColor = System.Drawing.Color.Yellow;
-            this.btnChoose.Location = new System.Drawing.Point(674, 140);
+            this.btnChoose.Location = new System.Drawing.Point(674, 171);
             this.btnChoose.Name = "btnChoose";
             this.btnChoose.Size = new System.Drawing.Size(150, 54);
             this.btnChoose.TabIndex = 6;
@@ -86,7 +87,7 @@
             this.butConf.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.butConf.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.butConf.ForeColor = System.Drawing.Color.Yellow;
-            this.butConf.Location = new System.Drawing.Point(674, 394);
+            this.butConf.Location = new System.Drawing.Point(674, 473);
             this.butConf.Name = "butConf";
             this.butConf.Size = new System.Drawing.Size(150, 54);
             this.butConf.TabIndex = 8;
@@ -104,6 +105,19 @@
             this.label2.TabIndex = 9;
             this.label2.Text = "Danh sách nhân viên đã chọn";
             // 
+            // btnUnChoose
+            // 
+            this.btnUnChoose.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnUnChoose.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUnChoose.ForeColor = System.Drawing.Color.Yellow;
+            this.btnUnChoose.Location = new System.Drawing.Point(674, 327);
+            this.btnUnChoose.Name = "btnUnChoose";
+            this.btnUnChoose.Size = new System.Drawing.Size(150, 54);
+            this.btnUnChoose.TabIndex = 6;
+            this.btnUnChoose.Text = "UnChoose";
+            this.btnUnChoose.UseVisualStyleBackColor = false;
+            this.btnUnChoose.Click += new System.EventHandler(this.btnUnChoose_Click);
+            // 
             // FormNVChoDuyet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -112,10 +126,12 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.butConf);
             this.Controls.Add(this.DGVNVDuyet);
+            this.Controls.Add(this.btnUnChoose);
             this.Controls.Add(this.btnChoose);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.DGVNVChon);
             this.Name = "FormNVChoDuyet";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormNVChoDuyet";
             ((System.ComponentModel.ISupportInitialize)(this.DGVNVChon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DGVNVDuyet)).EndInit();
@@ -132,5 +148,6 @@
         private System.Windows.Forms.DataGridView DGVNVDuyet;
         private System.Windows.Forms.Button butConf;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnUnChoose;
     }
 }

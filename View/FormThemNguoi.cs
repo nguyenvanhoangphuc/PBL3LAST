@@ -25,10 +25,16 @@ namespace QuanLyPhongTroLinQ.View
             this.s = s;
             this.ID = x.ID;
             this.DT = x.TinhTrang;
+
         }
 
         private void btn_OK_Click(object sender, EventArgs e)
         {
+            if (txt_HVT.Text=="" || txt_SDT.Text==""||  txt_QQ.Text=="" || txt_CCCD.Text=="")
+            {
+                MessageBox.Show("Bạn chưa điền đầy đủ thông tin. Vui lòng điền thêm!");
+                return;
+            }
             if (s == "sua") NguoiThueBLL.Instance.SuaNguoiThue(NguoiThueBLL.Instance.DoiTuongNguoiThue(ID, txt_HVT.Text, txt_SDT.Text, txt_QQ.Text, txt_CCCD.Text, DT));
             else NguoiThueBLL.Instance.ThemNguoiThue(NguoiThueBLL.Instance.DoiTuongNguoiThue(ID, txt_HVT.Text, txt_SDT.Text, txt_QQ.Text, txt_CCCD.Text, DT));
             TrienKhai();
