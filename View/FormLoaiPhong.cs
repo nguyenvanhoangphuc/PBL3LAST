@@ -9,11 +9,12 @@ namespace QuanLyPhongTroLinQ.View
         public FormLoaiPhong()
         {
             InitializeComponent();
+            HienThi();
         }
 
-        private void btnHienThi_Click(object sender, EventArgs e)
+        public  void HienThi()
         {
-            LoaiPhong lp = new LoaiPhong();
+           
             dgv.DataSource = BLL.LoaiPhongBLL.Instance.hienthi();
             dgv.Columns["IDLoaiPhong"].Visible = false;
             dgv.Columns["PhongTros"].Visible = false;

@@ -29,9 +29,6 @@
         private void InitializeComponent()
         {
             this.cbbPhong = new System.Windows.Forms.ComboBox();
-            this.btnReset = new System.Windows.Forms.Button();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.btnCancel = new System.Windows.Forms.Button();
             this.txtSoTien = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -40,54 +37,29 @@
             this.cbbLoaiTB = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.dateSuaChua = new System.Windows.Forms.DateTimePicker();
+            this.btnReset = new CustomButton.VBButton();
+            this.btnCancel = new CustomButton.VBButton();
+            this.btnAdd = new CustomButton.VBButton();
             this.SuspendLayout();
             // 
             // cbbPhong
             // 
             this.cbbPhong.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold);
             this.cbbPhong.FormattingEnabled = true;
-            this.cbbPhong.Location = new System.Drawing.Point(322, 107);
+            this.cbbPhong.Location = new System.Drawing.Point(242, 87);
+            this.cbbPhong.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbbPhong.Name = "cbbPhong";
-            this.cbbPhong.Size = new System.Drawing.Size(236, 33);
+            this.cbbPhong.Size = new System.Drawing.Size(178, 28);
             this.cbbPhong.TabIndex = 18;
             this.cbbPhong.SelectedIndexChanged += new System.EventHandler(this.cbbPhong_SelectedIndexChanged);
-            // 
-            // btnReset
-            // 
-            this.btnReset.Location = new System.Drawing.Point(118, 369);
-            this.btnReset.Name = "btnReset";
-            this.btnReset.Size = new System.Drawing.Size(84, 50);
-            this.btnReset.TabIndex = 14;
-            this.btnReset.Text = "Reset";
-            this.btnReset.UseVisualStyleBackColor = true;
-            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.Location = new System.Drawing.Point(430, 369);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(84, 50);
-            this.btnAdd.TabIndex = 15;
-            this.btnAdd.Text = "Add";
-            this.btnAdd.UseVisualStyleBackColor = true;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            // 
-            // btnCancel
-            // 
-            this.btnCancel.Location = new System.Drawing.Point(273, 369);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(84, 50);
-            this.btnCancel.TabIndex = 16;
-            this.btnCancel.Text = "Cancel";
-            this.btnCancel.UseVisualStyleBackColor = true;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // txtSoTien
             // 
             this.txtSoTien.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSoTien.Location = new System.Drawing.Point(322, 269);
+            this.txtSoTien.Location = new System.Drawing.Point(242, 219);
+            this.txtSoTien.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtSoTien.Name = "txtSoTien";
-            this.txtSoTien.Size = new System.Drawing.Size(236, 34);
+            this.txtSoTien.Size = new System.Drawing.Size(178, 29);
             this.txtSoTien.TabIndex = 11;
             this.txtSoTien.Text = "0";
             // 
@@ -95,9 +67,10 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(82, 272);
+            this.label6.Location = new System.Drawing.Point(62, 221);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(177, 25);
+            this.label6.Size = new System.Drawing.Size(145, 22);
             this.label6.TabIndex = 5;
             this.label6.Text = "Số tiền sửa chữa";
             // 
@@ -105,9 +78,10 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(82, 107);
+            this.label4.Location = new System.Drawing.Point(62, 87);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(119, 25);
+            this.label4.Size = new System.Drawing.Size(97, 22);
             this.label4.TabIndex = 7;
             this.label4.Text = "Tên phòng";
             // 
@@ -115,9 +89,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(82, 160);
+            this.label3.Location = new System.Drawing.Point(62, 130);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(165, 25);
+            this.label3.Size = new System.Drawing.Size(138, 22);
             this.label3.TabIndex = 8;
             this.label3.Text = "Tên loại thiết bị";
             // 
@@ -126,9 +101,10 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Palatino Linotype", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Brown;
-            this.label1.Location = new System.Drawing.Point(69, 24);
+            this.label1.Location = new System.Drawing.Point(52, 20);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(489, 40);
+            this.label1.Size = new System.Drawing.Size(373, 32);
             this.label1.TabIndex = 10;
             this.label1.Text = "Vui lòng điều đầy đủ thông tin sau";
             // 
@@ -136,18 +112,20 @@
             // 
             this.cbbLoaiTB.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold);
             this.cbbLoaiTB.FormattingEnabled = true;
-            this.cbbLoaiTB.Location = new System.Drawing.Point(322, 157);
+            this.cbbLoaiTB.Location = new System.Drawing.Point(242, 128);
+            this.cbbLoaiTB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbbLoaiTB.Name = "cbbLoaiTB";
-            this.cbbLoaiTB.Size = new System.Drawing.Size(236, 33);
+            this.cbbLoaiTB.Size = new System.Drawing.Size(178, 28);
             this.cbbLoaiTB.TabIndex = 18;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(83, 219);
+            this.label5.Location = new System.Drawing.Point(62, 178);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(161, 25);
+            this.label5.Size = new System.Drawing.Size(132, 22);
             this.label5.TabIndex = 9;
             this.label5.Text = "Ngày sửa chữa";
             // 
@@ -155,28 +133,87 @@
             // 
             this.dateSuaChua.CalendarFont = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateSuaChua.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateSuaChua.Location = new System.Drawing.Point(322, 219);
+            this.dateSuaChua.Location = new System.Drawing.Point(242, 178);
+            this.dateSuaChua.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dateSuaChua.Name = "dateSuaChua";
-            this.dateSuaChua.Size = new System.Drawing.Size(236, 30);
+            this.dateSuaChua.Size = new System.Drawing.Size(178, 26);
             this.dateSuaChua.TabIndex = 19;
+            // 
+            // btnReset
+            // 
+            this.btnReset.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.btnReset.BackgroundColor = System.Drawing.Color.MediumSeaGreen;
+            this.btnReset.BorderColor = System.Drawing.Color.DimGray;
+            this.btnReset.BorderRadius = 5;
+            this.btnReset.BorderSize = 3;
+            this.btnReset.FlatAppearance.BorderSize = 0;
+            this.btnReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReset.ForeColor = System.Drawing.Color.White;
+            this.btnReset.Location = new System.Drawing.Point(185, 296);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.Size = new System.Drawing.Size(112, 43);
+            this.btnReset.TabIndex = 30;
+            this.btnReset.Text = "Reset";
+            this.btnReset.TextColor = System.Drawing.Color.White;
+            this.btnReset.UseVisualStyleBackColor = false;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.btnCancel.BackgroundColor = System.Drawing.Color.MediumSeaGreen;
+            this.btnCancel.BorderColor = System.Drawing.Color.DimGray;
+            this.btnCancel.BorderRadius = 5;
+            this.btnCancel.BorderSize = 3;
+            this.btnCancel.FlatAppearance.BorderSize = 0;
+            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancel.ForeColor = System.Drawing.Color.White;
+            this.btnCancel.Location = new System.Drawing.Point(312, 296);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(112, 43);
+            this.btnCancel.TabIndex = 31;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.TextColor = System.Drawing.Color.White;
+            this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.btnAdd.BackgroundColor = System.Drawing.Color.MediumSeaGreen;
+            this.btnAdd.BorderColor = System.Drawing.Color.DimGray;
+            this.btnAdd.BorderRadius = 5;
+            this.btnAdd.BorderSize = 3;
+            this.btnAdd.FlatAppearance.BorderSize = 0;
+            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdd.ForeColor = System.Drawing.Color.White;
+            this.btnAdd.Location = new System.Drawing.Point(58, 296);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(112, 43);
+            this.btnAdd.TabIndex = 32;
+            this.btnAdd.Text = "Add";
+            this.btnAdd.TextColor = System.Drawing.Color.White;
+            this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // AddLichSuSuaChua
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(638, 470);
+            this.ClientSize = new System.Drawing.Size(478, 382);
+            this.Controls.Add(this.btnAdd);
+            this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.btnReset);
             this.Controls.Add(this.dateSuaChua);
             this.Controls.Add(this.cbbLoaiTB);
             this.Controls.Add(this.cbbPhong);
-            this.Controls.Add(this.btnReset);
-            this.Controls.Add(this.btnAdd);
-            this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.txtSoTien);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "AddLichSuSuaChua";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddLichSuSuaChua";
@@ -188,9 +225,6 @@
         #endregion
 
         private System.Windows.Forms.ComboBox cbbPhong;
-        private System.Windows.Forms.Button btnReset;
-        private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.TextBox txtSoTien;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;
@@ -199,5 +233,8 @@
         private System.Windows.Forms.ComboBox cbbLoaiTB;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DateTimePicker dateSuaChua;
+        private CustomButton.VBButton btnReset;
+        private CustomButton.VBButton btnCancel;
+        private CustomButton.VBButton btnAdd;
     }
 }

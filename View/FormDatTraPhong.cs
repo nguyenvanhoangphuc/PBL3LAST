@@ -55,7 +55,7 @@ namespace QuanLyPhongTroLinQ.View
         private void btnTraPhong_Click(object sender, EventArgs e)
         {
             FormTraPhong f = new FormTraPhong();
-            f.t = new FormTraPhong.Mydel(Refresh);
+            f.t = new FormTraPhong.Mydel(Refreshdgv);
             f.Show();
         }
     }

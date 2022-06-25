@@ -28,9 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btn_OK = new System.Windows.Forms.Button();
-            this.btn_Cancel = new System.Windows.Forms.Button();
-            this.lbl_TenPhong = new System.Windows.Forms.Label();
             this.dtp_ThuTien = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -43,55 +40,27 @@
             this.txt_TMCN = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txt_TienPhong = new System.Windows.Forms.TextBox();
+            this.btnOK = new CustomButton.VBButton();
+            this.btn_Cancel = new CustomButton.VBButton();
             this.SuspendLayout();
-            // 
-            // btn_OK
-            // 
-            this.btn_OK.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_OK.Location = new System.Drawing.Point(94, 374);
-            this.btn_OK.Name = "btn_OK";
-            this.btn_OK.Size = new System.Drawing.Size(108, 57);
-            this.btn_OK.TabIndex = 0;
-            this.btn_OK.Text = "OK";
-            this.btn_OK.UseVisualStyleBackColor = true;
-            this.btn_OK.Click += new System.EventHandler(this.btn_OK_Click);
-            // 
-            // btn_Cancel
-            // 
-            this.btn_Cancel.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Cancel.Location = new System.Drawing.Point(284, 370);
-            this.btn_Cancel.Name = "btn_Cancel";
-            this.btn_Cancel.Size = new System.Drawing.Size(116, 61);
-            this.btn_Cancel.TabIndex = 1;
-            this.btn_Cancel.Text = "Cancel";
-            this.btn_Cancel.UseVisualStyleBackColor = true;
-            this.btn_Cancel.Click += new System.EventHandler(this.btn_Cancel_Click);
-            // 
-            // lbl_TenPhong
-            // 
-            this.lbl_TenPhong.AutoSize = true;
-            this.lbl_TenPhong.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_TenPhong.Location = new System.Drawing.Point(224, 25);
-            this.lbl_TenPhong.Name = "lbl_TenPhong";
-            this.lbl_TenPhong.Size = new System.Drawing.Size(114, 25);
-            this.lbl_TenPhong.TabIndex = 2;
-            this.lbl_TenPhong.Text = "TenPhong";
             // 
             // dtp_ThuTien
             // 
             this.dtp_ThuTien.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtp_ThuTien.Location = new System.Drawing.Point(284, 84);
+            this.dtp_ThuTien.Location = new System.Drawing.Point(213, 68);
+            this.dtp_ThuTien.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dtp_ThuTien.Name = "dtp_ThuTien";
-            this.dtp_ThuTien.Size = new System.Drawing.Size(200, 30);
+            this.dtp_ThuTien.Size = new System.Drawing.Size(151, 26);
             this.dtp_ThuTien.TabIndex = 3;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(42, 84);
+            this.label1.Location = new System.Drawing.Point(32, 68);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(123, 23);
+            this.label1.Size = new System.Drawing.Size(99, 19);
             this.label1.TabIndex = 4;
             this.label1.Text = "Ngày thu tiền";
             // 
@@ -99,9 +68,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(42, 167);
+            this.label2.Location = new System.Drawing.Point(32, 136);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(107, 23);
+            this.label2.Size = new System.Drawing.Size(87, 19);
             this.label2.TabIndex = 4;
             this.label2.Text = "Số chữ điện";
             // 
@@ -109,9 +79,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(42, 214);
+            this.label3.Location = new System.Drawing.Point(32, 174);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(114, 23);
+            this.label3.Size = new System.Drawing.Size(93, 19);
             this.label3.TabIndex = 4;
             this.label3.Text = "Số chữ nước";
             // 
@@ -119,9 +90,10 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(38, 261);
+            this.label4.Location = new System.Drawing.Point(28, 212);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(200, 23);
+            this.label4.Size = new System.Drawing.Size(160, 19);
             this.label4.TabIndex = 4;
             this.label4.Text = "Tiền trên một chữ diện";
             // 
@@ -129,67 +101,113 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(38, 309);
+            this.label5.Location = new System.Drawing.Point(28, 251);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(209, 23);
+            this.label5.Size = new System.Drawing.Size(168, 19);
             this.label5.TabIndex = 4;
             this.label5.Text = "Tiền một mét khối nước";
             // 
             // txt_ChuDien
             // 
             this.txt_ChuDien.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_ChuDien.Location = new System.Drawing.Point(283, 167);
+            this.txt_ChuDien.Location = new System.Drawing.Point(212, 136);
+            this.txt_ChuDien.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txt_ChuDien.Name = "txt_ChuDien";
-            this.txt_ChuDien.Size = new System.Drawing.Size(201, 30);
+            this.txt_ChuDien.Size = new System.Drawing.Size(152, 26);
             this.txt_ChuDien.TabIndex = 5;
             // 
             // txt_ChuNuoc
             // 
             this.txt_ChuNuoc.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_ChuNuoc.Location = new System.Drawing.Point(283, 214);
+            this.txt_ChuNuoc.Location = new System.Drawing.Point(212, 174);
+            this.txt_ChuNuoc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txt_ChuNuoc.Name = "txt_ChuNuoc";
-            this.txt_ChuNuoc.Size = new System.Drawing.Size(201, 30);
+            this.txt_ChuNuoc.Size = new System.Drawing.Size(152, 26);
             this.txt_ChuNuoc.TabIndex = 5;
             // 
             // txt_TMCD
             // 
             this.txt_TMCD.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_TMCD.Location = new System.Drawing.Point(283, 261);
+            this.txt_TMCD.Location = new System.Drawing.Point(212, 212);
+            this.txt_TMCD.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txt_TMCD.Name = "txt_TMCD";
-            this.txt_TMCD.Size = new System.Drawing.Size(201, 30);
+            this.txt_TMCD.Size = new System.Drawing.Size(152, 26);
             this.txt_TMCD.TabIndex = 5;
             // 
             // txt_TMCN
             // 
             this.txt_TMCN.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_TMCN.Location = new System.Drawing.Point(283, 309);
+            this.txt_TMCN.Location = new System.Drawing.Point(212, 251);
+            this.txt_TMCN.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txt_TMCN.Name = "txt_TMCN";
-            this.txt_TMCN.Size = new System.Drawing.Size(201, 30);
+            this.txt_TMCN.Size = new System.Drawing.Size(152, 26);
             this.txt_TMCN.TabIndex = 5;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(42, 127);
+            this.label6.Location = new System.Drawing.Point(32, 103);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(103, 23);
+            this.label6.Size = new System.Drawing.Size(83, 19);
             this.label6.TabIndex = 4;
             this.label6.Text = "Tiền phòng";
             // 
             // txt_TienPhong
             // 
             this.txt_TienPhong.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_TienPhong.Location = new System.Drawing.Point(284, 127);
+            this.txt_TienPhong.Location = new System.Drawing.Point(213, 103);
+            this.txt_TienPhong.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txt_TienPhong.Name = "txt_TienPhong";
-            this.txt_TienPhong.Size = new System.Drawing.Size(201, 30);
+            this.txt_TienPhong.Size = new System.Drawing.Size(152, 26);
             this.txt_TienPhong.TabIndex = 5;
+            // 
+            // btnOK
+            // 
+            this.btnOK.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.btnOK.BackgroundColor = System.Drawing.Color.MediumSeaGreen;
+            this.btnOK.BorderColor = System.Drawing.Color.DimGray;
+            this.btnOK.BorderRadius = 5;
+            this.btnOK.BorderSize = 3;
+            this.btnOK.FlatAppearance.BorderSize = 0;
+            this.btnOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOK.ForeColor = System.Drawing.Color.White;
+            this.btnOK.Location = new System.Drawing.Point(17, 312);
+            this.btnOK.Name = "btnOK";
+            this.btnOK.Size = new System.Drawing.Size(112, 43);
+            this.btnOK.TabIndex = 34;
+            this.btnOK.Text = "OK";
+            this.btnOK.TextColor = System.Drawing.Color.White;
+            this.btnOK.UseVisualStyleBackColor = false;
+            // 
+            // btn_Cancel
+            // 
+            this.btn_Cancel.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.btn_Cancel.BackgroundColor = System.Drawing.Color.MediumSeaGreen;
+            this.btn_Cancel.BorderColor = System.Drawing.Color.DimGray;
+            this.btn_Cancel.BorderRadius = 5;
+            this.btn_Cancel.BorderSize = 3;
+            this.btn_Cancel.FlatAppearance.BorderSize = 0;
+            this.btn_Cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Cancel.ForeColor = System.Drawing.Color.White;
+            this.btn_Cancel.Location = new System.Drawing.Point(271, 312);
+            this.btn_Cancel.Name = "btn_Cancel";
+            this.btn_Cancel.Size = new System.Drawing.Size(112, 43);
+            this.btn_Cancel.TabIndex = 33;
+            this.btn_Cancel.Text = "Cancel";
+            this.btn_Cancel.TextColor = System.Drawing.Color.White;
+            this.btn_Cancel.UseVisualStyleBackColor = false;
+            this.btn_Cancel.Click += new System.EventHandler(this.btn_Cancel_Click);
             // 
             // FormAddFixThang
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(527, 469);
+            this.ClientSize = new System.Drawing.Size(395, 381);
+            this.Controls.Add(this.btnOK);
+            this.Controls.Add(this.btn_Cancel);
             this.Controls.Add(this.txt_TMCN);
             this.Controls.Add(this.txt_TMCD);
             this.Controls.Add(this.txt_ChuNuoc);
@@ -202,22 +220,17 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dtp_ThuTien);
-            this.Controls.Add(this.lbl_TenPhong);
-            this.Controls.Add(this.btn_Cancel);
-            this.Controls.Add(this.btn_OK);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FormAddFixThang";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormThemThang";
+            this.Click += new System.EventHandler(this.btn_OK_Click);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btn_OK;
-        private System.Windows.Forms.Button btn_Cancel;
-        private System.Windows.Forms.Label lbl_TenPhong;
         private System.Windows.Forms.DateTimePicker dtp_ThuTien;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
@@ -230,5 +243,7 @@
         private System.Windows.Forms.TextBox txt_TMCN;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txt_TienPhong;
+        private CustomButton.VBButton btnOK;
+        private CustomButton.VBButton btn_Cancel;
     }
 }

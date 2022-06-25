@@ -18,6 +18,7 @@ namespace QuanLyPhongTroLinQ.View
         {
             InitializeComponent();
             ID = id;
+            lblSophong.Text = NguoiThueBLL.Instance.GetTenPhongByID(ID);
             ShowDGV(); 
         }
 
@@ -32,5 +33,7 @@ namespace QuanLyPhongTroLinQ.View
         {
             this.Close(); 
         }
+
+   
     }
 }

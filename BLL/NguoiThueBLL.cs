@@ -27,6 +27,10 @@ namespace QuanLyPhongTroLinQ.BLL
         {
             db = new QLPT();
         }
+        public string GetTenPhongByID(string ID){
+
+            return db.PhongTros.Find(ID).TenPhong;
+        }
 
         public DataTable GetAllNguoiThueView(string s = "", bool HVT = false, bool SDT = false, bool QQ = false, bool CCCD = false, bool DT = false)
         {

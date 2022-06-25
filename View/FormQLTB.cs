@@ -60,5 +60,7 @@ namespace QuanLyPhongTroLinQ.View
             txtSearch.Text = "";
             showDGV();
         }
+
+     
     }
 }

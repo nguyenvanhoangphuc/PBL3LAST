@@ -15,120 +15,63 @@ namespace QuanLyPhongTroLinQ.View
             idNhanVien = idNV;
         }
 
-        public void Default()
-        {
-            if (pnlDSThietBi.BackColor != SystemColors.ButtonHighlight)
-            {
-                lblDSThietBi.ForeColor = SystemColors.ActiveCaptionText;
-                lblDSThietBi.MouseLeave += new EventHandler(this.lbl_MouseLeave);
-                pnlDSThietBi.BackColor = SystemColors.ButtonHighlight;
-            }
 
-            if (pnlLoaiPhong.BackColor != SystemColors.ButtonHighlight)
-            {
-                lblLoaiPhong.ForeColor = SystemColors.ActiveCaptionText;
-                lblLoaiPhong.MouseLeave += new EventHandler(this.lbl_MouseLeave);
-                pnlLoaiPhong.BackColor = SystemColors.ButtonHighlight;
-            }
-            if (pnlLSSuaChua.BackColor != SystemColors.ButtonHighlight)
-            {
-                lblLichSuSuaChua.ForeColor = SystemColors.ActiveCaptionText;
-                lblLichSuSuaChua.MouseLeave += new EventHandler(this.lbl_MouseLeave);
-                pnlLSSuaChua.BackColor = SystemColors.ButtonHighlight;
-            }
-            if (pnlTaiKhoan.BackColor != SystemColors.ButtonHighlight)
-            {
-                lblTaiKhoan.ForeColor = SystemColors.ActiveCaptionText;
-                lblTaiKhoan.MouseLeave += new EventHandler(this.lbl_MouseLeave);
-                pnlTaiKhoan.BackColor = SystemColors.ButtonHighlight;
-            }
-
-            if (pnlThongKe.BackColor != SystemColors.ButtonHighlight)
-            {
-                lblThongKe.ForeColor = SystemColors.ActiveCaptionText;
-                lblThongKe.MouseLeave += new EventHandler(this.lbl_MouseLeave);
-                pnlThongKe.BackColor = SystemColors.ButtonHighlight;
-            }
-            if(pnlTaiKhoan.BackColor != SystemColors.ButtonHighlight)
-            {
-                lblTaiKhoan.ForeColor = SystemColors.ActiveCaptionText;
-                lblTaiKhoan.MouseLeave += new EventHandler(this.lbl_MouseLeave);
-                pnlTaiKhoan.BackColor = SystemColors.ButtonHighlight;
-            }
-        }
-        private void lblDSThietBi_Click(object sender, EventArgs e)
+        private void btnDSThietBi_Click(object sender, EventArgs e)
         {
-            Default();
+
             panel4.Hide();
-            lblDSThietBi.MouseLeave -= new EventHandler(this.lbl_MouseLeave);
-            pnlDSThietBi.BackColor = SystemColors.ControlDarkDark;
-            lblDSThietBi.ForeColor = Color.Blue;
             FormQLTB f = new FormQLTB();
             f.MdiParent = this;
             f.Show();
         }
 
-        private void lbl_MouseEnter(object sender, EventArgs e)
-        {
-            ((Label)sender).ForeColor = Color.Blue;
-        }
+      
 
-        private void lbl_MouseLeave(object sender, EventArgs e)
-        {
-            ((Label)sender).ForeColor = SystemColors.ActiveCaptionText;
-        }
-
-        private void lblThoat_Click(object sender, EventArgs e)
+   
+        private void btnThoat_Click(object sender, EventArgs e)
         {
             dExit();
             this.Close();
         }
 
-        private void lblLichSuSuaChua_Click(object sender, EventArgs e)
+        private void btnLichSuSuaChua_Click(object sender, EventArgs e)
         {
-            Default();
+
             panel4.Hide();
-            lblLichSuSuaChua.MouseLeave -= new EventHandler(this.lbl_MouseLeave);
-            pnlLSSuaChua.BackColor = SystemColors.ControlDarkDark;
-            lblLichSuSuaChua.ForeColor = Color.Blue;
+
             FormLichSuSuaChua f = new FormLichSuSuaChua(idNhanVien);
             f.MdiParent = this;
             f.Show();
         }
 
-        private void lblLoaiPhong_Click(object sender, EventArgs e)
+        private void btnLoaiPhong_Click(object sender, EventArgs e)
         {
-            Default();
+
             panel4.Hide();
-            lblLoaiPhong.MouseLeave -= new EventHandler(this.lbl_MouseLeave);
-            pnlLoaiPhong.BackColor = SystemColors.ControlDarkDark;
-            lblLoaiPhong.ForeColor = Color.Blue;
+
             FormPhong_NV f = new FormPhong_NV();
             f.MdiParent = this;
             f.Show();
         }
 
-        private void lblThongKe_Click(object sender, EventArgs e)
+        private void btnThongKe_Click(object sender, EventArgs e)
         {
-            Default();
+
             panel4.Hide();
-            lblThongKe.MouseLeave -= new EventHandler(this.lbl_MouseLeave);
-            pnlThongKe.BackColor = SystemColors.ControlDarkDark;
-            lblThongKe.ForeColor = Color.Blue;
+
             FormThongKe f = new FormThongKe();
             f.MdiParent = this;
             f.Show();
         }
 
-        private void lblTaiKhoan_Click(object sender, EventArgs e)
+        private void btnTaiKhoan_Click(object sender, EventArgs e)
         {
-            Default();
-            lblTaiKhoan.MouseLeave -= new EventHandler(this.lbl_MouseLeave);
-            pnlTaiKhoan.BackColor = SystemColors.ControlDarkDark;
-            lblTaiKhoan.ForeColor = Color.Blue;
+
             panel4.Show();
             panel4.Controls.Clear();
             panel4.Controls.Add(new uclSuaTK(idNhanVien));
         }
+
+
     }
 }

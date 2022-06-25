@@ -57,5 +57,7 @@ namespace QuanLyPhongTroLinQ.View
         {
             GUI();
         }
+
+       
     }
 }

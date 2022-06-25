@@ -38,7 +38,7 @@ namespace QuanLyPhongTroLinQ.View
 
             dgv_DSThang.DataSource = TraTienBLL.Instance.GetDSTienThang(txt_TimKiem.Text, rdo_CaHai.Checked, rdo_DaNop.Checked, ID_Phong);
             dgv_DSThang.Columns[0].Visible = false;
-            
+
         }
 
         private void rdo_ChuaNop_CheckedChanged(object sender, EventArgs e)
@@ -74,30 +74,24 @@ namespace QuanLyPhongTroLinQ.View
             DialogResult dr = MessageBox.Show("Bạn có chắc muốn xóa tháng mới nhất ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dr == DialogResult.Yes)
             {
-              
-                TraTienBLL.Instance.XoaThangMoiNhat(dgv_DSThang.Rows[dgv_DSThang.Rows.Count-2].Cells["ID"].Value.ToString());
+
+                TraTienBLL.Instance.XoaThangMoiNhat(dgv_DSThang.Rows[dgv_DSThang.Rows.Count - 2].Cells["ID"].Value.ToString());
                 GUI();
                 TrienKhai1();
             }
-            
+
         }
 
         private void btn_Sua_Click(object sender, EventArgs e)
         {
-            if (dgv_DSThang.Rows.Count >= 2)
+            DialogResult dr = MessageBox.Show("Bạn có chắc muốn chỉnh sửa tháng mới nhất ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dr == DialogResult.Yes)
             {
-                DialogResult dr = MessageBox.Show("Bạn có chắc muốn chỉnh sửa tháng mới nhất ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if (dr == DialogResult.Yes)
-                {
-                    FormAddFixThang f = new FormAddFixThang(ID_Phong, dgv_DSThang.Rows[dgv_DSThang.Rows.Count - 2].Cells["ID"].Value.ToString());
-                    f.TrienKhai = new FormAddFixThang.HamTrienKhai(GUI);
-                    f.TrienKhai1 = new FormAddFixThang.HamTrienKhai1(TrienKhai1);
-                    f.Show();
-                }
-            }
-            else
-            {
-                MessageBox.Show("Phòng này hiện không có thông tin thu trả tiền!"); 
+
+                FormAddFixThang f = new FormAddFixThang(ID_Phong, dgv_DSThang.Rows[dgv_DSThang.Rows.Count - 2].Cells["ID"].Value.ToString());
+                f.TrienKhai = new FormAddFixThang.HamTrienKhai(GUI);
+                f.TrienKhai1 = new FormAddFixThang.HamTrienKhai1(TrienKhai1);
+                f.Show();
             }
         }
 
@@ -106,7 +100,8 @@ namespace QuanLyPhongTroLinQ.View
             if (dgv_DSThang.SelectedRows.Count == 1)
             {
                 DialogResult dr = MessageBox.Show("Click OK để nạp tiền hoặc chuyển về chưa nạp tiền", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
-                if (dr == DialogResult.OK) { 
+                if (dr == DialogResult.OK)
+                {
                     TraTienBLL.Instance.NapTien(dgv_DSThang.SelectedRows[0].Cells["ID"].Value.ToString());
                     GUI();
                     TrienKhai1();
@@ -120,7 +115,7 @@ namespace QuanLyPhongTroLinQ.View
         {
             string s = TraTienBLL.Instance.XuatHoaDon(ID_Phong, TenPhong, dgv_DSThang);
 
-            FormHoaDon f= new FormHoaDon(TenPhong, s);
+            FormHoaDon f = new FormHoaDon(TenPhong, s);
             f.Show();
         }
     }

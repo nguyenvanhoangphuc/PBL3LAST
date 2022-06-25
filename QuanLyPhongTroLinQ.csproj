@@ -108,6 +108,9 @@
     <Compile Include="DTO\DTO_main\TKLSSC.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VBButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="View\AddLichSuSuaChua.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -530,6 +533,36 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\background1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_f.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tien.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\thue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loaip.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ana.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\abc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\book.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fix.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\equipment.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\out.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

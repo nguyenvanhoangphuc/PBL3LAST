@@ -49,5 +49,7 @@ namespace QuanLyPhongTroLinQ.View
             FormXemThietBiPhong f = new FormXemThietBiPhong(DGVPhongTro.SelectedRows[0].Cells["TenPhong"].Value.ToString(), DGVPhongTro.SelectedRows[0].Cells["ID"].Value.ToString());
             f.Show();
         }
+
+     
     }
 }
