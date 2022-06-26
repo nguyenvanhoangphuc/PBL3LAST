@@ -48,9 +48,10 @@ namespace QuanLyPhongTroLinQ.View
             this.label5.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.label5.Font = new System.Drawing.Font("Palatino Linotype", 25.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label5.Location = new System.Drawing.Point(859, 16);
+            this.label5.Location = new System.Drawing.Point(1145, 20);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(179, 47);
+            this.label5.Size = new System.Drawing.Size(222, 57);
             this.label5.TabIndex = 12;
             this.label5.Text = "Nhân viên";
             // 
@@ -59,10 +60,10 @@ namespace QuanLyPhongTroLinQ.View
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.label6);
-            this.panel1.Location = new System.Drawing.Point(11, 16);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Location = new System.Drawing.Point(15, 20);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(214, 67);
+            this.panel1.Size = new System.Drawing.Size(284, 82);
             this.panel1.TabIndex = 10;
             // 
             // label6
@@ -72,10 +73,9 @@ namespace QuanLyPhongTroLinQ.View
             this.label6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label6.Font = new System.Drawing.Font("Palatino Linotype", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label6.Location = new System.Drawing.Point(25, 14);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Location = new System.Drawing.Point(33, 17);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(124, 31);
+            this.label6.Size = new System.Drawing.Size(151, 40);
             this.label6.TabIndex = 10;
             this.label6.Text = "Menu        ";
             // 
@@ -92,9 +92,10 @@ namespace QuanLyPhongTroLinQ.View
             this.vbButton3.ForeColor = System.Drawing.Color.White;
             this.vbButton3.Image = global::QuanLyPhongTroLinQ.Properties.Resources.loaip;
             this.vbButton3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.vbButton3.Location = new System.Drawing.Point(12, 176);
+            this.vbButton3.Location = new System.Drawing.Point(16, 217);
+            this.vbButton3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.vbButton3.Name = "vbButton3";
-            this.vbButton3.Size = new System.Drawing.Size(214, 48);
+            this.vbButton3.Size = new System.Drawing.Size(285, 59);
             this.vbButton3.TabIndex = 24;
             this.vbButton3.Text = "Loại phòng";
             this.vbButton3.TextColor = System.Drawing.Color.White;
@@ -114,9 +115,10 @@ namespace QuanLyPhongTroLinQ.View
             this.vbButton8.ForeColor = System.Drawing.Color.White;
             this.vbButton8.Image = global::QuanLyPhongTroLinQ.Properties.Resources.user_f;
             this.vbButton8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.vbButton8.Location = new System.Drawing.Point(12, 377);
+            this.vbButton8.Location = new System.Drawing.Point(16, 464);
+            this.vbButton8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.vbButton8.Name = "vbButton8";
-            this.vbButton8.Size = new System.Drawing.Size(214, 48);
+            this.vbButton8.Size = new System.Drawing.Size(285, 59);
             this.vbButton8.TabIndex = 26;
             this.vbButton8.Text = "Tài khoản";
             this.vbButton8.TextColor = System.Drawing.Color.White;
@@ -136,9 +138,10 @@ namespace QuanLyPhongTroLinQ.View
             this.vbButton7.ForeColor = System.Drawing.Color.White;
             this.vbButton7.Image = global::QuanLyPhongTroLinQ.Properties.Resources.ana;
             this.vbButton7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.vbButton7.Location = new System.Drawing.Point(14, 310);
+            this.vbButton7.Location = new System.Drawing.Point(19, 382);
+            this.vbButton7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.vbButton7.Name = "vbButton7";
-            this.vbButton7.Size = new System.Drawing.Size(214, 48);
+            this.vbButton7.Size = new System.Drawing.Size(285, 59);
             this.vbButton7.TabIndex = 25;
             this.vbButton7.Text = "Thống kê";
             this.vbButton7.TextColor = System.Drawing.Color.White;
@@ -158,9 +161,10 @@ namespace QuanLyPhongTroLinQ.View
             this.btnLichSuSuaChua.ForeColor = System.Drawing.Color.White;
             this.btnLichSuSuaChua.Image = global::QuanLyPhongTroLinQ.Properties.Resources.fix;
             this.btnLichSuSuaChua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLichSuSuaChua.Location = new System.Drawing.Point(12, 243);
+            this.btnLichSuSuaChua.Location = new System.Drawing.Point(16, 299);
+            this.btnLichSuSuaChua.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnLichSuSuaChua.Name = "btnLichSuSuaChua";
-            this.btnLichSuSuaChua.Size = new System.Drawing.Size(214, 48);
+            this.btnLichSuSuaChua.Size = new System.Drawing.Size(285, 59);
             this.btnLichSuSuaChua.TabIndex = 23;
             this.btnLichSuSuaChua.Text = "Lịch sử sửa chữa";
             this.btnLichSuSuaChua.TextColor = System.Drawing.Color.White;
@@ -180,9 +184,10 @@ namespace QuanLyPhongTroLinQ.View
             this.btnDSThietBi.ForeColor = System.Drawing.Color.White;
             this.btnDSThietBi.Image = global::QuanLyPhongTroLinQ.Properties.Resources.equipment;
             this.btnDSThietBi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDSThietBi.Location = new System.Drawing.Point(12, 109);
+            this.btnDSThietBi.Location = new System.Drawing.Point(16, 134);
+            this.btnDSThietBi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnDSThietBi.Name = "btnDSThietBi";
-            this.btnDSThietBi.Size = new System.Drawing.Size(214, 48);
+            this.btnDSThietBi.Size = new System.Drawing.Size(285, 59);
             this.btnDSThietBi.TabIndex = 23;
             this.btnDSThietBi.Text = "D.sách thiết bị";
             this.btnDSThietBi.TextColor = System.Drawing.Color.White;
@@ -192,10 +197,10 @@ namespace QuanLyPhongTroLinQ.View
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.panel4.Location = new System.Drawing.Point(264, 84);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2);
+            this.panel4.Location = new System.Drawing.Point(352, 103);
+            this.panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(774, 496);
+            this.panel4.Size = new System.Drawing.Size(1032, 610);
             this.panel4.TabIndex = 10;
             this.panel4.Visible = false;
             // 
@@ -212,9 +217,10 @@ namespace QuanLyPhongTroLinQ.View
             this.btnThoat.ForeColor = System.Drawing.Color.White;
             this.btnThoat.Image = global::QuanLyPhongTroLinQ.Properties.Resources._out;
             this.btnThoat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThoat.Location = new System.Drawing.Point(11, 532);
+            this.btnThoat.Location = new System.Drawing.Point(15, 655);
+            this.btnThoat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(214, 48);
+            this.btnThoat.Size = new System.Drawing.Size(285, 59);
             this.btnThoat.TabIndex = 26;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.TextColor = System.Drawing.Color.White;
@@ -223,11 +229,11 @@ namespace QuanLyPhongTroLinQ.View
             // 
             // FormMenuNhanVien
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::QuanLyPhongTroLinQ.Properties.Resources.abc;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1040, 612);
+            this.ClientSize = new System.Drawing.Size(1426, 759);
             this.Controls.Add(this.vbButton3);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.vbButton8);
@@ -240,6 +246,7 @@ namespace QuanLyPhongTroLinQ.View
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.IsMdiContainer = true;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FormMenuNhanVien";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.panel1.ResumeLayout(false);

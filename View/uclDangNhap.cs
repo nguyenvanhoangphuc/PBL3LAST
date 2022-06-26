@@ -60,6 +60,11 @@ namespace QuanLyPhongTroLinQ.View
         }
         private void xuathien()
         {
+            txtTenDangNhap.Text = "Tên đăng nhập";
+            txtTenDangNhap.ForeColor = Color.Silver;
+            txtMatKhau.UseSystemPasswordChar = false;
+            txtMatKhau.Text = "Mật khẩu";
+            txtMatKhau.ForeColor = Color.Silver;
             this.Show();
         }
 

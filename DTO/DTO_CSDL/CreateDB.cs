@@ -4,7 +4,8 @@ using System.Data.Entity;
 namespace QuanLyPhongTroLinQ.DTO
 {
     public class CreateDB :
-    DropCreateDatabaseIfModelChanges<QLPT>
+    CreateDatabaseIfNotExists<QLPT>
+    //DropCreateDatabaseIfModelChanges<QLPT>
     //DropCreateDatabaseAlways<QLPT>
     {
         protected override void Seed(QLPT context)
@@ -255,16 +256,16 @@ namespace QuanLyPhongTroLinQ.DTO
                 new NguoiThue {ID ="3", HoTen = "Trần Thanh Nguyên", SDT ="0444444444", QueQuan="Cẩm Lệ", CCCD="1234", TinhTrang=true},
                 new NguoiThue {ID ="4", HoTen = "Trần Thị Thu Phượng", SDT ="0555555555", QueQuan="TT Huế", CCCD="465256", TinhTrang=true},
                 new NguoiThue {ID="5",  HoTen ="Phạm Văn Tiến", QueQuan ="Sông Nước", SDT ="1234656789", CCCD="777776666", TinhTrang =true },
-                new NguoiThue {ID="6",  HoTen ="Lê Thành Long", QueQuan ="HongKong", SDT ="0123456987", CCCD="145234657", TinhTrang =false },
-                new NguoiThue {ID="7",    HoTen ="Lê Thành Long", QueQuan ="HongKong", SDT ="0123456987", CCCD="145234657", TinhTrang =false },
+                new NguoiThue {ID="6",  HoTen ="Lê Thành Long", QueQuan ="HongKong", SDT ="0123556987", CCCD="145234657", TinhTrang =false },
+                new NguoiThue {ID="7",    HoTen ="Lê Thành Long", QueQuan ="HongKong", SDT ="0123656987", CCCD="145234657", TinhTrang =false },
                 new NguoiThue {ID="8",    HoTen ="Nguyễn Tiến Anh", QueQuan ="Đại Lộc", SDT ="0337689694", CCCD="121121212", TinhTrang =true  },
                 new NguoiThue {ID="9",    HoTen ="Lê Hồng Nhung", QueQuan ="Cẩm Lệ", SDT ="0905050523", CCCD="123412154", TinhTrang =true },
                 new NguoiThue {ID="10",    HoTen ="Phạm Hương", QueQuan ="Bắc Cạn", SDT ="0303040401", CCCD="422452154", TinhTrang =true},
                 new NguoiThue {ID="11",    HoTen ="Nguyễn Đại Hùng", QueQuan ="Tam Kì", SDT ="0122852703", CCCD="123546215", TinhTrang =true },
                 new NguoiThue {ID="12",    HoTen ="Hoàng Nhật Minh", QueQuan ="Sông Nước", SDT ="1234656789", CCCD="012023244", TinhTrang =true },
                 new NguoiThue {ID="13",    HoTen ="Nguyễn Thị Ánh Tuyết", QueQuan ="Hà Nội", SDT ="0123456987", CCCD="144525412", TinhTrang =false },
-                new NguoiThue {ID="14",    HoTen ="Lê Văn Hoàng", QueQuan ="HongKong", SDT ="0123456987", CCCD="846585325", TinhTrang =false },
-                new NguoiThue {ID="15",    HoTen ="Ngô Quý", QueQuan ="Tiền Giang", SDT ="0123456987", CCCD="542154223", TinhTrang =false }
+                new NguoiThue {ID="14",    HoTen ="Lê Văn Hoàng", QueQuan ="HongKong", SDT ="0123756987", CCCD="846585325", TinhTrang =false },
+                new NguoiThue {ID="15",    HoTen ="Ngô Quý", QueQuan ="Tiền Giang", SDT ="0123856987", CCCD="542154223", TinhTrang =false }
 
             });
             context.QLDatPhongs.AddRange(new QLDatPhong[]
@@ -363,7 +364,22 @@ namespace QuanLyPhongTroLinQ.DTO
                 new TienThang {ID= "44", ID_Phong= "9", NgayThu= new DateTime(2022,06,01), TienPhong= 1700000, ChuDien= 170, ChuNuoc= 15, TienMotChuDien= 3000, TienMotChuNuoc= 10000, DaNop= false},
                 new TienThang {ID= "45", ID_Phong= "10", NgayThu= new DateTime(2022,06,01), TienPhong= 1500000, ChuDien= 160, ChuNuoc= 13, TienMotChuDien= 3000, TienMotChuNuoc= 10000, DaNop= false},
                 new TienThang {ID= "46", ID_Phong= "11", NgayThu= new DateTime(2022,06,01), TienPhong= 1300000, ChuDien= 140, ChuNuoc= 20, TienMotChuDien= 3000, TienMotChuNuoc= 10000, DaNop= false},
-                new TienThang {ID= "47", ID_Phong= "12", NgayThu= new DateTime(2022,06,01), TienPhong= 1300000, ChuDien= 140, ChuNuoc= 20, TienMotChuDien= 3000, TienMotChuNuoc= 10000, DaNop= false}
+                new TienThang {ID= "47", ID_Phong= "12", NgayThu= new DateTime(2022,06,01), TienPhong= 1300000, ChuDien= 140, ChuNuoc= 20, TienMotChuDien= 3000, TienMotChuNuoc= 10000, DaNop= false},
+
+                new TienThang {ID= "48", ID_Phong= "7", NgayThu= new DateTime(2000,01,01), TienPhong= 0, ChuDien= 0, ChuNuoc=0, TienMotChuDien=0, TienMotChuNuoc=0, DaNop= true},
+                new TienThang {ID= "49", ID_Phong= "8", NgayThu= new DateTime(2000,01,01), TienPhong= 0, ChuDien= 0, ChuNuoc=0, TienMotChuDien=0, TienMotChuNuoc=0, DaNop= true},
+                new TienThang {ID= "50", ID_Phong= "9", NgayThu= new DateTime(2000,01,01), TienPhong= 0, ChuDien= 0, ChuNuoc=0, TienMotChuDien=0, TienMotChuNuoc=0, DaNop= true},
+                new TienThang {ID= "51", ID_Phong= "10", NgayThu= new DateTime(2000,01,01), TienPhong= 0, ChuDien= 0, ChuNuoc=0, TienMotChuDien=0, TienMotChuNuoc=0, DaNop= true},
+                new TienThang {ID= "52", ID_Phong= "11",NgayThu= new DateTime(2000,01,01), TienPhong= 0, ChuDien= 0, ChuNuoc=0, TienMotChuDien=0, TienMotChuNuoc=0, DaNop= true},
+                new TienThang {ID= "53", ID_Phong= "12", NgayThu= new DateTime(2000,01,01), TienPhong= 0, ChuDien= 0, ChuNuoc=0, TienMotChuDien=0, TienMotChuNuoc=0, DaNop= true},
+                new TienThang {ID= "54", ID_Phong= "13", NgayThu= new DateTime(2000,01,01), TienPhong= 0, ChuDien= 0, ChuNuoc=0, TienMotChuDien=0, TienMotChuNuoc=0, DaNop= true},
+                new TienThang {ID= "55", ID_Phong= "14", NgayThu= new DateTime(2000,01,01), TienPhong= 0, ChuDien= 0, ChuNuoc=0, TienMotChuDien=0, TienMotChuNuoc=0, DaNop= true},
+                new TienThang {ID= "56", ID_Phong= "1", NgayThu= new DateTime(2000,01,01), TienPhong= 0, ChuDien= 0, ChuNuoc=0, TienMotChuDien=0, TienMotChuNuoc=0, DaNop= true},
+                new TienThang {ID= "57", ID_Phong= "2", NgayThu= new DateTime(2000,01,01), TienPhong= 0, ChuDien= 0, ChuNuoc=0, TienMotChuDien=0, TienMotChuNuoc=0, DaNop= true},
+                new TienThang {ID= "58", ID_Phong= "3", NgayThu= new DateTime(2000,01,01), TienPhong= 0, ChuDien= 0, ChuNuoc=0, TienMotChuDien=0, TienMotChuNuoc=0, DaNop= true},
+                new TienThang {ID= "59", ID_Phong= "4", NgayThu= new DateTime(2000,01,01), TienPhong= 0, ChuDien= 0, ChuNuoc=0, TienMotChuDien=0, TienMotChuNuoc=0, DaNop= true},
+                new TienThang {ID= "60", ID_Phong= "5",NgayThu= new DateTime(2000,01,01), TienPhong= 0, ChuDien= 0, ChuNuoc=0, TienMotChuDien=0, TienMotChuNuoc=0, DaNop= true},
+                new TienThang {ID= "61", ID_Phong= "6", NgayThu= new DateTime(2000,01,01), TienPhong= 0, ChuDien= 0, ChuNuoc=0, TienMotChuDien=0, TienMotChuNuoc=0, DaNop= true}
             });
         }
     }
