@@ -41,7 +41,7 @@ namespace QuanLyPhongTroLinQ.View
 
         private void btnReset_Click(object sender, EventArgs e)
         {
-            if (id == "")
+            if (id != "")//
             {
                 cbbPhong.Text = "";
                 cbbLoaiTB.Text = "";
