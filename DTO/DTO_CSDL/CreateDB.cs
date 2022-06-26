@@ -363,7 +363,22 @@ namespace QuanLyPhongTroLinQ.DTO
                 new TienThang {ID= "44", ID_Phong= "9", NgayThu= new DateTime(2022,06,01), TienPhong= 1700000, ChuDien= 170, ChuNuoc= 15, TienMotChuDien= 3000, TienMotChuNuoc= 10000, DaNop= false},
                 new TienThang {ID= "45", ID_Phong= "10", NgayThu= new DateTime(2022,06,01), TienPhong= 1500000, ChuDien= 160, ChuNuoc= 13, TienMotChuDien= 3000, TienMotChuNuoc= 10000, DaNop= false},
                 new TienThang {ID= "46", ID_Phong= "11", NgayThu= new DateTime(2022,06,01), TienPhong= 1300000, ChuDien= 140, ChuNuoc= 20, TienMotChuDien= 3000, TienMotChuNuoc= 10000, DaNop= false},
-                new TienThang {ID= "47", ID_Phong= "12", NgayThu= new DateTime(2022,06,01), TienPhong= 1300000, ChuDien= 140, ChuNuoc= 20, TienMotChuDien= 3000, TienMotChuNuoc= 10000, DaNop= false}
+                new TienThang {ID= "47", ID_Phong= "12", NgayThu= new DateTime(2022,06,01), TienPhong= 1300000, ChuDien= 140, ChuNuoc= 20, TienMotChuDien= 3000, TienMotChuNuoc= 10000, DaNop= false},
+                
+                new TienThang {ID= "48", ID_Phong= "7", NgayThu= new DateTime(2000,01,01), TienPhong= 0, ChuDien= 0, ChuNuoc=0, TienMotChuDien=0, TienMotChuNuoc=0, DaNop= true},
+                new TienThang {ID= "49", ID_Phong= "8", NgayThu= new DateTime(2000,01,01), TienPhong= 0, ChuDien= 0, ChuNuoc=0, TienMotChuDien=0, TienMotChuNuoc=0, DaNop= true},
+                new TienThang {ID= "50", ID_Phong= "9", NgayThu= new DateTime(2000,01,01), TienPhong= 0, ChuDien= 0, ChuNuoc=0, TienMotChuDien=0, TienMotChuNuoc=0, DaNop= true},
+                new TienThang {ID= "51", ID_Phong= "10", NgayThu= new DateTime(2000,01,01), TienPhong= 0, ChuDien= 0, ChuNuoc=0, TienMotChuDien=0, TienMotChuNuoc=0, DaNop= true},
+                new TienThang {ID= "52", ID_Phong= "11",NgayThu= new DateTime(2000,01,01), TienPhong= 0, ChuDien= 0, ChuNuoc=0, TienMotChuDien=0, TienMotChuNuoc=0, DaNop= true},
+                new TienThang {ID= "53", ID_Phong= "12", NgayThu= new DateTime(2000,01,01), TienPhong= 0, ChuDien= 0, ChuNuoc=0, TienMotChuDien=0, TienMotChuNuoc=0, DaNop= true},
+                new TienThang {ID= "54", ID_Phong= "13", NgayThu= new DateTime(2000,01,01), TienPhong= 0, ChuDien= 0, ChuNuoc=0, TienMotChuDien=0, TienMotChuNuoc=0, DaNop= true},
+                new TienThang {ID= "55", ID_Phong= "14", NgayThu= new DateTime(2000,01,01), TienPhong= 0, ChuDien= 0, ChuNuoc=0, TienMotChuDien=0, TienMotChuNuoc=0, DaNop= true},
+                new TienThang {ID= "56", ID_Phong= "1", NgayThu= new DateTime(2000,01,01), TienPhong= 0, ChuDien= 0, ChuNuoc=0, TienMotChuDien=0, TienMotChuNuoc=0, DaNop= true},
+                new TienThang {ID= "57", ID_Phong= "2", NgayThu= new DateTime(2000,01,01), TienPhong= 0, ChuDien= 0, ChuNuoc=0, TienMotChuDien=0, TienMotChuNuoc=0, DaNop= true},
+                new TienThang {ID= "58", ID_Phong= "3", NgayThu= new DateTime(2000,01,01), TienPhong= 0, ChuDien= 0, ChuNuoc=0, TienMotChuDien=0, TienMotChuNuoc=0, DaNop= true},
+                new TienThang {ID= "59", ID_Phong= "4", NgayThu= new DateTime(2000,01,01), TienPhong= 0, ChuDien= 0, ChuNuoc=0, TienMotChuDien=0, TienMotChuNuoc=0, DaNop= true},
+                new TienThang {ID= "60", ID_Phong= "5",NgayThu= new DateTime(2000,01,01), TienPhong= 0, ChuDien= 0, ChuNuoc=0, TienMotChuDien=0, TienMotChuNuoc=0, DaNop= true},
+                new TienThang {ID= "61", ID_Phong= "6", NgayThu= new DateTime(2000,01,01), TienPhong= 0, ChuDien= 0, ChuNuoc=0, TienMotChuDien=0, TienMotChuNuoc=0, DaNop= true}
             });
         }
     }
