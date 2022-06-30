@@ -91,7 +91,6 @@
             this.txtNhapMKMoi.Size = new System.Drawing.Size(454, 30);
             this.txtNhapMKMoi.TabIndex = 27;
             this.txtNhapMKMoi.Text = "Nhập mật khẩu mới";
-            this.txtNhapMKMoi.TextChanged += new System.EventHandler(this.txtNhapMKMoi_TextChanged);
             this.txtNhapMKMoi.Enter += new System.EventHandler(this.txtNhapMKMoi_Enter);
             this.txtNhapMKMoi.Leave += new System.EventHandler(this.txtNhapMKMoi_Leave);
             // 

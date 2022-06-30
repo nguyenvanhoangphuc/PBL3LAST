@@ -7,8 +7,8 @@ namespace QuanLyPhongTroLinQ.View
     public partial class uclXacNhanMK : UserControl
     {
         public delegate string Mydel(string s);
-        public Mydel d;
-        public static string em, code;
+        public static Mydel d;
+        static string em, code;
         public uclXacNhanMK(string email, string randomcode)
         {
             code = randomcode;
@@ -59,7 +59,7 @@ namespace QuanLyPhongTroLinQ.View
         {
             if (txtMaXN.Text == code)
             {
-                uclSetMK uclSetMK = new uclSetMK(em);
+                uclSetMK uclSetMK = new uclSetMK(em, code);
                 this.Hide();
                 this.Parent.Controls.Add(uclSetMK);
 

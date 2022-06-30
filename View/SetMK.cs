@@ -9,9 +9,11 @@ namespace QuanLyPhongTroLinQ.View
     public partial class uclSetMK : UserControl
     {
         string em;
-        public uclSetMK(string email)
+        static string code;
+        public uclSetMK(string email, string MaXN)
         {
             em = email;
+            code = MaXN;
             InitializeComponent();
         }
 
@@ -113,7 +115,7 @@ namespace QuanLyPhongTroLinQ.View
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            uclXacNhanMK u = new uclXacNhanMK(em, "000000");
+            uclXacNhanMK u = new uclXacNhanMK(em, code);
             this.Hide();
             this.Parent.Controls.Add(u);
         }
