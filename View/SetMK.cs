@@ -19,12 +19,6 @@ namespace QuanLyPhongTroLinQ.View
         {
 
         }
-
-        private void txtNhapMKMoi_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void txtNhapMKMoi_Leave(object sender, EventArgs e)
         {
             if (txtNhapMKMoi.Text == "")
@@ -36,11 +30,16 @@ namespace QuanLyPhongTroLinQ.View
 
         private void txtNhapMKMoi_Enter(object sender, EventArgs e)
         {
-            if (txtNhapMKMoi.Text == "Nhập mật khẩu mới")
+            if (txtNhapMKMoi.Text != "Nhập mật khẩu mới")
             {
                 txtNhapMKMoi.UseSystemPasswordChar = true;
                 txtNhapMKMoi.Text = "";
                 txtNhapMKMoi.ForeColor = Color.Black;
+            }
+
+            else
+            {
+                txtNhapMKMoi.Text = "";
             }
         }
 
@@ -55,11 +54,15 @@ namespace QuanLyPhongTroLinQ.View
 
         private void txtNhapLaiMK_Enter(object sender, EventArgs e)
         {
-            if (txtNhapLaiMK.Text == "Nhập lại mật khẩu")
+            if (txtNhapLaiMK.Text != "Nhập lại mật khẩu")
             {
                 txtNhapLaiMK.UseSystemPasswordChar = true;
                 txtNhapLaiMK.Text = "";
                 txtNhapLaiMK.ForeColor = Color.Black;
+            }
+            else
+            {
+                txtNhapLaiMK.Text = "";
             }
         }
 
