@@ -83,11 +83,8 @@ namespace QuanLyPhongTroLinQ.View
 
         private void btnTaiKhoan_Click(object sender, EventArgs e)
         {
-            panel4.Controls.Clear();
             panel4.Show();
             panel4.Controls.Add(new uclSuaTK(IDChuTro));
         }
-
-
     }
 }
